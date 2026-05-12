@@ -7,18 +7,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 :root{
-  --bg:#faf9f7;--surface:#ffffff;--card:#f4f2ee;--border:#e8e4dc;--border2:#d4cfc4;
+  --bg:#faf9f7;--surface:#fff;--card:#f4f2ee;--border:#e8e4dc;--border2:#d4cfc4;
   --accent:#2c5f2e;--accent2:#4a8c4d;--accent-light:#e8f0e8;
   --gold:#c8973a;--gold-light:#fdf3e3;
   --text:#1a1a18;--muted:#6b6860;--muted2:#9b9890;
   --success:#2c7a4b;--warning:#b87a1a;--danger:#b83c3c;--info:#2a5fa8;
   --radius:14px;--radius-sm:8px;
-  --shadow:0 2px 16px rgba(0,0,0,0.08);--shadow-lg:0 8px 40px rgba(0,0,0,0.12);
+  --shadow:0 2px 16px rgba(0,0,0,.08);--shadow-lg:0 8px 40px rgba(0,0,0,.12);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
 h1,h2,h3{font-family:'Playfair Display',serif}
-.topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,0.06)}
+.topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.06)}
 .logo{font-family:'Playfair Display',serif;font-size:22px;color:var(--accent);display:flex;align-items:center;gap:8px}
 .logo-dot{width:8px;height:8px;background:var(--gold);border-radius:50%}
 .nav{display:flex;gap:2px}
@@ -27,10 +27,10 @@ h1,h2,h3{font-family:'Playfair Display',serif}
 .nav-btn.active{color:var(--accent);background:var(--accent-light)}
 .user-chip{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:24px;padding:6px 14px 6px 8px;font-size:13px;cursor:pointer;font-weight:500}
 .avatar{width:28px;height:28px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff}
-.main{padding:36px 32px;max-width:1000px;margin:0 auto;width:100%}
+.main{padding:36px 32px;max-width:1040px;margin:0 auto;width:100%}
 .app{display:flex;flex-direction:column;min-height:100vh}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
-.card-sm{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;box-shadow:0 1px 6px rgba(0,0,0,0.05)}
+.card-sm{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;box-shadow:0 1px 6px rgba(0,0,0,.05)}
 .section-label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -38,7 +38,7 @@ h1,h2,h3{font-family:'Playfair Display',serif}
 .flex{display:flex;align-items:center}
 .flex-between{display:flex;align-items:center;justify-content:space-between}
 .gap-8{gap:8px}.gap-12{gap:12px}
-.mb-16{margin-bottom:16px}.mb-20{margin-bottom:20px}.mb-24{margin-bottom:24px}.mb-32{margin-bottom:32px}
+.mb-12{margin-bottom:12px}.mb-16{margin-bottom:16px}.mb-20{margin-bottom:20px}.mb-24{margin-bottom:24px}.mb-32{margin-bottom:32px}
 .stat-val{font-family:'Playfair Display',serif;font-size:40px;line-height:1;margin-bottom:4px}
 .stat-label{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
 .badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px}
@@ -50,7 +50,7 @@ h1,h2,h3{font-family:'Playfair Display',serif}
 .badge-gray{background:var(--card);color:var(--muted);border:1px solid var(--border)}
 .btn{display:inline-flex;align-items:center;gap:6px;border:none;border-radius:var(--radius-sm);padding:11px 20px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;cursor:pointer;transition:all .2s}
 .btn-primary{background:var(--accent);color:#fff}
-.btn-primary:hover{background:var(--accent2);transform:translateY(-1px);box-shadow:0 4px 12px rgba(44,95,46,0.3)}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-1px);box-shadow:0 4px 12px rgba(44,95,46,.3)}
 .btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border)}
 .btn-ghost:hover{color:var(--text);border-color:var(--border2);background:var(--card)}
 .btn:disabled{opacity:.4;cursor:not-allowed;transform:none!important}
@@ -59,23 +59,22 @@ h1,h2,h3{font-family:'Playfair Display',serif}
 .field{margin-bottom:18px}
 .field label{display:block;font-size:12px;color:var(--muted);margin-bottom:7px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 .input{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;color:var(--text);font-size:14px;font-family:'Nunito',sans-serif;outline:none;transition:border .2s;font-weight:500}
-.input:focus{border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 3px rgba(44,95,46,0.08)}
+.input:focus{border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 3px rgba(44,95,46,.08)}
 .input.error{border-color:var(--danger)}
 .input::placeholder{color:var(--muted2)}
 .input-hint{font-size:12px;color:var(--muted);margin-top:5px}
 .input-error{font-size:12px;color:var(--danger);margin-top:5px;font-weight:600}
-select.input{cursor:pointer}
 textarea.input{resize:vertical;min-height:80px}
 .table-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--border)}
 table{width:100%;border-collapse:collapse}
 th{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;padding:12px 16px;text-align:left;border-bottom:1px solid var(--border);background:var(--card)}
-td{padding:14px 16px;border-bottom:1px solid var(--border);font-size:14px;font-weight:500}
+td{padding:13px 16px;border-bottom:1px solid var(--border);font-size:14px;font-weight:500}
 tr:last-child td{border-bottom:none}
 tbody tr:hover td{background:var(--bg)}
 .pos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
 .pos-card{background:var(--surface);border:2px solid var(--border);border-radius:var(--radius);padding:18px 14px;cursor:pointer;text-align:center;transition:all .25s;position:relative}
 .pos-card:hover{border-color:var(--accent2);background:var(--accent-light);transform:translateY(-2px)}
-.pos-card.selected{border-color:var(--accent);background:var(--accent-light);box-shadow:0 0 0 3px rgba(44,95,46,0.15)}
+.pos-card.selected{border-color:var(--accent);background:var(--accent-light);box-shadow:0 0 0 3px rgba(44,95,46,.15)}
 .pos-card .pos-icon{font-size:28px;margin-bottom:8px}
 .pos-card .pos-name{font-size:13px;font-weight:700}
 .pos-card .check{position:absolute;top:8px;right:8px;width:20px;height:20px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;color:#fff;font-size:11px;font-weight:700}
@@ -83,26 +82,33 @@ tbody tr:hover td{background:var(--bg)}
 .progress-track{height:5px;background:var(--border);border-radius:10px;overflow:hidden;margin:14px 0 6px}
 .progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:10px;transition:width .5s ease}
 .q-cat{font-size:11px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
-.q-text{font-family:'Playfair Display',serif;font-size:20px;line-height:1.4;color:var(--text);margin-bottom:22px}
+.q-text{font-family:'Playfair Display',serif;font-size:20px;line-height:1.4;margin-bottom:22px}
 .choices{display:flex;flex-direction:column;gap:10px}
 .choice{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:13px 18px;cursor:pointer;font-size:14px;text-align:left;color:var(--text);font-family:'Nunito',sans-serif;font-weight:600;transition:all .2s;width:100%}
 .choice:hover{border-color:var(--accent2);background:var(--accent-light)}
 .choice.selected{background:var(--accent-light);border-color:var(--accent);color:var(--accent)}
+/* Login */
 .login-wrap{min-height:100vh;display:flex;background:var(--bg)}
 .login-left{flex:1;background:linear-gradient(145deg,var(--accent) 0%,#1a3d1c 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px;color:#fff}
 .login-logo{font-family:'Playfair Display',serif;font-size:44px;color:#fff;margin-bottom:12px}
-.login-tagline{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.7;text-align:center;max-width:260px}
-.login-right{width:500px;display:flex;align-items:center;justify-content:center;padding:48px;overflow-y:auto}
+.login-tagline{font-size:14px;color:rgba(255,255,255,.7);line-height:1.7;text-align:center;max-width:260px}
+.login-right{width:480px;display:flex;align-items:center;justify-content:center;padding:48px;overflow-y:auto}
 .login-box{width:100%}
 .login-title{font-family:'Playfair Display',serif;font-size:26px;margin-bottom:6px}
 .login-sub{color:var(--muted);font-size:14px;margin-bottom:24px}
 .login-tabs{display:flex;gap:4px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:4px;margin-bottom:22px}
 .login-tab{flex:1;padding:9px;border:none;border-radius:6px;cursor:pointer;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;background:transparent;color:var(--muted);transition:all .2s}
-.login-tab.active{background:var(--surface);color:var(--accent);box-shadow:0 1px 4px rgba(0,0,0,0.1)}
+.login-tab.active{background:var(--surface);color:var(--accent);box-shadow:0 1px 4px rgba(0,0,0,.1)}
 .step-dots{display:flex;gap:8px;margin-bottom:24px;justify-content:center}
 .step-dot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:all .3s}
 .step-dot.active{background:var(--accent);width:24px;border-radius:4px}
 .step-dot.done{background:var(--accent2)}
+/* Detail panel */
+.detail-panel{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-top:12px}
+.qa-row{padding:12px 0;border-bottom:1px solid var(--border)}
+.qa-row:last-child{border-bottom:none}
+.qa-question{font-size:13px;color:var(--muted);margin-bottom:5px;font-weight:600}
+.qa-answer{font-size:14px;color:var(--accent);font-weight:700;background:var(--accent-light);border-radius:6px;padding:6px 12px;display:inline-block}
 .toast{position:fixed;top:20px;right:20px;z-index:999;padding:14px 20px;border-radius:var(--radius-sm);font-size:13px;font-weight:600;animation:slideIn .3s ease;box-shadow:var(--shadow-lg);max-width:320px}
 .toast-success{background:var(--accent);color:#fff}
 .toast-danger{background:var(--danger);color:#fff}
@@ -120,8 +126,7 @@ tbody tr:hover td{background:var(--bg)}
 <div id="root"></div>
 <script type="module">
 import{initializeApp}from"https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import{getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut,onAuthStateChanged}from"https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-import{getFirestore,collection,doc,setDoc,getDoc,getDocs,addDoc,query,orderBy,serverTimestamp}from"https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import{getFirestore,collection,doc,addDoc,getDocs,query,orderBy,serverTimestamp}from"https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const firebaseConfig={
   apiKey:"AIzaSyBkFbcT--VfrLe2ZMjxhmRAs1V7Svzx2Bg",
@@ -133,19 +138,22 @@ const firebaseConfig={
 };
 
 const app=initializeApp(firebaseConfig);
-const auth=getAuth(app);
 const db=getFirestore(app);
 
+// ── RAHBAR PAROLI ──
+const MANAGER_PASSWORD="14191981214";
+
+// ── KASBLAR VA SAVOLLAR ──
 const POSITIONS={
   menejer:{label:"Menejer",icon:"👔",questions:[
     {id:"mn1",cat:"Rahbarlik",text:"Jamoangizni motivatsiya qilish uchun qaysi usulni qo'llaysiz?",options:["Har bir xodimga individual yondashuv","Umumiy maqsad va rag'batlantirish tizimi","Natijaga qarab mukofot berish","Doimiy nazorat va hisobot olish"]},
     {id:"mn2",cat:"Muloqot",text:"Xodim bilan kelishmovchilik yuzaga kelsa nima qilasiz?",options:["Yakkama-yakka suhbat o'tkazaman","Jamoa oldida muammoni hal qilaman","HR ga topshiraman","Vaqt o'tishi bilan o'zi hal bo'ladi deb kutaman"]},
     {id:"mn3",cat:"Rejalashtirish",text:"Oylik reja bajarilmasa birinchi qadam nima?",options:["Sabablarni tahlil qilib yangi reja tuzaman","Xodimlarga mas'uliyatni yuklayman","Rahbariyatga hisobot beraman","Qolgan kunlarda ikki barobar ish qilaman"]},
     {id:"mn4",cat:"Qaror qabul qilish",text:"Shoshilinch qaror qabul qilishda nimaga tayanasiz?",options:["Tajriba va ma'lumotlarga","Jamoadan maslahat olaman","Rahbardan ko'rsatma kutaman","Eng xavfsiz variantni tanlayman"]},
-    {id:"mn5",cat:"Mijoz ishlash",text:"Norozi mijozni qanday tinchlantirасиз?",options:["Diqqat bilan tinglash va uzr so'rash","Muammoni darhol hal qilish yoki alternativ taklif","Imkoniyat bo'yicha chegirma yoki bonus berish","Mas'ul xodimga yo'naltiraman"]},
+    {id:"mn5",cat:"Mijoz ishlash",text:"Norozi mijozni qanday tinchlantirасиз?",options:["Diqqat bilan tinglash va uzr so'rash","Muammoni darhol hal qilish yoki alternativ taklif","Chegirma yoki bonus berish","Mas'ul xodimga yo'naltiraman"]},
     {id:"mn6",cat:"Vaqt boshqaruvi",text:"Bir vaqtda bir nechta muhim vazifa tushsa nima qilasiz?",options:["Muhimlik bo'yicha ustuvorlik qilaman","Hammasi bilan parallel ishlashga harakat qilaman","Jamoaga taqsimlab beraman","Rahbardan qaysi birinchi ekanini so'rayman"]},
     {id:"mn7",cat:"Natija",text:"O'tgan oyda ko'rsatkich qanday edi?",options:["Rejadan 20% va yuqori bajarildi","Reja to'liq bajarildi","Rejaning 80-99% bajarildi","Rejaning 80% dan kam bajarildi"]},
-    {id:"mn8",cat:"Rivojlanish",text:"O'zingizni professional rivojlantirish uchun nima qilasiz?",options:["Muntazam treninglar va kurslar o'taman","Kitob va maqolalar o'qiyman","Tajribali hamkasblardan o'rganaman","Hozircha o'zim yetarli deb hisoblayman"]},
+    {id:"mn8",cat:"Rivojlanish",text:"O'zingizni professional rivojlantirish uchun nima qilasiz?",options:["Muntazam treninglar va kurslar","Kitob va maqolalar o'qiyman","Tajribali hamkasblardan o'rganaman","Hozircha o'zim yetarli deb hisoblayman"]},
     {id:"mn9",cat:"Jamoa",text:"Yangi xodimni jamoaga qo'shishda qanday yordam berasiz?",options:["Shaxsan kuratorlik qilaman","Tajribali xodimga biriktirib qo'yaman","Qo'llanma va yo'riqnoma beraman","O'zi moslashib ketadi deb kutaman"]},
     {id:"mn10",cat:"Intizom",text:"Ish vaqtini buzgan xodimga yondashuv?",options:["Ogohlantirib, yozma xat beraman","Yakkama-yakka suhbat o'tkazib sababini aniqlayman","Jamoada misol sifatida ko'taraman","Ko'z yumib ketaverlaman"]},
   ]},
@@ -155,7 +163,7 @@ const POSITIONS={
     {id:"ba3",cat:"Tezlik",text:"Navbat ko'payib ketsa qaysi usulni qo'llaysiz?",options:["Oddiy buyurtmalarni birinchi, murakkablarini parallel tayyorlayman","Har bir buyurtmani tartib bilan bajaraman","Yordamchi so'rayman","Tezroq ishlashga harakat qilaman"]},
     {id:"ba4",cat:"Tozalik",text:"Smena davomida jihozlarni qachon tozalaysiz?",options:["Har bir buyurtmadan keyin asosiy qismlarni","Soatda bir marta","Smena oxirida","Boshqaruv tekshiruvidan oldin"]},
     {id:"ba5",cat:"Mahsulot bilimi",text:"Mijoz engil qahva so'rasa nimani tavsiya qilasiz?",options:["Cappuccino yoki Latte — yumshoq va sut bilan","Americano — espressoga suv qo'shilgan","Filter coffee — engil qahva","Har kim o'zi biladi, men maslahat bermayman"]},
-    {id:"ba6",cat:"Stressga chidamlilik",text:"Ko'p buyurtma va charchagan paytda qanday tutasiz?",options:["Xotirjam va sifatli ishlashni davom ettiraman","Smena oxiriga qadar chidayman","Menejerni xabardor qilaman","Ish sifati biroz pasayadi, ammo bajaraman"]},
+    {id:"ba6",cat:"Stress",text:"Ko'p buyurtma va charchagan paytda qanday tutasiz?",options:["Xotirjam va sifatli ishlashni davom ettiraman","Smena oxiriga qadar chidayman","Menejerni xabardor qilaman","Ish sifati biroz pasayadi, ammo bajaraman"]},
     {id:"ba7",cat:"Jamoa",text:"Hamkasbingiz xato qilsa qanday harakat qilasiz?",options:["Xushmuomalalik bilan to'g'ri usulni ko'rsataman","Menejerni xabardor qilaman","Hech narsa demay o'zim tuzataman","Bu mening ishim emas deb qoldiraman"]},
     {id:"ba8",cat:"Mijoz muloqoti",text:"Yangi mijoz menyuni tushunmasa nima qilasiz?",options:["Sabr bilan har bir ichimlikni tushuntiraman","Mashhur ichimliklarni ko'rsataman","Menyuni berib o'qishiga kutaman","Tezroq tanlashini so'rayman"]},
     {id:"ba9",cat:"Rivojlanish",text:"Barista sifatida o'zingizni qanday rivojlantirasiz?",options:["Yangi texnika va retseptlarni o'rganaman","Treninglar va musobaqalarda qatnashaman","Tajribali baristalardan o'rganaman","Hozircha bilimim yetarli"]},
@@ -163,15 +171,15 @@ const POSITIONS={
   ]},
   sotuvchi:{label:"Sotuvchi",icon:"🛍️",questions:[
     {id:"so1",cat:"Sotuv texnikasi",text:"Mijoz 'qimmat' desa qanday javob berasiz?",options:["Mahsulot qiymatini va afzalliklarini tushuntiraman","Chegirma yoki aksiya taklif qilaman","Arzonroq alternativ ko'rsataman","Mijozning qaroriga hurmat bilan qo'shilaman"]},
-    {id:"so2",cat:"Mijoz bilan ishlash",text:"Sovuq qo'ng'iroqda birinchi 30 soniyada nima deysiz?",options:["O'zimni tanishtirish va qiziqish uyg'otuvchi savol","Mahsulot foydalari haqida to'liq ma'lumot beraman","Ularning muammosini topib yechim taklif qilaman","Qo'ng'iroq maqsadini to'g'ridan-to'g'ri aytaman"]},
-    {id:"so3",cat:"Natija",text:"Oylik sotuv rejangizni bajarish strategiyangiz?",options:["Katta mijozlarga e'tibor beraman","Ko'p kichik sotuvlar qilaman","Mavjud mijozlarni ushlab qolaman va referral so'rayman","Yangi mijozlar qidiraman"]},
+    {id:"so2",cat:"Mijoz bilan ishlash",text:"Sovuq qo'ng'iroqda birinchi 30 soniyada nima deysiz?",options:["O'zimni tanishtirish va qiziqish uyg'otuvchi savol","Mahsulot foydalari haqida to'liq ma'lumot","Ularning muammosini topib yechim taklif qilaman","Qo'ng'iroq maqsadini to'g'ridan-to'g'ri aytaman"]},
+    {id:"so3",cat:"Natija",text:"Oylik sotuv rejangizni bajarish strategiyangiz?",options:["Katta mijozlarga e'tibor beraman","Ko'p kichik sotuvlar qilaman","Mavjud mijozlarni ushlab qolaman","Yangi mijozlar qidiraman"]},
     {id:"so4",cat:"Rad etish",text:"Mijoz 'endi kerak emas' desa nima qilasiz?",options:["Kelgusida bog'lanish uchun ruxsat so'rayman","Sababini aniqlab, e'tirozni hal qilaman","Xayrlashib, munosabatni saqlaman","Yangi mijozga o'taman"]},
     {id:"so5",cat:"Mahsulot bilimi",text:"Mijoz siz bilmagan savol bersa nima qilasiz?",options:["Bilmasligimni aytib, aniqlab qaytaman","Taxmin bilan javob beraman","Texnik mutaxassisga yo'naltiraman","Mavzuni o'zgartiraman"]},
-    {id:"so6",cat:"Muloqot",text:"Muzokarada qaysi usul samaraliroq?",options:["Ko'proq tinglash, kam gapirish","Mahsulot afzalliklarini ko'p ta'kidlash","Mijoz ehtiyojiga mos yechim taklif qilish","Raqobatchilar bilan taqqoslash"]},
+    {id:"so6",cat:"Muloqot",text:"Muzokarada qaysi usul samaraliroq?",options:["Ko'proq tinglash, kam gapirish","Mahsulot afzalliklarini ta'kidlash","Mijoz ehtiyojiga mos yechim taklif qilish","Raqobatchilar bilan taqqoslash"]},
     {id:"so7",cat:"CRM",text:"Mijozlar ma'lumotlari bilan qanday ishlaysiz?",options:["CRM tizimida har bir muloqotni qayd etaman","Daftarga yozib olaman","Xotiramga ishonaman","Faqat yopilgan bitimlarni kiritaman"]},
     {id:"so8",cat:"Vaqt boshqaruvi",text:"Bir kunda nechta yangi mijoz bilan muloqot optimal?",options:["10-15 ta sifatli muloqot","20-30 ta ko'proq qamrab olish","5-7 ta chuqur muloqot","Miqdor muhim emas, sifat muhim"]},
     {id:"so9",cat:"Jamoa",text:"Hamkasbingiz sizning mijozingizga sotmoqchi bo'lsa?",options:["Mijoz bilan munosabatimni saqlab hamkorlik qilaman","Menejerga xabar beraman","Raqobatga kirishaman","Mijoz o'zi qaror qiladi"]},
-    {id:"so10",cat:"Rivojlanish",text:"Sotuv ko'nikmalaringizni qanday oshirasiz?",options:["Kitob o'qish va online kurslar","Treninglar va roleplay mashg'ulotlar","Tajribali sotuvchilardan o'rganaman","Amaliyot orqali o'z-o'zidan rivojlanaman"]},
+    {id:"so10",cat:"Rivojlanish",text:"Sotuv ko'nikmalaringizni qanday oshirasiz?",options:["Kitob o'qish va online kurslar","Treninglar va roleplay mashg'ulotlar","Tajribali sotuvchilardan o'rganaman","Amaliyot orqali rivojlanaman"]},
   ]},
   hr:{label:"HR",icon:"🤝",questions:[
     {id:"hr1",cat:"Yollash",text:"Eng mos nomzodni tanlashda qaysi mezonga e'tibor berasiz?",options:["Kasbiy ko'nikmalar va tajriba","Jamoa bilan moslik (culture fit)","O'sish potentsiali va o'rganish qobiliyati","Hamma mezonlar teng muhim"]},
@@ -188,7 +196,7 @@ const POSITIONS={
   tozalovchi:{label:"Tozalovchi",icon:"🧹",questions:[
     {id:"to1",cat:"Tartib",text:"Smena boshida birinchi nimani qilasiz?",options:["Jihozlar va materiallarni tekshirib, rejani tuzaman","Oldingidan qolgan ishlarni davom ettiraman","Mas'uldan ko'rsatma olaman","Darhol tozalashni boshlayman"]},
     {id:"to2",cat:"Kimyoviy vositalar",text:"Turli yuzalar uchun qaysi vositani tanlaysiz?",options:["Yuzaga qarab tegishli vositani tanlayman","Umumiy tozalovchi vositani hamma yerda ishlataman","Ishchi bergan narsani ishlataman","Ko'proq bo'lsa yaxshiroq deb ko'p ishlataman"]},
-    {id:"to3",cat:"Xavfsizlik",text:"Kimyoviy moddalar bilan ishlashda ehtiyot choralar?",options:["Qo'lqop, niqob va himoya kiyimini kiyaman","Faqat qo'lqop kiyaman","Ko'rsatmalarga qarab harakat qilaman","Odatda himoya vositasisiz ishlashga odatlanganman"]},
+    {id:"to3",cat:"Xavfsizlik",text:"Kimyoviy moddalar bilan ishlashda ehtiyot choralar?",options:["Qo'lqop, niqob va himoya kiyimini kiyaman","Faqat qo'lqop kiyaman","Ko'rsatmalarga qarab harakat qilaman","Himoya vositasisiz ishlashga odatlanganman"]},
     {id:"to4",cat:"Muammo hal qilish",text:"Kuchli dog' tozalab bo'lmayotgan joy bilan nima qilasiz?",options:["Maxsus vosita yoki texnika qidiraman","Mas'ulni xabardor qilaman","Qayta-qayta urinishni davom ettiraman","Boshqa joyga o'tib, keyinroq qaytaman"]},
     {id:"to5",cat:"Vaqt boshqaruvi",text:"Katta maydonni qisqa vaqtda tozalash kerak bo'lsa?",options:["Yuqoridan pastga, ichkaridan tashqariga usulida","Eng ko'zga ko'rinadigan joylarni birinchi","Har bir xonani to'liq yakunlab keyingisiga o'taman","Tez ko'zdan kechirib, muhimlarini birinchi qilaman"]},
     {id:"to6",cat:"Jihozlar",text:"Tozalash jihozi ishlamay qolsa nima qilasiz?",options:["Darhol mas'ulni xabardor qilib, muqobil vosita so'rayman","O'zim tuzatishga harakat qilaman","Qo'l bilan davom ettiraman","Jihoz tuzatilguncha kutaman"]},
@@ -204,7 +212,7 @@ function isValidPhone(p){return /^[\+]?[0-9]{9,13}$/.test(String(p||'').replace(
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
 
 let S={
-  user:null,userRole:null,userData:null,
+  isManager:false,managerName:'',
   page:'login',loginTab:'manager',
   regStep:1,
   regName:'',regEmail:'',regPhone:'',regAddress:'',regPosition:'',
@@ -212,7 +220,8 @@ let S={
   examAnswers:{},examStep:0,examResult:null,
   selfScore:0,selfNote:'',
   employees:[],exams:[],
-  search:'',toast:null,loading:true,
+  search:'',expandedId:null,
+  toast:null,loading:false,
 };
 
 function render(){
@@ -221,10 +230,14 @@ function render(){
     root.innerHTML='<div style="min-height:100vh;display:flex;align-items:center;justify-content:center"><div style="font-family:Playfair Display,serif;font-size:28px;color:#2c5f2e">Ottimo...</div></div>';
     return;
   }
-  if(!S.user){root.innerHTML=renderLogin();}
-  else{root.innerHTML=renderApp();}
+  if(!S.isManager&&S.loginTab==='manager'){root.innerHTML=renderLogin();return;}
+  if(S.loginTab==='employee'){root.innerHTML=renderLogin();return;}
+  root.innerHTML=renderApp();
 }
 
+// ══════════════════════════════════════════════════
+// LOGIN
+// ══════════════════════════════════════════════════
 function renderLogin(){
   return`
   ${S.toast?`<div class="toast toast-${S.toast.type}">${S.toast.msg}</div>`:''}
@@ -233,7 +246,7 @@ function renderLogin(){
       <div class="login-logo">Ottimo</div>
       <p class="login-tagline">Xodimlarni sinov muddatida baholash va rivojlantirish tizimi</p>
       <div style="margin-top:40px;display:flex;flex-direction:column;gap:14px">
-        ${Object.values(POSITIONS).map(p=>`<div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.75);font-size:14px;font-weight:500"><span style="font-size:20px">${p.icon}</span>${p.label}</div>`).join('')}
+        ${Object.values(POSITIONS).map(p=>`<div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.75);font-size:14px;font-weight:500"><span style="font-size:20px">${p.icon}</span>${p.label}</div>`).join('')}
       </div>
     </div>
     <div class="login-right">
@@ -252,18 +265,21 @@ function renderLogin(){
 
 function renderManagerLogin(){
   return`
-  <div class="field"><label>Email</label>
-    <input class="input" id="l-email" type="email" placeholder="rahbar@ottimo.uz"/>
+  <div class="field">
+    <label>Ism Familiya</label>
+    <input class="input" id="m-name" type="text" placeholder="Ism Familiya"/>
   </div>
-  <div class="field"><label>Parol</label>
-    <input class="input" id="l-pass" type="password" placeholder="••••••••"/>
+  <div class="field">
+    <label>Parol</label>
+    <input class="input" id="m-pass" type="password" placeholder="••••••••"/>
   </div>
-  <div class="field"><label>Ism (yangi hisob uchun)</label>
-    <input class="input" id="l-name" placeholder="Ism Familiya"/>
-  </div>
-  <button class="btn btn-primary btn-full btn-lg" style="margin-top:8px" onclick="doLogin()">Kirish →</button>`;
+  ${S.regErrors.manager?`<div class="input-error mb-12">⚠ ${S.regErrors.manager}</div>`:''}
+  <button class="btn btn-primary btn-full btn-lg" onclick="doManagerLogin()" style="margin-top:8px">Kirish →</button>`;
 }
 
+// ══════════════════════════════════════════════════
+// EMPLOYEE FLOW
+// ══════════════════════════════════════════════════
 function renderEmpFlow(){
   if(S.regStep===1)return renderStep1();
   if(S.regStep===2)return renderStep2();
@@ -308,10 +324,10 @@ function renderStep2(){
     <div class="step-dot done"></div><div class="step-dot active"></div><div class="step-dot"></div>
   </div>
   <div class="section-label">Kasbingizni tanlang</div>
-  ${S.regErrors.position?`<div class="input-error mb-16">⚠ Iltimos kasbni tanlang</div>`:''}
+  ${S.regErrors.position?`<div class="input-error mb-12">⚠ Iltimos kasbni tanlang</div>`:''}
   <div class="pos-grid" style="grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px">
     ${Object.entries(POSITIONS).map(([k,v])=>`
-    <div class="pos-card${S.regPosition===k?' selected':''}" onclick="pickPos('${k}')">
+    <div class="pos-card${S.regPosition===k?' selected':''}" onclick="S.regPosition='${k}';render()">
       <div class="check">✓</div>
       <div class="pos-icon">${v.icon}</div>
       <div class="pos-name">${v.label}</div>
@@ -350,13 +366,12 @@ function renderExam(){
   <div class="flex gap-8" style="margin-top:14px">
     <button class="btn btn-ghost" onclick="S.examStep=${qs.length-1};render()">← Orqaga</button>
     <button class="btn btn-primary" style="flex:1;justify-content:center" onclick="submitExam()">Yuborish ✓</button>
-  </div>
-  `:`
+  </div>`:`
   <div class="q-cat">${qs[step].cat}</div>
   <div class="q-text">${qs[step].text}</div>
   <div class="choices">
     ${qs[step].options.map((o,oi)=>`
-    <button class="choice${S.examAnswers[qs[step].id]===String(oi)?' selected':''}" onclick="pickAns('${qs[step].id}','${oi}')">${o}</button>`).join('')}
+    <button class="choice${S.examAnswers[qs[step].id]===String(oi)?' selected':''}" onclick="S.examAnswers['${qs[step].id}']='${oi}';render()">${o}</button>`).join('')}
   </div>
   <div class="flex gap-8" style="margin-top:22px">
     <button class="btn btn-ghost"${step===0?' disabled':''} onclick="S.examStep--;render()">← Oldingi</button>
@@ -367,8 +382,7 @@ function renderExam(){
 }
 
 function renderDone(){
-  const r=S.examResult;
-  if(!r)return'';
+  const r=S.examResult;if(!r)return'';
   const color=r.finalScore>=85?'var(--success)':r.finalScore>=65?'var(--warning)':'var(--danger)';
   const icon=r.finalScore>=85?'🏆':r.finalScore>=65?'📊':'📋';
   return`
@@ -386,12 +400,14 @@ function renderDone(){
   </div>`;
 }
 
+// ══════════════════════════════════════════════════
+// MANAGER APP
+// ══════════════════════════════════════════════════
 function renderApp(){
-  const pages=['home','employees','results'];
-  const labels={home:'Bosh sahifa',employees:'Hodimlar',results:'Natijalar'};
+  const pages=['home','results'];
+  const labels={home:'Bosh sahifa',results:'Natijalar'};
   let content='';
   if(S.page==='home')content=renderHome();
-  else if(S.page==='employees')content=renderEmployees();
   else if(S.page==='results')content=renderResults();
   return`
   ${S.toast?`<div class="toast toast-${S.toast.type}">${S.toast.msg}</div>`:''}
@@ -400,8 +416,8 @@ function renderApp(){
       <div class="logo"><div class="logo-dot"></div>Ottimo</div>
       <nav class="nav">${pages.map(p=>`<button class="nav-btn${S.page===p?' active':''}" onclick="S.page='${p}';render()">${labels[p]}</button>`).join('')}</nav>
       <div class="user-chip" onclick="doLogout()">
-        <div class="avatar">${(S.userData?.name||S.user.email)[0].toUpperCase()}</div>
-        <span style="font-weight:600">${S.userData?.name||'Rahbar'}</span>
+        <div class="avatar">${(S.managerName||'R')[0].toUpperCase()}</div>
+        <span style="font-weight:600">${S.managerName||'Rahbar'}</span>
         <span style="color:var(--muted);font-size:12px">↗ Chiqish</span>
       </div>
     </div>
@@ -419,7 +435,7 @@ function renderHome(){
     <h1 style="font-size:32px;margin-bottom:4px">Bosh sahifa</h1>
     <p style="color:var(--muted);font-size:14px;margin-bottom:28px">Ottimo HR — Sinov muddati boshqaruvi</p>
     <div class="grid-4 mb-24">
-      ${[{l:'Hodimlar',v:S.employees.length,c:'var(--accent)'},{l:'Qabul qilindi',v:passed,c:'var(--success)'},{l:'Monitoring',v:monitor,c:'var(--warning)'},{l:"O'rtacha ball",v:avg+'%',c:'var(--info)'}]
+      ${[{l:'Jami topshirdi',v:S.exams.length,c:'var(--accent)'},{l:'Qabul qilindi',v:passed,c:'var(--success)'},{l:'Monitoring',v:monitor,c:'var(--warning)'},{l:"O'rtacha ball",v:avg+'%',c:'var(--info)'}]
         .map(s=>`<div class="card-sm"><div class="stat-val" style="color:${s.c}">${s.v}</div><div class="stat-label">${s.l}</div></div>`).join('')}
     </div>
     <div class="grid-2">
@@ -439,7 +455,7 @@ function renderHome(){
           </div>`).join('')}
       </div>
       <div class="card">
-        <div class="section-label">Kasblar bo'yicha</div>
+        <div class="section-label">Kasblar bo'yicha statistika</div>
         ${Object.entries(POSITIONS).map(([k,v])=>{
           const cnt=S.exams.filter(e=>e.position===k).length;
           const av=cnt?Math.round(S.exams.filter(e=>e.position===k).reduce((a,e)=>a+e.finalScore,0)/cnt):0;
@@ -452,39 +468,16 @@ function renderHome(){
   </div>`;
 }
 
-function renderEmployees(){
-  const f=S.employees.filter(e=>(e.name||'').toLowerCase().includes(S.search.toLowerCase())||(e.position||'').toLowerCase().includes(S.search.toLowerCase()));
-  return`
-  <div class="fade-up">
-    <h1 style="font-size:28px;margin-bottom:20px">Hodimlar</h1>
-    <input class="input mb-20" placeholder="Qidirish…" value="${esc(S.search)}" oninput="S.search=this.value;render()" style="max-width:360px"/>
-    ${f.length===0?`<div class="card" style="text-align:center;padding:48px"><p style="color:var(--muted)">Hodim topilmadi</p></div>`:`
-    <div class="table-wrap"><table>
-      <thead><tr><th>Hodim</th><th>Kasb</th><th>Telefon</th><th>Manzil</th><th>Sinov</th><th>Holat</th></tr></thead>
-      <tbody>${f.map(e=>{
-        const dl=e.startDate?daysLeft(e.startDate):null;
-        const last=S.exams.filter(x=>x.email===e.email).slice(-1)[0];
-        return`<tr>
-          <td><div class="flex gap-12">
-            <div style="width:34px;height:34px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">${POSITIONS[e.position]?.icon||'👤'}</div>
-            <div><div style="font-weight:600">${e.name}</div><div style="font-size:12px;color:var(--muted)">${e.email||''}</div></div>
-          </div></td>
-          <td><span class="badge badge-gray">${POSITIONS[e.position]?.label||e.position||'—'}</span></td>
-          <td style="color:var(--muted);font-size:13px">${e.phone||'—'}</td>
-          <td style="color:var(--muted);font-size:13px;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${e.address||'—'}</td>
-          <td>${dl===null?'—':dl>0?`<span class="badge ${dl<=7?'badge-amber':'badge-blue'}">${dl} kun</span>`:'<span class="badge badge-red">Tugadi</span>'}</td>
-          <td>${last?scoreBadge(last.finalScore):'<span class="badge badge-gold">Kutilmoqda</span>'}</td>
-        </tr>`;}).join('')}
-      </tbody>
-    </table></div>`}
-  </div>`;
-}
-
+// ══════════════════════════════════════════════════
+// NATIJALAR — SAVOLLAR VA JAVOBLAR BILAN
+// ══════════════════════════════════════════════════
 function renderResults(){
-  const sorted=[...S.exams].sort((a,b)=>b.timestamp-a.timestamp);
-  const passed=sorted.filter(e=>e.finalScore>=85).length;
-  const monitor=sorted.filter(e=>e.finalScore>=65&&e.finalScore<85).length;
-  const failed=sorted.filter(e=>e.finalScore<65).length;
+  const search=S.search.toLowerCase();
+  const sorted=[...S.exams].sort((a,b)=>b.timestamp-a.timestamp)
+    .filter(e=>(e.employeeName||'').toLowerCase().includes(search)||(e.position||'').toLowerCase().includes(search));
+  const passed=S.exams.filter(e=>e.finalScore>=85).length;
+  const monitor=S.exams.filter(e=>e.finalScore>=65&&e.finalScore<85).length;
+  const failed=S.exams.filter(e=>e.finalScore<65).length;
   return`
   <div class="fade-up">
     <h1 style="font-size:28px;margin-bottom:20px">Natijalar</h1>
@@ -492,31 +485,97 @@ function renderResults(){
       ${[{l:'Qabul (≥85%)',v:passed,c:'var(--success)'},{l:'Monitoring (65–84%)',v:monitor,c:'var(--warning)'},{l:'Rad (< 65%)',v:failed,c:'var(--danger)'}]
         .map(s=>`<div class="card-sm"><div class="stat-val" style="color:${s.c}">${s.v}</div><div class="stat-label">${s.l}</div></div>`).join('')}
     </div>
-    ${sorted.length===0?`<div class="card" style="text-align:center;padding:48px"><p style="color:var(--muted)">Hali natija yo'q</p></div>`:`
-    <div class="table-wrap"><table>
-      <thead><tr><th>Hodim</th><th>Kasb</th><th>Telefon</th><th>Manzil</th><th>Sana</th><th>Ball</th><th>Holat</th></tr></thead>
-      <tbody>${sorted.map(ex=>`<tr>
-        <td><div class="flex gap-12">
-          <div style="width:32px;height:32px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">${POSITIONS[ex.position]?.icon||'👤'}</div>
-          <div><div style="font-weight:600">${ex.employeeName}</div><div style="font-size:12px;color:var(--muted)">${ex.email||''}</div></div>
-        </div></td>
-        <td><span class="badge badge-gray">${POSITIONS[ex.position]?.label||ex.position||'—'}</span></td>
-        <td style="font-size:13px;color:var(--muted)">${ex.phone||'—'}</td>
-        <td style="font-size:13px;color:var(--muted);max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${ex.address||'—'}</td>
-        <td style="font-size:13px;color:var(--muted)">${ex.date||''}</td>
-        <td><span style="font-size:18px;font-weight:700;color:${ex.finalScore>=85?'var(--success)':ex.finalScore>=65?'var(--warning)':'var(--danger)'}">${ex.finalScore}%</span></td>
-        <td>${scoreBadge(ex.finalScore)}</td>
-      </tr>`).join('')}</tbody>
-    </table></div>`}
+    <input class="input mb-20" placeholder="Ism yoki kasb bo'yicha qidirish…" value="${esc(S.search)}"
+      oninput="S.search=this.value;render()" style="max-width:360px"/>
+    ${sorted.length===0?`<div class="card" style="text-align:center;padding:48px"><p style="color:var(--muted)">Natija topilmadi</p></div>`
+      :sorted.map(ex=>renderExamCard(ex)).join('')}
   </div>`;
 }
 
+function renderExamCard(ex){
+  const pos=POSITIONS[ex.position];
+  const isOpen=S.expandedId===ex.id;
+  const color=ex.finalScore>=85?'var(--success)':ex.finalScore>=65?'var(--warning)':'var(--danger)';
+
+  // Savollar va javoblarni tayyorlaymiz
+  let qaHtml='';
+  if(pos&&ex.answers){
+    pos.questions.forEach(q=>{
+      const ansIdx=ex.answers[q.id];
+      const ansText=ansIdx!==undefined&&ansIdx!==null&&q.options[parseInt(ansIdx)]
+        ?q.options[parseInt(ansIdx)]:'Javob berilmagan';
+      const isCorrect=parseInt(ansIdx)===0;
+      qaHtml+=`
+      <div class="qa-row">
+        <div class="qa-question">${q.cat}: ${q.text}</div>
+        <div class="qa-answer" style="background:${isCorrect?'var(--accent-light)':'#fdf3e3'};color:${isCorrect?'var(--accent)':'var(--warning)'}">
+          ${isCorrect?'✓':''} ${ansText}
+        </div>
+      </div>`;
+    });
+    // O'z bahosi
+    if(ex.selfScore){
+      const selfLabels=["A'lo","Yaxshi","O'rtacha","Rivojlanish kerak"];
+      qaHtml+=`<div class="qa-row">
+        <div class="qa-question">O'z-o'zini baholash</div>
+        <div class="qa-answer">${selfLabels[ex.selfScore-1]||''}</div>
+      </div>`;
+    }
+    if(ex.selfNote){
+      qaHtml+=`<div class="qa-row">
+        <div class="qa-question">Qo'shimcha izoh</div>
+        <div class="qa-answer" style="background:var(--card);color:var(--text)">${ex.selfNote}</div>
+      </div>`;
+    }
+  }
+
+  return`
+  <div class="card" style="margin-bottom:12px;padding:0;overflow:hidden">
+    <!-- Asosiy ma'lumot -->
+    <div style="padding:18px 20px">
+      <div class="flex-between" style="flex-wrap:wrap;gap:12px">
+        <div class="flex gap-12">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">${pos?.icon||'👤'}</div>
+          <div>
+            <div style="font-size:16px;font-weight:700">${ex.employeeName}</div>
+            <div style="font-size:13px;color:var(--muted);margin-top:2px">
+              <span class="badge badge-gray" style="margin-right:6px">${pos?.label||ex.position||'—'}</span>
+              ${ex.date||''}
+            </div>
+            <div style="font-size:12px;color:var(--muted);margin-top:4px">
+              📞 ${ex.phone||'—'} &nbsp;|&nbsp; 📧 ${ex.email||'—'} &nbsp;|&nbsp; 📍 ${ex.address||'—'}
+            </div>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:36px;font-weight:700;color:${color};font-family:'Playfair Display',serif;line-height:1">${ex.finalScore}%</div>
+          <div style="margin-top:6px">${scoreBadge(ex.finalScore)}</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:6px">
+            Savol-javob: ${ex.empScore}% &nbsp;|&nbsp; O'z bahosi: ${ex.selfScorePct}%
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Savollar toggle -->
+    <div style="border-top:1px solid var(--border);padding:12px 20px;background:var(--card);cursor:pointer;display:flex;align-items:center;justify-content:space-between"
+      onclick="S.expandedId=S.expandedId==='${ex.id}'?null:'${ex.id}';render()">
+      <span style="font-size:13px;font-weight:700;color:var(--accent)">
+        ${isOpen?'▲ Savollar va javoblarni yashirish':'▼ Savollar va javoblarni ko\'rish'}
+      </span>
+      <span style="font-size:12px;color:var(--muted)">${pos?.questions.length||0} ta savol</span>
+    </div>
+    ${isOpen?`<div style="padding:0 20px 20px">${qaHtml}</div>`:''}
+  </div>`;
+}
+
+// ══════════════════════════════════════════════════
+// HELPERS
+// ══════════════════════════════════════════════════
 function scoreBadge(s){
   if(s>=85)return'<span class="badge badge-green">✓ Qabul</span>';
   if(s>=65)return'<span class="badge badge-amber">◎ Monitoring</span>';
   return'<span class="badge badge-red">✗ Rad</span>';
 }
-function daysLeft(d){const end=new Date(new Date(d).getTime()+30*24*60*60*1000);return Math.ceil((end-new Date())/(1000*60*60*24));}
 function computeScore(answers,qs){
   let total=0,count=0;
   qs.forEach(q=>{
@@ -525,13 +584,33 @@ function computeScore(answers,qs){
   });
   return count?Math.round(total/count):50;
 }
+function showToast(msg,type='success'){
+  S.toast={msg,type};render();
+  setTimeout(()=>{S.toast=null;render();},3500);
+}
 
+// ══════════════════════════════════════════════════
+// ACTIONS
+// ══════════════════════════════════════════════════
 window.setTab=(t)=>{
-  Object.assign(S,{loginTab:t,regStep:1,regName:'',regEmail:'',regPhone:'',regAddress:'',regPosition:'',regErrors:{},examAnswers:{},examStep:0,examResult:null,selfScore:0,selfNote:''});
+  Object.assign(S,{loginTab:t,regStep:1,regName:'',regEmail:'',regPhone:'',regAddress:'',regPosition:'',
+    regErrors:{},examAnswers:{},examStep:0,examResult:null,selfScore:0,selfNote:''});
   render();
 };
-window.pickPos=(k)=>{S.regPosition=k;render();};
-window.pickAns=(id,idx)=>{S.examAnswers[id]=idx;render();};
+
+window.doManagerLogin=()=>{
+  const name=document.getElementById('m-name')?.value?.trim()||'';
+  const pass=document.getElementById('m-pass')?.value||'';
+  if(!name){S.regErrors={manager:"Ism Familiyangizni kiriting"};render();return;}
+  if(pass!==MANAGER_PASSWORD){S.regErrors={manager:"Parol noto'g'ri"};render();return;}
+  S.isManager=true;S.managerName=name;S.regErrors={};S.page='home';
+  loadData().then(()=>render());
+};
+
+window.doLogout=()=>{
+  Object.assign(S,{isManager:false,managerName:'',page:'login',loginTab:'manager',regErrors:{}});
+  render();
+};
 
 window.goStep2=()=>{
   const name=document.getElementById('f-name')?.value?.trim()||'';
@@ -563,65 +642,23 @@ window.submitExam=async()=>{
   const final=Math.round(empScore*0.8+selfScorePct*0.2);
   const result={
     employeeName:S.regName,email:S.regEmail,phone:S.regPhone,address:S.regAddress,
-    position:S.regPosition,answers:S.examAnswers,empScore,selfScorePct,finalScore:final,
+    position:S.regPosition,answers:S.examAnswers,selfScore:S.selfScore,
+    empScore,selfScorePct,finalScore:final,
     selfNote:S.selfNote,date:new Date().toLocaleDateString('uz-UZ'),timestamp:Date.now(),
   };
   try{
     await addDoc(collection(db,'exams'),result);
-    await addDoc(collection(db,'employees'),{
-      name:S.regName,email:S.regEmail,phone:S.regPhone,address:S.regAddress,
-      position:S.regPosition,startDate:new Date().toISOString().split('T')[0],
-      status:final>=85?'passed':final>=65?'monitor':'failed',
-      lastScore:final,createdAt:serverTimestamp(),
-    });
-    await loadData();
     S.examResult=result;S.regStep=4;render();
   }catch(err){showToast('Xatolik: '+err.message,'danger');}
 };
 
-window.doLogin=async()=>{
-  const email=document.getElementById('l-email')?.value?.trim();
-  const pass=document.getElementById('l-pass')?.value;
-  const name=document.getElementById('l-name')?.value?.trim();
-  if(!email||!pass)return showToast('Email va parol kiriting','danger');
-  if(!isValidEmail(email))return showToast("To'g'ri email kiriting: ism@gmail.com",'danger');
-  try{
-    let cred;
-    try{cred=await signInWithEmailAndPassword(auth,email,pass);}
-    catch{
-      if(!name)return showToast("Yangi hisob: ismingizni kiriting",'danger');
-      cred=await createUserWithEmailAndPassword(auth,email,pass);
-      await setDoc(doc(db,'users',cred.user.uid),{name,email,role:'manager',createdAt:serverTimestamp()});
-    }
-  }catch(err){
-    const m={'auth/wrong-password':"Parol noto'g'ri",'auth/user-not-found':'Foydalanuvchi topilmadi','auth/invalid-credential':"Email yoki parol noto'g'ri"};
-    showToast(m[err.code]||'Xatolik: '+err.message,'danger');
-  }
-};
-window.doLogout=async()=>await signOut(auth);
-
-function showToast(msg,type='success'){
-  S.toast={msg,type};render();
-  setTimeout(()=>{S.toast=null;render();},3500);
-}
 async function loadData(){
   try{
-    const[emps,exs]=await Promise.all([
-      getDocs(collection(db,'employees')),
-      getDocs(query(collection(db,'exams'),orderBy('timestamp','desc'))),
-    ]);
-    S.employees=emps.docs.map(d=>({id:d.id,...d.data()}));
+    const exs=await getDocs(query(collection(db,'exams'),orderBy('timestamp','desc')));
     S.exams=exs.docs.map(d=>({id:d.id,...d.data()}));
   }catch(e){console.warn(e);}
 }
-onAuthStateChanged(auth,async(user)=>{
-  if(user){
-    const ud=await getDoc(doc(db,'users',user.uid));
-    S.user=user;S.userData=ud.exists()?ud.data():null;
-    S.page='home';await loadData();
-  }else{S.user=null;S.userData=null;S.page='login';}
-  S.loading=false;render();
-});
+
 render();
 </script>
 </body>
