@@ -1,131 +1,132 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="uz">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Ottimo — Sinov tizimi</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<title>Ottimo HR</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-:root{
-  --bg:#faf9f7;--surface:#fff;--card:#f4f2ee;--border:#e8e4dc;
-  --accent:#2c5f2e;--accent2:#4a8c4d;--accent-light:#e8f0e8;
-  --gold:#c8973a;--gold-light:#fdf3e3;
-  --text:#1a1a18;--muted:#6b6860;--muted2:#9b9890;
-  --success:#2c7a4b;--warning:#b87a1a;--danger:#b83c3c;--info:#2a5fa8;
-  --radius:14px;--radius-sm:8px;
-  --shadow:0 2px 16px rgba(0,0,0,.08);--shadow-lg:0 8px 40px rgba(0,0,0,.12);
-}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;font-size:15px;line-height:1.6;min-height:100vh}
-h1,h2,h3{font-family:'Playfair Display',serif}
-.topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.06)}
-.logo{font-family:'Playfair Display',serif;font-size:22px;color:var(--accent);display:flex;align-items:center;gap:8px}
-.logo-dot{width:8px;height:8px;background:var(--gold);border-radius:50%}
-.nav{display:flex;gap:2px}
-.nav-btn{background:transparent;border:none;color:var(--muted);padding:8px 16px;border-radius:var(--radius-sm);cursor:pointer;font-size:13px;font-family:'Nunito',sans-serif;font-weight:600;transition:all .2s}
-.nav-btn:hover{color:var(--text);background:var(--card)}
-.nav-btn.active{color:var(--accent);background:var(--accent-light)}
-.user-chip{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:24px;padding:6px 14px 6px 8px;font-size:13px;cursor:pointer;font-weight:500}
-.avatar{width:28px;height:28px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff}
-.main{padding:36px 32px;max-width:1040px;margin:0 auto;width:100%}
-.app{display:flex;flex-direction:column;min-height:100vh}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
-.card-sm{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;box-shadow:0 1px 6px rgba(0,0,0,.05)}
-.section-label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.flex{display:flex;align-items:center}
-.flex-between{display:flex;align-items:center;justify-content:space-between}
-.gap-8{gap:8px}.gap-12{gap:12px}
-.mb-12{margin-bottom:12px}.mb-16{margin-bottom:16px}.mb-20{margin-bottom:20px}.mb-24{margin-bottom:24px}
-.stat-val{font-family:'Playfair Display',serif;font-size:40px;line-height:1;margin-bottom:4px}
-.stat-label{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
-.badge{display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px}
-.badge-green{background:#e8f5ee;color:#2c7a4b;border:1px solid #b8ddc8}
-.badge-amber{background:#fdf3e3;color:#b87a1a;border:1px solid #f0d49a}
-.badge-red{background:#fdf0f0;color:#b83c3c;border:1px solid #f0c4c4}
-.badge-gray{background:var(--card);color:var(--muted);border:1px solid var(--border)}
-.btn{display:inline-flex;align-items:center;gap:6px;border:none;border-radius:var(--radius-sm);padding:11px 20px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;cursor:pointer;transition:all .2s}
-.btn-primary{background:var(--accent);color:#fff}
-.btn-primary:hover{background:var(--accent2);transform:translateY(-1px)}
-.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border)}
-.btn-ghost:hover{color:var(--text);background:var(--card)}
-.btn:disabled{opacity:.4;cursor:not-allowed;transform:none!important}
+:root{
+  --bg:#f8f7f4;--surface:#fff;--card:#f2f0ec;--border:#e5e1d8;
+  --accent:#2c5f2e;--accent2:#3d7a40;--accent-light:#eaf2ea;
+  --gold:#c8973a;--text:#1a1a18;--muted:#6b6860;--muted2:#a09d97;
+  --success:#2c7a4b;--warn:#b87a1a;--danger:#b83c3c;
+  --r:12px;--r2:8px;--sh:0 2px 12px rgba(0,0,0,.07);
+}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+/* TOPBAR */
+.topbar{background:var(--surface);border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;z-index:50;box-shadow:var(--sh)}
+.logo{font-family:'Playfair Display',serif;font-size:20px;color:var(--accent)}
+.nav button{background:none;border:none;padding:7px 14px;border-radius:var(--r2);font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer}
+.nav button.on{color:var(--accent);background:var(--accent-light)}
+.chip{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:5px 12px 5px 6px;font-size:13px;font-weight:600;cursor:pointer}
+.av{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+/* MAIN */
+.main{max-width:960px;margin:0 auto;padding:32px 24px}
+/* CARDS */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
+.csm{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+/* BADGES */
+.badge{display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px}
+.bg{background:#e8f5ee;color:#2c7a4b;border:1px solid #b8ddc8}
+.ba{background:#fdf3e3;color:#b87a1a;border:1px solid #f0d49a}
+.br{background:#fdf0f0;color:#b83c3c;border:1px solid #f0c4c4}
+.bb{background:#e8f0fc;color:#2a5fa8;border:1px solid #b8cef0}
+.bgold{background:#fdf3e3;color:var(--gold);border:1px solid #f0d49a}
+.bgray{background:var(--card);color:var(--muted);border:1px solid var(--border)}
+/* BTNS */
+.btn{display:inline-flex;align-items:center;gap:5px;border:none;border-radius:var(--r2);padding:10px 18px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;cursor:pointer;transition:all .18s}
+.btn-p{background:var(--accent);color:#fff}
+.btn-p:hover{background:var(--accent2)}
+.btn-g{background:transparent;color:var(--muted);border:1px solid var(--border)}
+.btn-g:hover{color:var(--text);background:var(--card)}
 .btn-full{width:100%;justify-content:center}
-.btn-lg{padding:14px 28px;font-size:15px;border-radius:var(--radius)}
-.field{margin-bottom:16px}
-.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
-.input{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;color:var(--text);font-size:14px;font-family:'Nunito',sans-serif;outline:none;transition:border .2s;font-weight:500}
-.input:focus{border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 3px rgba(44,95,46,.08)}
-.input.error{border-color:var(--danger)}
-.input::placeholder{color:var(--muted2)}
-.input-hint{font-size:12px;color:var(--muted);margin-top:4px}
-.input-error{font-size:12px;color:var(--danger);margin-top:4px;font-weight:600}
-/* Kasb kartochkalar */
-.pos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
-.pos-card{background:var(--surface);border:2px solid var(--border);border-radius:var(--radius);padding:20px 14px;cursor:pointer;text-align:center;transition:all .2s;position:relative}
-.pos-card:hover{border-color:var(--accent2);background:var(--accent-light);transform:translateY(-2px)}
-.pos-card.selected{border-color:var(--accent);background:var(--accent-light)}
-.pos-card .pos-icon{font-size:30px;margin-bottom:8px}
-.pos-card .pos-name{font-size:13px;font-weight:700}
-/* Progress */
-.progress-track{height:5px;background:var(--border);border-radius:10px;overflow:hidden;margin:14px 0 6px}
-.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:10px;transition:width .5s ease}
-.q-cat{font-size:11px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
-.q-text{font-family:'Playfair Display',serif;font-size:20px;line-height:1.4;margin-bottom:20px}
-.choices{display:flex;flex-direction:column;gap:9px}
-.choice{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:12px 16px;cursor:pointer;font-size:14px;text-align:left;color:var(--text);font-family:'Nunito',sans-serif;font-weight:600;transition:all .2s;width:100%}
-.choice:hover{border-color:var(--accent2);background:var(--accent-light)}
-.choice.selected{background:var(--accent-light);border-color:var(--accent);color:var(--accent)}
-/* Login */
-.login-wrap{min-height:100vh;display:flex;background:var(--bg)}
-.login-left{flex:1;background:linear-gradient(145deg,var(--accent) 0%,#1a3d1c 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px;color:#fff}
-.login-logo{font-family:'Playfair Display',serif;font-size:44px;color:#fff;margin-bottom:12px}
-.login-tagline{font-size:14px;color:rgba(255,255,255,.7);line-height:1.7;text-align:center;max-width:260px}
-.login-right{width:480px;display:flex;align-items:flex-start;justify-content:center;padding:40px;overflow-y:auto;max-height:100vh}
-.login-box{width:100%;padding-top:20px}
-.login-title{font-family:'Playfair Display',serif;font-size:26px;margin-bottom:6px}
-.login-sub{color:var(--muted);font-size:14px;margin-bottom:20px}
-.login-tabs{display:flex;gap:4px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:4px;margin-bottom:20px}
-.login-tab{flex:1;padding:9px;border:none;border-radius:6px;cursor:pointer;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;background:transparent;color:var(--muted);transition:all .2s}
-.login-tab.active{background:var(--surface);color:var(--accent);box-shadow:0 1px 4px rgba(0,0,0,.1)}
-.step-dots{display:flex;gap:8px;margin-bottom:20px;justify-content:center}
-.step-dot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:all .3s}
-.step-dot.active{background:var(--accent);width:24px;border-radius:4px}
-.step-dot.done{background:var(--accent2)}
-/* Natija kartochka */
-.exam-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:14px;overflow:hidden;box-shadow:var(--shadow)}
-.exam-card-header{padding:18px 22px;cursor:pointer;transition:background .2s}
-.exam-card-header:hover{background:var(--card)}
-.exam-card-body{padding:0 22px 20px;border-top:1px solid var(--border)}
-.qa-item{padding:14px 0;border-bottom:1px solid var(--border)}
+.btn-lg{padding:13px 24px;font-size:14px}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+/* INPUTS */
+.field{margin-bottom:15px}
+.field label{display:block;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
+.inp{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r2);padding:11px 13px;color:var(--text);font-size:14px;font-family:'Nunito',sans-serif;font-weight:500;outline:none;transition:border .18s}
+.inp:focus{border-color:var(--accent);background:var(--surface)}
+.inp.err{border-color:var(--danger)}
+.inp::placeholder{color:var(--muted2)}
+.hint{font-size:11px;color:var(--muted);margin-top:3px}
+.errtxt{font-size:11px;color:var(--danger);font-weight:700;margin-top:3px}
+/* LOGIN */
+.lw{min-height:100vh;display:flex}
+.ll{width:340px;background:linear-gradient(150deg,var(--accent),#1a3d1c);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 36px;color:#fff;flex-shrink:0}
+.ll-logo{font-family:'Playfair Display',serif;font-size:40px;margin-bottom:10px}
+.ll-tag{font-size:13px;color:rgba(255,255,255,.7);text-align:center;line-height:1.6}
+.lr{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:40px 24px;overflow-y:auto}
+.lbox{width:100%;max-width:400px;padding-top:16px}
+.ltabs{display:flex;gap:3px;background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:3px;margin-bottom:20px}
+.ltab{flex:1;padding:8px;border:none;border-radius:6px;cursor:pointer;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;background:transparent;color:var(--muted)}
+.ltab.on{background:var(--surface);color:var(--accent)}
+/* STEPS */
+.dots{display:flex;gap:7px;justify-content:center;margin-bottom:20px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:all .3s}
+.dot.on{background:var(--accent);width:22px;border-radius:4px}
+.dot.dn{background:var(--accent2)}
+/* PROGRESS */
+.pbar{height:4px;background:var(--border);border-radius:10px;overflow:hidden;margin:12px 0 5px}
+.pfill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:10px;transition:width .4s}
+/* KASB */
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:18px}
+.pc{background:var(--surface);border:2px solid var(--border);border-radius:var(--r);padding:16px 12px;cursor:pointer;text-align:center;transition:all .2s;position:relative}
+.pc:hover{border-color:var(--accent2);background:var(--accent-light)}
+.pc.sel{border-color:var(--accent);background:var(--accent-light)}
+.pc .ck{position:absolute;top:7px;right:7px;width:18px;height:18px;background:var(--accent);border-radius:50%;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;opacity:0}
+.pc.sel .ck{opacity:1}
+/* SAVOL */
+.qcat{font-size:11px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px}
+.qtxt{font-family:'Playfair Display',serif;font-size:19px;line-height:1.45;margin-bottom:18px}
+.choices{display:flex;flex-direction:column;gap:8px}
+.ch{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r2);padding:11px 15px;cursor:pointer;font-size:14px;font-family:'Nunito',sans-serif;font-weight:600;text-align:left;width:100%;transition:all .18s;color:var(--text)}
+.ch:hover{border-color:var(--accent2);background:var(--accent-light)}
+.ch.sel{background:var(--accent-light);border-color:var(--accent);color:var(--accent)}
+/* RESULT CARD */
+.rcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);margin-bottom:10px;overflow:hidden;box-shadow:var(--sh)}
+.rcard-head{padding:16px 18px;cursor:pointer}
+.rcard-body{padding:0 18px 16px;border-top:1px solid var(--border)}
+.qa-item{padding:10px 0;border-bottom:1px solid var(--border)}
 .qa-item:last-child{border-bottom:none}
-.qa-num{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
-.qa-question{font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px;line-height:1.4}
-.qa-options{display:flex;flex-direction:column;gap:6px}
-.qa-option{font-size:13px;padding:8px 12px;border-radius:8px;font-weight:500;border:1px solid var(--border)}
-.qa-option.chosen{background:var(--accent-light);border-color:var(--accent);color:var(--accent);font-weight:700}
-.qa-option.not-chosen{background:var(--bg);color:var(--muted)}
-/* Toast */
-.toast{position:fixed;top:20px;right:20px;z-index:999;padding:14px 20px;border-radius:var(--radius-sm);font-size:13px;font-weight:600;animation:slideIn .3s ease;box-shadow:var(--shadow-lg);max-width:320px}
-.toast-success{background:var(--accent);color:#fff}
-.toast-danger{background:var(--danger);color:#fff}
-@keyframes slideIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-.fade-up{animation:fadeUp .4s ease}
-@media(max-width:768px){
-  .login-left{display:none}.login-right{width:100%;padding:24px;max-height:none}
-  .grid-3{grid-template-columns:1fr 1fr}
-  .pos-grid{grid-template-columns:1fr 1fr}.topbar{padding:0 16px}.main{padding:20px 16px}
+.qa-cat{font-size:10px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px}
+.qa-q{font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px}
+.qa-a{background:var(--accent-light);border-radius:6px;padding:6px 11px;font-size:12px;font-weight:700;color:var(--accent);display:inline-block}
+/* STAT */
+.sv{font-family:'Playfair Display',serif;font-size:38px;line-height:1;margin-bottom:3px}
+.sl{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+/* TABLE */
+.tw{overflow-x:auto;border-radius:var(--r);border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse}
+th{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;padding:11px 15px;text-align:left;border-bottom:1px solid var(--border);background:var(--card)}
+td{padding:12px 15px;border-bottom:1px solid var(--border);font-size:13px;font-weight:500}
+tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:var(--bg)}
+/* TOAST */
+.toast{position:fixed;top:18px;right:18px;z-index:999;padding:12px 18px;border-radius:var(--r2);font-size:13px;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,.15);max-width:300px}
+.ts{background:var(--accent);color:#fff}
+.td{background:var(--danger);color:#fff}
+@keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.fu{animation:fu .35s ease}
+@media(max-width:640px){
+  .ll{display:none}.lr{padding:20px 16px}
+  .g4,.g3{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}
+  .topbar{padding:0 14px}.main{padding:20px 14px}
 }
 </style>
 </head>
 <body>
-<div id="root"></div>
+<div id="app"></div>
 <script type="module">
 import{initializeApp}from"https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import{getFirestore,collection,addDoc,getDocs,query,orderBy}from"https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import{getFirestore,collection,addDoc,getDocs,query,orderBy,serverTimestamp}from"https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-const firebaseConfig={
+const FB={
   apiKey:"AIzaSyBkFbcT--VfrLe2ZMjxhmRAs1V7Svzx2Bg",
   authDomain:"ottimo-hr.firebaseapp.com",
   projectId:"ottimo-hr",
@@ -133,430 +134,475 @@ const firebaseConfig={
   messagingSenderId:"130893452321",
   appId:"1:130893452321:web:d70ddfc1fffc57a1c97f60"
 };
-const app=initializeApp(firebaseConfig);
-const db=getFirestore(app);
-const MANAGER_PASSWORD="688466";
+const db=getFirestore(initializeApp(FB));
 
-const POSITIONS={
-  menejer:{label:"Menejer",icon:"👔",questions:[
-    {id:"mn1",cat:"Rahbarlik",text:"Xodim ish rejasini bajarmasa birinchi nima qilasiz?",options:["Sababini aniqlab, yordam beraman","Ogohlantirib, muddatni uzaytiraman","Boshqa xodimga topshiraman","Darhol jazo chorasi ko'raman"]},
-    {id:"mn2",cat:"Qaror",text:"Ikki muhim ish bir vaqtda tushsa qanday harakat qilasiz?",options:["Muhimligiga qarab ustuvorlik belgilayman","Ikkalasini parallel bajaraman","Jamoaga taqsimlayman","Rahbardan ko'rsatma kutaman"]},
-    {id:"mn3",cat:"Muloqot",text:"Xodim siz bilan rozi bo'lmasa qanday muloqot qilasiz?",options:["Tinglash va birgalikda yechim topaman","O'z fikrimni to'g'ri deb davom ettiraman","Ovoz berish o'tkazaman","Rahbariyatga hisobot beraman"]},
-    {id:"mn4",cat:"Motivatsiya",text:"Jamoangiz ish sifati pasaysa nima qilasiz?",options:["Muammoni aniqlab, qo'llab-quvvatlayman","Rag'batlantirish tizimini ko'rib chiqaman","Umumiy yig'ilish o'tkazaman","Eng yaxshilarga bonus beraman"]},
-    {id:"mn5",cat:"Mijoz",text:"VIP mijoz shikoyat bilan kelsa nima qilasiz?",options:["Zudlik bilan shaxsan muloqot qilaman","Mas'ul xodimni yo'naltiraman","Kechirim so'rab, yechim taklif qilaman","Standart jarayon bo'yicha hal qilaman"]},
-    {id:"mn6",cat:"Hisobot",text:"Oylik ko'rsatkichlar past bo'lsa qanday taqdim etасиз?",options:["Sabablarni tahlil qilib, yechim rejasi taqdim etaman","Faqat natijani aytaman","Jamoani ayblayman","Keyingi oy yaxshilanadi deb va'da qilaman"]},
-    {id:"mn7",cat:"Yangi xodim",text:"Yangi xodimni jamoaga qo'shishda asosiy ustuvorlik?",options:["Mentor tayinlab, moslashishiga yordam beraman","Qo'llanma va yo'riqnoma tayyorlayman","Jamoa bilan tanishtirib qo'yaman","Faqat ish vazifalarini tushuntiraman"]},
-    {id:"mn8",cat:"Ziddiyat",text:"Ikki xodim o'rtasida jiddiy ziddiyat bo'lsa?",options:["Har ikki tomonni alohida tinglash va yechim topaman","Jamoa oldida hal qilamiz","HR ga topshiraman","Ogohlantirish beraman"]},
-    {id:"mn9",cat:"Innovatsiya",text:"Jamoada yangi g'oya taklif qilinsa qanday yondashasiz?",options:["Baholash mezonlari asosida ko'rib chiqaman","Darhol tatbiq etishga harakat qilaman","Rahbariyat bilan kelishaman","Avvalgi tajribaga asoslanib qaror qilaman"]},
-    {id:"mn10",cat:"Natija",text:"Kvartal davomidagi asosiy muvaffaqiyatingiz?",options:["Jamoa samaradorligini oshirdim","Yangi mijozlar jalb qildim","Jarayon va tizimlarni yaxshiladim","Xarajatlarni kamaytirishga erishdim"]},
+const TG_TOKEN="8738408299:AAEO_fJc_Izu4qcQRD_Kbj1lBCJV3bWtHM0";
+const TG_CHAT="8738408299";
+const MGR_PASS="688466";
+
+async function sendTelegram(text){
+  try{
+    await fetch("https://api.telegram.org/bot"+TG_TOKEN+"/sendMessage",{
+      method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({chat_id:TG_CHAT,text:text,parse_mode:"HTML"})
+    });
+  }catch(e){console.warn("TG error:",e);}
+}
+
+const POS={
+  menejer:{l:"Menejer",i:"👔",q:[
+    {id:"m1",c:"Rahbarlik",t:"Xodim ish rejasini bajarmasa birinchi nima qilasiz?",o:["Sababini aniqlab, yordam beraman","Ogohlantirib, muddatni uzaytiraman","Boshqa xodimga topshiraman","Darhol jazo chorasi ko'raman"]},
+    {id:"m2",c:"Qaror",t:"Ikki muhim ish bir vaqtda tushsa qanday harakat qilasiz?",o:["Muhimligiga qarab ustuvorlik belgilayman","Ikkalasini parallel bajaraman","Jamoaga taqsimlayman","Rahbardan ko'rsatma kutaman"]},
+    {id:"m3",c:"Muloqot",t:"Xodim siz bilan rozi bo'lmasa qanday muloqot qilasiz?",o:["Tinglash va birgalikda yechim topaman","O'z fikrimni to'g'ri deb davom ettiraman","Ovoz berish o'tkazaman","Rahbariyatga hisobot beraman"]},
+    {id:"m4",c:"Motivatsiya",t:"Jamoangiz ish sifati pasayib ketsa nima qilasiz?",o:["Muammoni aniqlab, qo'llab-quvvatlayman","Rag'batlantirish tizimini ko'rib chiqaman","Umumiy yig'ilish o'tkazaman","Eng yaxshi natija ko'rsatganlarga bonus beraman"]},
+    {id:"m5",c:"Mijoz",t:"VIP mijoz shikoyat bilan kelsa nima qilasiz?",o:["Zudlik bilan shaxsan muloqot qilaman","Mas'ul xodimni yo'naltiraman","Kechirim so'rab, yechim taklif qilaman","Standart jarayon bo'yicha hal qilaman"]},
+    {id:"m6",c:"Hisobot",t:"Oylik ko'rsatkichlar past bo'lsa rahbariyatga nima deysiz?",o:["Sabablarni tahlil qilib, yechim rejasi taqdim etaman","Faqat natijani aytaman","Jamoani ayblayman","Keyingi oy yaxshilanadi deb va'da qilaman"]},
+    {id:"m7",c:"Yangi xodim",t:"Yangi xodimni jamoaga qo'shishda asosiy ustuvorlik?",o:["Mentor tayinlab, moslashishiga yordam beraman","Qo'llanma va yo'riqnoma tayyorlayman","Jamoaga tanishtirib qo'yaman","Faqat ish vazifalarini tushuntiraman"]},
+    {id:"m8",c:"Ziddiyat",t:"Ikki xodim o'rtasida jiddiy ziddiyat bo'lsa?",o:["Har ikki tomonni alohida tinglash va yechim topaman","Jamoa oldida hal qilamiz","HR ga topshiraman","Ogohlantirish beraman"]},
+    {id:"m9",c:"Innovatsiya",t:"Jamoada yangi g'oya taklif qilinsa qanday yondashasiz?",o:["Baholash mezonlari asosida ko'rib chiqaman","Darhol tatbiq etishga harakat qilaman","Rahbariyat bilan kelishaman","Avvalgi tajribaga asoslanib qaror qilaman"]},
+    {id:"m10",c:"Natija",t:"Kvartaldagi asosiy muvaffaqiyatingiz nimada bo'ldi?",o:["Jamoa samaradorligini oshirdim","Yangi mijozlar jalb qildim","Jarayon va tizimlarni yaxshiladim","Xarajatlarni kamaytirishga erishdim"]},
   ]},
-  barista:{label:"Barista",icon:"☕",questions:[
-    {id:"ba1",cat:"Texnika",text:"Espresso tayyorlashda eng muhim omil nima?",options:["Tortish vaqti (25-30 sek) va hajmi (25-30ml)","Kofe turi va qovurish darajasi","Suv harorati va bosimi","Kofe maydalash darajasi"]},
-    {id:"ba2",cat:"Sifat",text:"Mijoz qahvasi ta'mini yoqtirmasa nima qilasiz?",options:["Uzr so'rab darhol yangi tayyorlayman","Isitish uchun mikroto'lqin taklif qilaman","Menejerni chaqiraman","Mijoz noto'g'ri tanlagan deb hisoblayman"]},
-    {id:"ba3",cat:"Bilim",text:"Latte va cappuccino farqi nima?",options:["Latte ko'proq sut, cappuccino ko'proq ko'pik","Ikkalasi bir xil, faqat nomi farq qiladi","Cappuccino kuchliroq, latte yumshoqroq","Latte sovuq, cappuccino issiq served"]},
-    {id:"ba4",cat:"Tozalik",text:"Espresso mashinasini qachon tozalash kerak?",options:["Har smena boshida, oxirida va zarur bo'lganda","Faqat ko'zga ko'rinadigan kir bo'lganda","Hafta oxirida bir marta","Texnik xizmat vaqtida"]},
-    {id:"ba5",cat:"Mijoz",text:"Qahvadan allergiyasi bor mijoz kelsa nima qilasiz?",options:["Ingredientlarni tushuntirib, muqobil taklif qilaman","Doktor maslahatiga yo'naltiraman","Hech narsa demay kutaman","Faqat kutilgan mahsulotni beraman"]},
-    {id:"ba6",cat:"Tezlik",text:"Navbat uzayib ketsa qanday ish tartibini qo'llaysiz?",options:["Parallel tayyorlash: bir vaqtda bir nechta buyurtma","Tezlik uchun sifatni biroz pasaytiraman","Yordamchi so'rayman","Har bir buyurtmani tartibda bajaraman"]},
-    {id:"ba7",cat:"Yangi mahsulot",text:"Menyuga yangi ichimlik qo'shilsa qanday o'rganasiz?",options:["Retseptni yod olib, o'zim sinab ko'raman","Faqat ko'rsatma bo'lganda o'rganaman","Video darslardan qo'shimcha o'rganaman","Hamkasbdan so'rayman"]},
-    {id:"ba8",cat:"Muammo",text:"Mashina ishlamay qolsa smena o'rtasida nima qilasiz?",options:["Darhol mas'ulni xabardor qilib, mijozlarni ogohlantiraman","O'zim tuzatishga harakat qilaman","Smenani to'xtataman","Muqobil usul bilan davom etaman"]},
-    {id:"ba9",cat:"Jamoa",text:"Hamkasbingiz xato retsept ishlatayotganini ko'rsangiz?",options:["Xushmuomalalik bilan to'g'ri retseptni ko'rsataman","Menejerni xabardor qilaman","Hech narsa demay davom etaman","Mijoz shikoyat qilganidan keyin aytaman"]},
-    {id:"ba10",cat:"Mas'uliyat",text:"Smena oxirida ish joyi tartibsiz qolsa nima qilasiz?",options:["O'zim to'liq tozalab, keyingi smenani tayyorlab ketaman","Faqat o'z ish joyimni tozalayman","Keyingi smena o'zi tartibga soladi","Tez-tez tozalab, tartibli ushlab turaman"]},
+  barista:{l:"Barista",i:"☕",q:[
+    {id:"b1",c:"Texnika",t:"Espresso tayyorlashda eng muhim omil nima?",o:["Tortish vaqti (25-30 sek) va hajmi (25-30ml)","Kofe turi va qovurish darajasi","Suv harorati va bosimi","Kofe maydalash darajasi"]},
+    {id:"b2",c:"Sifat",t:"Mijoz qahvasi ta'mini yoqtirmasa nima qilasiz?",o:["Uzr so'rab darhol yangi tayyorlayman","Isitish uchun mikroto'lqin taklif qilaman","Kechirim so'rayman, lekin yangi tayyorlay olmayman","Menejerni chaqiraman"]},
+    {id:"b3",c:"Bilim",t:"Latte va cappuccino farqi nima?",o:["Latte ko'proq sut, cappuccino ko'proq ko'pik","Ikkalasi bir xil, faqat nomi farq qiladi","Cappuccino kuchliroq, latte yumshoqroq","Latte sovuq, cappuccino issiq servis qilinadi"]},
+    {id:"b4",c:"Tozalik",t:"Espresso mashinasini qachon tozalash kerak?",o:["Har smena boshida, oxirida va zarur bo'lganda","Faqat ko'zga ko'rinadigan kir bo'lganda","Hafta oxirida bir marta","Texnik xizmat vaqtida"]},
+    {id:"b5",c:"Mijoz",t:"Qahvadan allergiyasi bor mijoz kelsa nima qilasiz?",o:["Ingredientlarni batafsil tushuntirib, muqobil taklif qilaman","Doktor maslahatiga yo'naltiraman","Hech narsa demayman, o'zi biladi","Faqat kutilgan mahsulotni beraman"]},
+    {id:"b6",c:"Tezlik",t:"Navbat uzayib ketsa qanday ish tartibini qo'llaysiz?",o:["Parallel tayyorlash: bir vaqtda bir nechta buyurtma","Tezlik uchun sifatni biroz pasaytiraman","Yordamchi so'rayman","Har bir buyurtmani tartibda bajaraman"]},
+    {id:"b7",c:"Yangi mahsulot",t:"Menyuga yangi ichimlik qo'shilsa qanday o'rganasiz?",o:["Retseptni yod olib, o'zim sinab ko'raman","Faqat ko'rsatma bo'lganda o'rganaman","Internet va video darslardan qo'shimcha o'rganaman","Hamkasbdan so'rayman"]},
+    {id:"b8",c:"Muammo",t:"Mashina ishlamay qolsa smena o'rtasida nima qilasiz?",o:["Darhol mas'ulni xabardor qilib, mijozlarni ogohlantiraman","O'zim tuzatishga harakat qilaman","Smenani to'xtataman","Muqobil usul bilan davom etaman"]},
+    {id:"b9",c:"Jamoa",t:"Hamkasbingiz xato retsept ishlatayotganini ko'rsangiz?",o:["Xushmuomalalik bilan to'g'ri retseptni ko'rsataman","Menejerni xabardor qilaman","Hech narsa demay davom etaman","Mijoz shikoyat qilganidan keyin aytaman"]},
+    {id:"b10",c:"Mas'uliyat",t:"Smena oxirida ish joyi tartibsiz qolsa nima qilasiz?",o:["O'zim to'liq tozalab, keyingi smenani tayyorlab ketaman","Faqat o'z ish joyimni tozalayman","Keyingi smena o'zi tartibga soladi","Tez-tez tozalab, tartibli ushlab turaman"]},
   ]},
-  sotuvchi:{label:"Sotuvchi",icon:"🛍️",questions:[
-    {id:"so1",cat:"Sotuv",text:"Mijoz mahsulot narxini qimmat desa qanday javob berasiz?",options:["Mahsulotning qiymatini va uzoq muddatli foydasini tushuntiraman","Chegirma beraman","Arzonroq variantni taklif qilaman","Narx bozor narxiga mos deb tushuntiraman"]},
-    {id:"so2",cat:"Ehtiyoj",text:"Mijozning haqiqiy ehtiyojini aniqlash uchun nima qilasiz?",options:["Ochiq savollar beraman va diqqat bilan tinglayman","Mahsulotlarimizni birin-ketin taqdim etaman","Eng mashhur mahsulotni taklif qilaman","Mijoz o'zi so'raganini beraman"]},
-    {id:"so3",cat:"Rad etish",text:"Mijoz 'O'ylab ko'raman' desa qanday harakat qilasiz?",options:["Asosiy savollarni aniqlab, shubhalarni bartaraf etaman","Qayta qo'ng'iroq vaqtini belgilab ruxsat so'rayman","Yangi taklif bilan chiqaman","Xayrlashib, keyingi mijozga o'taman"]},
-    {id:"so4",cat:"Bilim",text:"Raqobatchi mahsulotidan afzalligimizni qanday tushuntirasiz?",options:["Aniq faktlar va farqlarni ko'rsataman","Raqobatchilarni tanqid qilaman","Narq jihatiga e'tibor qarataman","Faqat o'z mahsulotimiz haqida gapiraman"]},
-    {id:"so5",cat:"Taqdimot",text:"Yangi mijozga mahsulot taqdimotini qanday boshlaysiz?",options:["Avval mijoz ehtiyojini aniqlayman, so'ng mahsulotni ko'rsataman","Mahsulotning barcha xususiyatlarini batafsil aytaman","Demo ko'rsataman","Muvaffaqiyatli mijozlar misolini keltiraman"]},
-    {id:"so6",cat:"Munosabat",text:"Mijoz bilan uzoq muddatli munosabat qurish uchun?",options:["Sotuvdan keyin ham xabardor bo'lib turaman","Har oy yangi takliflar yuboraman","Bayramlarda tabriklayman","Faqat yangi mahsulot chiqqanda muloqot qilaman"]},
-    {id:"so7",cat:"Reja",text:"Oylik reja bajarilmayotganini sezsa qanday harakat qilasiz?",options:["Sabablarni tahlil qilib, strategiyani o'zgartiraman","Rahbariyatga aytaman","Qolgan kunlarda ikki barobar harakat qilaman","Keyingi oyga umid qilaman"]},
-    {id:"so8",cat:"Guruh",text:"Jamoaviy sotuv loyihasida o'z vazifangiz nima?",options:["Aniq rolimni o'tab, jamoa muvaffaqiyatiga hissa qo'shaman","Eng ko'p sotuv qilishga intilaман","Loyiha rahbarini qo'llab-quvvatlayman","Jamoadan mustaqil ishlashni afzal ko'raman"]},
-    {id:"so9",cat:"Shikoyat",text:"Mijoz mahsulotdan norozi bo'lib qaytib kelsa?",options:["Muammoni tinglash, kechirim so'rash va yechim taklif qilish","Qaytarish yoki almashtirish tartibini tushuntiraman","Menejerga yo'naltiraman","Sababini aniqlab, imkon qadar hal qilaman"]},
-    {id:"so10",cat:"O'rganish",text:"Yangi mahsulot haqida qanday bilim olasiz?",options:["Barcha materiallarni o'qib, o'zim sinab ko'raman","Treninglar va prezentatsiyalarda qatnashaman","Hamkasblardan o'rganaman","Mijoz savollari orqali o'rganaman"]},
+  sotuvchi:{l:"Sotuvchi",i:"🛍️",q:[
+    {id:"s1",c:"Sotuv",t:"Mijoz mahsulot narxini qimmat desa qanday javob berasiz?",o:["Mahsulotning qiymatini va uzoq muddatli foydasini tushuntiraman","Chegirma beraman","Arzonroq variantni taklif qilaman","Narx bozor narxiga mos deb tushuntiraman"]},
+    {id:"s2",c:"Ehtiyoj",t:"Mijozning haqiqiy ehtiyojini aniqlash uchun nima qilasiz?",o:["Ochiq savollar beraman va diqqat bilan tinglayman","Mahsulotlarimizni birin-ketin taqdim etaman","Eng mashhur mahsulotni taklif qilaman","Mijoz o'zi so'raganini beraman"]},
+    {id:"s3",c:"Rad etish",t:"Mijoz 'O'ylab ko'raman' desa qanday harakat qilasiz?",o:["Asosiy savollarni aniqlab, shubhalarni bartaraf etaman","Qayta qo'ng'iroq vaqtini belgilab ruxsat so'rayman","Yangi taklif bilan chiqaman","Xayrlashib, keyingi mijozga o'taman"]},
+    {id:"s4",c:"Bilim",t:"Raqobatchi mahsulotidan afzalligimizni qanday tushuntirасиз?",o:["Aniq faktlar va farqlarni ko'rsataman","Raqobatchilarni tanqid qilaman","Narq jihatiga e'tibor qarataman","Faqat o'z mahsulotimiz haqida gapiraman"]},
+    {id:"s5",c:"Taqdimot",t:"Yangi mijozga mahsulot taqdimotini qanday boshlaysiz?",o:["Avval mijoz ehtiyojini aniqlayman, so'ng mahsulotni ko'rsataman","Mahsulotning barcha xususiyatlarini batafsil aytaman","Demo ko'rsataman","Muvaffaqiyatli mijozlar misolini keltiraman"]},
+    {id:"s6",c:"Munosabat",t:"Mijoz bilan uzoq muddatli munosabat qurish uchun nima qilasiz?",o:["Sotuvdan keyin ham xabardor bo'lib turaman","Har oy yangi takliflar yuboraman","Bayramlarda tabriklаyman","Faqat yangi mahsulot chiqqanda muloqot qilaman"]},
+    {id:"s7",c:"Reja",t:"Oylik reja bajarilmayotganini sezsa qanday harakat qilasiz?",o:["Sabablarni tahlil qilib, strategiyani o'zgartiraman","Rahbariyatga aytaman","Qolgan kunlarda ikki barobar harakat qilaman","Keyingi oyga umid qilaman"]},
+    {id:"s8",c:"Guruh",t:"Jamoaviy sotuv loyihasida o'z vazifangiz nima?",o:["Aniq rolimni o'tab, jamoa muvaffaqiyatiga hissa qo'shaman","Eng ko'p sotuv qilishga intilamаn","Loyiha rahbarini qo'llab-quvvatlayman","Jamoadan mustaqil ishlashni afzal ko'raman"]},
+    {id:"s9",c:"Shikoyat",t:"Mijoz mahsulotdan norozi bo'lib qaytib kelsa nima qilasiz?",o:["Muammoni tinglash, kechirim so'rash va yechim taklif qilish","Qaytarish yoki almashtirish tartibini tushuntiraman","Menejerga yo'naltiraman","Sababini aniqlab, imkon qadar hal qilaman"]},
+    {id:"s10",c:"O'rganish",t:"Yangi mahsulot haqida qanday bilim olasiz?",o:["Barcha materiallarni o'qib, o'zim sinab ko'raman","Treninglar va prezentatsiyalarda qatnashaman","Hamkasblardan o'rganaman","Mijoz savollari orqali o'rganaman"]},
   ]},
-  hr:{label:"HR",icon:"🤝",questions:[
-    {id:"hr1",cat:"Yollash",text:"Intervyu o'tkazishda qanday savollardan foydalanasiz?",options:["Vaziyatga asoslangan (STAR) savollar","Standart ish tajribasi savollari","Ko'proq shaxsiy va motivatsiya savollari","Texnik bilimni tekshiruvchi savollar"]},
-    {id:"hr2",cat:"Onboarding",text:"Yangi xodim birinchi haftada nimaga muhtoj?",options:["Aniq rol, mentor va ish muhiti bilan tanishish","Faqat hujjatlarni to'ldirish","Darhol ish boshlash","Jamoa bilan tanishish yig'ilishi"]},
-    {id:"hr3",cat:"Nizolar",text:"Bo'limlar o'rtasida mojaro yuzaga kelsa HR sifatida?",options:["Betaraf vositachi sifatida ikki tomonni tinglaman","Qoida va tartibga asosan qaror qilaman","Yuqori rahbariyatga topshiraman","Tomonlarni alohida yig'ib, yechim topaman"]},
-    {id:"hr4",cat:"Ishdan bo'shatish",text:"Xodimni bo'shatish zarur bo'lganda qanday harakat qilasiz?",options:["Qonuniy tartib va insoniy munosabat bilan o'tkazaman","Faqat hujjat va rasmiy jarayon","Xodimga oldindan ogohlantirish beraman","Menejer bilan birgalikda hal qilaman"]},
-    {id:"hr5",cat:"Siyosat",text:"Xodim kompaniya qoidasini buzsa nima qilasiz?",options:["Qoidabuzarlik darajasiga qarab tartib bo'yicha jazo chorasi","Avval suhbat, keyin rasmiy ogohlantirish","Darhol menejerga xabar beraman","Yozma ogohlantirish yuboraman"]},
-    {id:"hr6",cat:"Motivatsiya",text:"Xodimlar ish qoldirish ko'rsatkichi oshsa nimadan boshlayman?",options:["Exit interview va sabab tahlili","Ish sharoitini ko'rib chiqaman","Maosh va benefitlarni taqqoslayman","Xodimlar so'rovnomasini o'tkazaman"]},
-    {id:"hr7",cat:"Rivojlanish",text:"Xodim o'sishini qo'llab-quvvatlash uchun nima qilasiz?",options:["Individual rivojlanish rejasi (IDP) tuzaman","Treninglar va kurslar tashkil etaman","Mentorlik dasturini yo'lga qo'yaman","Ichki ko'tarilish imkoniyatlarini taqdim etaman"]},
-    {id:"hr8",cat:"Muhit",text:"Korporativ madaniyatni shakllantirishda HR roli nima?",options:["Qadriyatlarni tatbiq etuvchi tadbirlar va amaliyotlar","Faqat yangi xodimlarni o'rgatish","Rahbariyat ko'rsatmasini amalga oshirish","Xodimlar fikr-mulohazasini to'plash"]},
-    {id:"hr9",cat:"Qonun",text:"Xodim mehnat huquqlari haqida savol bersa nima qilasiz?",options:["To'g'ri ma'lumot beraman va kerak bo'lsa yuristga yo'naltiraman","Faqat kompaniya siyosatini tushuntiraman","Rahbariyatga havola qilaman","Standart javob tayyorlagiman"]},
-    {id:"hr10",cat:"Ma'lumot",text:"Xodimlar ma'lumotlarining maxfiyligi haqida yondashuvingiz?",options:["Qat'iy maxfiylik, faqat vakolatli shaxslarga ruxsat","Kompaniya ichida erkin almashish mumkin","Faqat HR ko'rishi mumkin","Ma'lumotlar bazasida saqlash yetarli"]},
+  hr:{l:"HR",i:"🤝",q:[
+    {id:"h1",c:"Yollash",t:"Intervyu o'tkazishda qanday savollardan foydalanasiz?",o:["Vaziyatga asoslangan (STAR) savollar","Standart ish tajribasi savollari","Ko'proq shaxsiy va motivatsiya savollari","Texnik bilimni tekshiruvchi savollar"]},
+    {id:"h2",c:"Onboarding",t:"Yangi xodim birinchi haftada nimaga muhtoj?",o:["Aniq rol va vazifalar, mentor va ish muhiti bilan tanishish","Faqat hujjatlarni to'ldirish","Darhol ish boshlash","Jamoa bilan tanishish yig'ilishi"]},
+    {id:"h3",c:"Nizo",t:"Bo'limlar o'rtasida mojaro yuzaga kelsa HR sifatida nima qilasiz?",o:["Betaraf vositachi sifatida ikki tomonni tinglaman","Qoida va tartibga asosan qaror qilaman","Yuqori rahbariyatga topshiraman","Tomonlarni alohida yig'ib, yechim topaman"]},
+    {id:"h4",c:"Bo'shatish",t:"Xodimni bo'shatish zarur bo'lganda qanday harakat qilasiz?",o:["Qonuniy tartib va insoniy munosabat bilan o'tkazaman","Faqat hujjat va rasmiy jarayon","Xodimga oldindan ogohlantirish beraman","Menejer bilan birgalikda hal qilaman"]},
+    {id:"h5",c:"Siyosat",t:"Xodim kompaniya qoidasini buzsa nima qilasiz?",o:["Qoidabuzarlik darajasiga qarab tartib bo'yicha jazo chorasi","Avval suhbat, keyin rasmiy ogohlantirish","Darhol menejerga xabar beraman","Yozma ogohlantirish yuboraman"]},
+    {id:"h6",c:"Motivatsiya",t:"Xodimlar ish qoldirish ko'rsatkichi oshsa nimadan boshlayman?",o:["Exit interview va sabab tahlili","Ish sharoitini ko'rib chiqaman","Maosh va benefitlarni taqqoslayman","Xodimlar so'rovnomasini o'tkazaman"]},
+    {id:"h7",c:"Rivojlanish",t:"Xodim o'sishini qo'llab-quvvatlash uchun nima qilasiz?",o:["Individual rivojlanish rejasi (IDP) tuzaman","Treninglar va kurslar tashkil etaman","Mentorlik dasturini yo'lga qo'yaman","Ichki ko'tarilish imkoniyatlarini taqdim etaman"]},
+    {id:"h8",c:"Madaniyat",t:"Korporativ madaniyatni shakllantirishda HR roli nima?",o:["Qadriyatlarni tatbiq etuvchi tadbirlar","Faqat yangi xodimlarni o'rgatish","Rahbariyat ko'rsatmasini amalga oshirish","Xodimlar fikr-mulohazasini to'plash"]},
+    {id:"h9",c:"Qonun",t:"Xodim mehnat huquqlari haqida savol bersa nima qilasiz?",o:["To'g'ri ma'lumot beraman va kerak bo'lsa yuristga yo'naltiraman","Faqat kompaniya siyosatini tushuntiraman","Rahbariyatga havola qilaman","Standart javob tayyorlagiman"]},
+    {id:"h10",c:"Maxfiylik",t:"Xodimlar ma'lumotlarining maxfiyligi bo'yicha yondashuvingiz?",o:["Qat'iy maxfiylik siyosati va ruxsatga asoslangan kirish","Faqat zarur hollarda maxfiy saqlayman","Umumiy bazada saqlayman","Har bir xodim o'z ma'lumotlarini boshqaradi"]},
   ]},
-  tozalovchi:{label:"Tozalovchi",icon:"🧹",questions:[
-    {id:"to1",cat:"Tartib",text:"Smena boshida birinchi nimani qilasiz?",options:["Jihozlar va materiallarni tekshirib, ish rejani tuzaman","Oldingidan qolgan ishlarni davom ettiraman","Mas'uldan ko'rsatma olaman","Darhol tozalashni boshlayman"]},
-    {id:"to2",cat:"Kimyoviy vositalar",text:"Turli yuzalar uchun qaysi vositani tanlaysiz?",options:["Yuzaga qarab tegishli vositani tanlayman","Umumiy tozalovchi vositani hamma yerda ishlataman","Ishchi bergan narsani ishlataman","Ko'proq bo'lsa yaxshiroq deb ko'p ishlataman"]},
-    {id:"to3",cat:"Xavfsizlik",text:"Kimyoviy moddalar bilan ishlashda ehtiyot choralar?",options:["Qo'lqop, niqob va himoya kiyimini kiyaman","Faqat qo'lqop kiyaman","Ko'rsatmalarga qarab harakat qilaman","Himoya vositasisiz ishlashga odatlanganman"]},
-    {id:"to4",cat:"Muammo",text:"Kuchli dog' tozalab bo'lmayotgan joy bilan nima qilasiz?",options:["Maxsus vosita yoki texnika qidiraman","Mas'ulni xabardor qilaman","Qayta-qayta urinishni davom ettiraman","Boshqa joyga o'tib, keyinroq qaytaman"]},
-    {id:"to5",cat:"Vaqt",text:"Katta maydonni qisqa vaqtda tozalash kerak bo'lsa?",options:["Yuqoridan pastga, ichkaridan tashqariga usulida","Eng ko'zga ko'rinadigan joylarni birinchi","Har bir xonani to'liq yakunlab keyingisiga o'taman","Tez ko'zdan kechirib, muhimlarini birinchi qilaman"]},
-    {id:"to6",cat:"Jihozlar",text:"Tozalash jihozi ishlamay qolsa nima qilasiz?",options:["Darhol mas'ulni xabardor qilib, muqobil vosita so'rayman","O'zim tuzatishga harakat qilaman","Qo'l bilan davom ettiraman","Jihoz tuzatilguncha kutaman"]},
-    {id:"to7",cat:"Sifat",text:"Ishingiz sifatini o'zingiz qanday nazorat qilasiz?",options:["Yakunlashdan oldin har joyni qayta tekshiraman","Cheklistdan foydalanaman","Nazoratchi fikriga tayanaman","Ko'zga ko'rinsa yetarli deb hisoblayman"]},
-    {id:"to8",cat:"Muloqot",text:"Tozalayotgan paytda biror kishi halaqit bersa?",options:["Xushmuomalalik bilan kutishni so'rayman","Ularni e'tiborsiz qoldirib ishni davom ettiraman","Keyin qilish uchun to'xtataman","Mas'ulni chaqiraman"]},
-    {id:"to9",cat:"Mas'uliyat",text:"Ish paytida biror narsani tasodifan sindirsangiz?",options:["Darhol mas'ulni xabardor qilaman","Yashirishga harakat qilaman","O'zim tuzataman yoki almashtiraman","Kimdir ko'rmasa aytmasam ham bo'ladi"]},
-    {id:"to10",cat:"Intizom",text:"Ish tugagandan keyin jihozlar bilan nima qilasiz?",options:["Jihozlarni tozalab, joy-joyiga qo'yaman va sarflarni qayd etaman","Tezda joyiga qo'yib ketaman","Ertangi smena o'zi qiladi deb qoldiraman","Mas'ul ko'rsatgan joyga qo'yaman"]},
+  tozalovchi:{l:"Tozalovchi",i:"🧹",q:[
+    {id:"t1",c:"Tartib",t:"Smena boshida birinchi nimani qilasiz?",o:["Jihozlar va materiallarni tekshirib, rejani tuzaman","Oldingidan qolgan ishlarni davom ettiraman","Mas'uldan ko'rsatma olaman","Darhol tozalashni boshlayman"]},
+    {id:"t2",c:"Vositalar",t:"Turli yuzalar uchun qaysi tozalash vositasini tanlaysiz?",o:["Yuzaga qarab tegishli vositani tanlayman","Umumiy tozalovchi vositani hamma yerda ishlataman","Ishchi bergan narsani ishlataman","Ko'proq bo'lsa yaxshiroq deb ko'p ishlataman"]},
+    {id:"t3",c:"Xavfsizlik",t:"Kimyoviy moddalar bilan ishlashda ehtiyot choralar?",o:["Qo'lqop, niqob va himoya kiyimini kiyaman","Faqat qo'lqop kiyaman","Ko'rsatmalarga qarab harakat qilaman","Himoya vositasisiz ishlashga odatlanganman"]},
+    {id:"t4",c:"Muammo",t:"Kuchli dog' tozalab bo'lmayotgan joy bilan nima qilasiz?",o:["Maxsus vosita yoki texnika qidiraman","Mas'ulni xabardor qilaman","Qayta-qayta urinishni davom ettiraman","Boshqa joyga o'tib, keyinroq qaytaman"]},
+    {id:"t5",c:"Vaqt",t:"Katta maydonni qisqa vaqtda tozalash kerak bo'lsa?",o:["Yuqoridan pastga, ichkaridan tashqariga usulida","Eng ko'zga ko'rinadigan joylarni birinchi","Har bir xonani to'liq yakunlab keyingisiga o'taman","Tez ko'zdan kechirib, muhimlarini birinchi qilaman"]},
+    {id:"t6",c:"Jihoz",t:"Tozalash jihozi ishlamay qolsa nima qilasiz?",o:["Darhol mas'ulni xabardor qilib, muqobil vosita so'rayman","O'zim tuzatishga harakat qilaman","Qo'l bilan davom ettiraman","Jihoz tuzatilguncha kutaman"]},
+    {id:"t7",c:"Sifat",t:"Ishingiz sifatini o'zingiz qanday nazorat qilasiz?",o:["Yakunlashdan oldin har joyni qayta tekshiraman","Cheklistdan foydalanaman","Mijozlar yoki nazoratchi fikriga tayanaman","Ko'zga ko'rinsa yetarli deb hisoblayman"]},
+    {id:"t8",c:"Muloqot",t:"Tozalayotgan paytda biror kishi halaqit bersa?",o:["Xushmuomalalik bilan kutishni so'rayman","Ularni e'tiborsiz qoldirib ishni davom ettiraman","Keyin qilish uchun to'xtataman","Mas'ulni chaqiraman"]},
+    {id:"t9",c:"Mas'uliyat",t:"Ish paytida biror narsani tasodifan sindirsangiz nima qilasiz?",o:["Darhol mas'ulni xabardor qilaman","Yashirishga harakat qilaman","O'zim tuzataman yoki almashtiraman","Kimdir ko'rmasa aytmasam ham bo'ladi"]},
+    {id:"t10",c:"Intizom",t:"Ish tugagandan keyin jihozlar bilan nima qilasiz?",o:["Jihozlarni tozalab, joy-joyiga qo'yaman va sarflarni qayd etaman","Tezda joyiga qo'yib ketaman","Ertangi smena o'zi qiladi deb qoldiraman","Mas'ul ko'rsatgan joyga qo'yaman"]},
   ]},
 };
 
-function isValidEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(e||'').trim())}
-function isValidPhone(p){return /^[\+]?[0-9]{9,13}$/.test(String(p||'').replace(/[\s\-\(\)]/g,''))}
-function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+// ── HELPERS ──
+function vEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test((e||'').trim())}
+function vPhone(p){return /^\+?[0-9]{9,13}$/.test((p||'').replace(/[\s\-\(\)]/g,''))}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function sbadge(s){
+  if(s>=85)return '<span class="badge bg">✓ Qabul</span>';
+  if(s>=65)return '<span class="badge ba">◎ Monitoring</span>';
+  return '<span class="badge br">✗ Rad</span>';
+}
+function score(ans,qs){
+  let t=0,c=0;
+  qs.forEach(function(q){
+    var idx=parseInt(ans[q.id]);
+    if(!isNaN(idx)&&idx>=0){t+=((q.o.length-idx)/q.o.length)*100;c++;}
+  });
+  return c?Math.round(t/c):50;
+}
 
-let S={
-  isManager:false,managerName:'',
-  page:'login',loginTab:'manager',
-  // hodim
-  regStep:1,
-  regName:'',regEmail:'',regPhone:'',regBirth:'',regAddress:'',regPosition:'',
-  regErrors:{},
-  examAnswers:{},examStep:0,examResult:null,
+// ── STATE ──
+var S={
+  tab:'manager', // manager | employee
   // manager
-  exams:[],search:'',expandedId:null,
+  mgr:false, mgrName:'',
+  page:'home', // home | results
+  exams:[], expandId:null,
+  srch:'',
+  // employee steps: 1=info, 2=kasb, 3=exam, 4=done
+  step:1,
+  name:'',email:'',phone:'',bdate:'',address:'',pos:'',
+  errs:{},
+  ans:{}, qstep:0,
+  result:null,
+  // ui
   toast:null,
 };
 
-function render(){
-  document.getElementById('root').innerHTML=
-    (!S.isManager) ? renderLogin() : renderApp();
+// ── RENDER ──
+function R(){
+  var h='';
+  if(S.toast) h+='<div class="toast '+(S.toast.t==='d'?'td':'ts')+'">'+S.toast.m+'</div>';
+
+  if(!S.mgr && S.tab==='manager'){
+    h+=renderLogin();
+  } else if(S.tab==='employee'){
+    h+=renderLogin();
+  } else {
+    h+=renderApp();
+  }
+  document.getElementById('app').innerHTML=h;
 }
 
-// ══════ LOGIN ══════
+// ── LOGIN PAGE ──
 function renderLogin(){
-  return`
-  ${S.toast?`<div class="toast toast-${S.toast.type}">${S.toast.msg}</div>`:''}
-  <div class="login-wrap">
-    <div class="login-left">
-      <div class="login-logo">Ottimo</div>
-      <p class="login-tagline">Xodimlarni sinov muddatida baholash va rivojlantirish tizimi</p>
-    </div>
-    <div class="login-right">
-      <div class="login-box fade-up">
-        <div class="login-title">${S.loginTab==='manager'?'Rahbar kirish':'Sinov imtihoni'}</div>
-        <div class="login-sub">${S.loginTab==='manager'?'Boshqaruv paneliga kirish':'Ma\'lumotlarni to\'ldiring'}</div>
-        <div class="login-tabs">
-          <button class="login-tab ${S.loginTab==='manager'?'active':''}" onclick="setTab('manager')">Rahbar</button>
-          <button class="login-tab ${S.loginTab==='employee'?'active':''}" onclick="setTab('employee')">Hodim</button>
-        </div>
-        ${S.loginTab==='manager'?renderMgrLogin():renderEmpFlow()}
-      </div>
-    </div>
-  </div>`;
+  return '<div class="lw">'
+    +'<div class="ll"><div class="ll-logo">Ottimo</div><p class="ll-tag">Xodimlarni sinov muddatida baholash tizimi</p></div>'
+    +'<div class="lr"><div class="lbox fu">'
+    +'<div style="font-family:\'Playfair Display\',serif;font-size:24px;margin-bottom:4px">'+(S.tab==='manager'?'Rahbar kirish':'Sinov imtihoni')+'</div>'
+    +'<div style="font-size:13px;color:var(--muted);margin-bottom:18px">'+(S.tab==='manager'?'Boshqaruv paneliga kirish':'Ma\'lumotlarni to\'ldiring')+'</div>'
+    +'<div class="ltabs">'
+    +'<button class="ltab '+(S.tab==='manager'?'on':'')+'" onclick="ST(\'manager\')">Rahbar</button>'
+    +'<button class="ltab '+(S.tab==='employee'?'on':'')+'" onclick="ST(\'employee\')">Hodim</button>'
+    +'</div>'
+    +(S.tab==='manager'?renderMgrLogin():renderEmpFlow())
+    +'</div></div></div>';
 }
 
 function renderMgrLogin(){
-  return`
-  <div class="field"><label>Ism Familiya</label>
-    <input class="input" id="m-name" type="text" placeholder="Ism Familiya"/>
-  </div>
-  <div class="field"><label>Parol</label>
-    <input class="input" id="m-pass" type="password" placeholder="••••••••"/>
-  </div>
-  ${S.regErrors.mgr?`<div class="input-error mb-12">⚠ ${S.regErrors.mgr}</div>`:''}
-  <button class="btn btn-primary btn-full btn-lg" onclick="doMgrLogin()" style="margin-top:8px">Kirish →</button>`;
+  return '<div class="field"><label>Ism Familiya</label>'
+    +'<input class="inp" id="mn" type="text" placeholder="Ism Familiya"/></div>'
+    +'<div class="field"><label>Parol</label>'
+    +'<input class="inp" id="mp" type="password" placeholder="••••••••"/></div>'
+    +(S.errs.mgr?'<div class="errtxt">⚠ '+S.errs.mgr+'</div>':'')
+    +'<button class="btn btn-p btn-full btn-lg" style="margin-top:10px" onclick="doMgr()">Kirish →</button>';
 }
 
-// ══════ HODIM OQIMI ══════
+// ── EMPLOYEE FLOW ──
 function renderEmpFlow(){
-  if(S.regStep===1)return renderStep1();
-  if(S.regStep===2)return renderStep2();
-  if(S.regStep===3)return renderExam();
-  if(S.regStep===4)return renderDone();
-  return renderStep1();
+  if(S.step===1) return renderE1();
+  if(S.step===2) return renderE2();
+  if(S.step===3) return renderE3();
+  if(S.step===4) return renderE4();
+  return renderE1();
 }
 
-function renderStep1(){
-  const e=S.regErrors;
-  return`
-  <div class="step-dots">
-    <div class="step-dot active"></div><div class="step-dot"></div><div class="step-dot"></div>
-  </div>
-  <div class="section-label">Shaxsiy ma'lumotlar</div>
-  <div class="field"><label>Ism va familiya *</label>
-    <input class="input${e.name?' error':''}" id="f-name" type="text" placeholder="To'liq ismingiz" value="${esc(S.regName)}"/>
-    ${e.name?`<div class="input-error">⚠ ${e.name}</div>`:''}
-  </div>
-  <div class="field"><label>Email *</label>
-    <input class="input${e.email?' error':''}" id="f-email" type="email" placeholder="email@gmail.com" value="${esc(S.regEmail)}"/>
-    ${e.email?`<div class="input-error">⚠ ${e.email}</div>`:`<div class="input-hint">To'g'ri format: ism@gmail.com</div>`}
-  </div>
-  <div class="field"><label>Telefon *</label>
-    <input class="input${e.phone?' error':''}" id="f-phone" type="tel" placeholder="+998901234567" value="${esc(S.regPhone)}"/>
-    ${e.phone?`<div class="input-error">⚠ ${e.phone}</div>`:`<div class="input-hint">Masalan: +998901234567</div>`}
-  </div>
-  <div class="field"><label>Tug'ilgan sana *</label>
-    <input class="input${e.birth?' error':''}" id="f-birth" type="date" value="${esc(S.regBirth)}"/>
-    ${e.birth?`<div class="input-error">⚠ ${e.birth}</div>`:''}
-  </div>
-  <div class="field"><label>Manzil *</label>
-    <input class="input${e.address?' error':''}" id="f-address" type="text" placeholder="Toshkent, Chilonzor tumani" value="${esc(S.regAddress)}"/>
-    ${e.address?`<div class="input-error">⚠ ${e.address}</div>`:''}
-  </div>
-  <button class="btn btn-primary btn-full btn-lg" onclick="goStep2()" style="margin-top:8px">Davom etish →</button>`;
+function renderE1(){
+  var e=S.errs;
+  return '<div class="dots"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>'
+    +'<div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px">Shaxsiy ma\'lumotlar</div>'
+    +'<div class="field"><label>Ism va familiya *</label>'
+    +'<input class="inp'+(e.name?' err':'')+'" id="fn" type="text" placeholder="To\'liq ismingiz" value="'+esc(S.name)+'"/>'
+    +(e.name?'<div class="errtxt">⚠ '+e.name+'</div>':'')+'</div>'
+    +'<div class="field"><label>Email *</label>'
+    +'<input class="inp'+(e.email?' err':'')+'" id="fe" type="email" placeholder="email@gmail.com" value="'+esc(S.email)+'"/>'
+    +(e.email?'<div class="errtxt">⚠ '+e.email+'</div>':'<div class="hint">To\'g\'ri format: ism@gmail.com</div>')+'</div>'
+    +'<div class="field"><label>Telefon *</label>'
+    +'<input class="inp'+(e.phone?' err':'')+'" id="fp" type="tel" placeholder="+998901234567" value="'+esc(S.phone)+'"/>'
+    +(e.phone?'<div class="errtxt">⚠ '+e.phone+'</div>':'<div class="hint">Masalan: +998901234567</div>')+'</div>'
+    +'<div class="field"><label>Tug\'ilgan sana *</label>'
+    +'<input class="inp'+(e.bdate?' err':'')+'" id="fb" type="date" value="'+esc(S.bdate)+'"/>'
+    +(e.bdate?'<div class="errtxt">⚠ '+e.bdate+'</div>':'')+'</div>'
+    +'<div class="field"><label>Manzil *</label>'
+    +'<input class="inp'+(e.address?' err':'')+'" id="fa" type="text" placeholder="Toshkent, Chilonzor tumani" value="'+esc(S.address)+'"/>'
+    +(e.address?'<div class="errtxt">⚠ '+e.address+'</div>':'')+'</div>'
+    +'<button class="btn btn-p btn-full btn-lg" style="margin-top:8px" onclick="goE2()">Davom etish →</button>';
 }
 
-function renderStep2(){
-  return`
-  <div class="step-dots">
-    <div class="step-dot done"></div><div class="step-dot active"></div><div class="step-dot"></div>
-  </div>
-  <div class="section-label">Kasbingizni tanlang</div>
-  <div class="pos-grid" style="grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px">
-    ${Object.entries(POSITIONS).map(([k,v])=>`
-    <div class="pos-card${S.regPosition===k?' selected':''}" onclick="pickPos('${k}')">
-      <div class="pos-icon">${v.icon}</div>
-      <div class="pos-name">${v.label}</div>
-    </div>`).join('')}
-  </div>
-  ${S.regErrors.pos?`<div class="input-error mb-12">⚠ Iltimos kasbni tanlang</div>`:''}
-  <div class="flex gap-8">
-    <button class="btn btn-ghost" onclick="S.regStep=1;render()">← Orqaga</button>
-    <button class="btn btn-primary" style="flex:1;justify-content:center" onclick="goStep3()">Imtihonni boshlash →</button>
-  </div>`;
+function renderE2(){
+  var keys=Object.keys(POS);
+  var cards='';
+  keys.forEach(function(k){
+    var p=POS[k];
+    cards+='<div class="pc'+(S.pos===k?' sel':'')+'" onclick="SP(\''+k+'\')">'
+      +'<div class="ck">✓</div>'
+      +'<div style="font-size:26px;margin-bottom:7px">'+p.i+'</div>'
+      +'<div style="font-size:13px;font-weight:700">'+p.l+'</div>'
+      +'</div>';
+  });
+  return '<div class="dots"><div class="dot dn"></div><div class="dot on"></div><div class="dot"></div></div>'
+    +'<div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px">Kasbingizni tanlang</div>'
+    +(S.errs.pos?'<div class="errtxt" style="margin-bottom:10px">⚠ Iltimos kasbni tanlang</div>':'')
+    +'<div class="pg">'+cards+'</div>'
+    +'<div style="display:flex;gap:8px">'
+    +'<button class="btn btn-g" onclick="S.step=1;R()">← Orqaga</button>'
+    +'<button class="btn btn-p" style="flex:1;justify-content:center" onclick="goE3()">Imtihonni boshlash →</button>'
+    +'</div>';
 }
 
-function renderExam(){
-  const qs=POSITIONS[S.regPosition].questions;
-  const step=S.examStep;
-  const total=qs.length;
-  const q=qs[step];
-  if(!q){S.regStep=4;render();return '';}
-  const pct=Math.round((step/total)*100);
-  const qid=q.id;
-  const opts=q.options.map((o,i)=>{
-    const sel=S.examAnswers[qid]===String(i);
-    return '<button class="choice'+(sel?' selected':'')+'" onclick="PA(''+qid+'','+i+')">'+o+'</button>';
-  }).join('');
-  return`
-  <div class="step-dots">
-    <div class="step-dot done"></div><div class="step-dot done"></div><div class="step-dot active"></div>
-  </div>
-  <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
-  <div style="font-size:12px;color:var(--muted);font-weight:600;margin-bottom:18px">Savol ${step+1} / ${total}</div>
-  <div class="q-cat">${q.cat}</div>
-  <div class="q-text">${q.text}</div>
-  <div class="choices">${opts}</div>
-  <div class="flex gap-8" style="margin-top:22px">
-    <button class="btn btn-ghost" ${step===0?'disabled':''} onclick="S.examStep--;render()">← Oldingi</button>
-    <button class="btn btn-primary" style="flex:1;justify-content:center" onclick="S.examStep++;render()">
-      ${step===total-1?'Yakunlash →':'Keyingi →'}
-    </button>
-  </div>`;
+function renderE3(){
+  var qs=POS[S.pos].q;
+  var qi=S.qstep;
+  if(qi>=qs.length){S.step=4;submitExam();return '';}
+  var q=qs[qi];
+  var pct=Math.round((qi/qs.length)*100);
+  var opts='';
+  q.o.forEach(function(o,i){
+    var isSel=S.ans[q.id]===String(i);
+    opts+='<button class="ch'+(isSel?' sel':'')+'" onclick="PA(\''+q.id+'\',\''+i+'\')">'+esc(o)+'</button>';
+  });
+  return '<div class="dots"><div class="dot dn"></div><div class="dot dn"></div><div class="dot on"></div></div>'
+    +'<div class="pbar"><div class="pfill" style="width:'+pct+'%"></div></div>'
+    +'<div style="font-size:11px;color:var(--muted);font-weight:600;margin-bottom:16px">Savol '+(qi+1)+' / '+qs.length+'</div>'
+    +'<div class="qcat">'+q.c+'</div>'
+    +'<div class="qtxt">'+esc(q.t)+'</div>'
+    +'<div class="choices">'+opts+'</div>'
+    +'<div style="display:flex;gap:8px;margin-top:20px">'
+    +'<button class="btn btn-g"'+(qi===0?' disabled':'')+' onclick="S.qstep--;R()">← Oldingi</button>'
+    +'<button class="btn btn-p" style="flex:1;justify-content:center" onclick="S.qstep++;R()">'
+    +(qi===qs.length-1?'Yakunlash →':'Keyingi →')
+    +'</button></div>';
 }
 
-function renderDone(){
-  const r=S.examResult;if(!r)return'';
-  const color=r.score>=85?'var(--success)':r.score>=65?'var(--warning)':'var(--danger)';
-  return`
-  <div style="text-align:center;padding:20px 0">
-    <div style="font-size:52px;margin-bottom:12px">${r.score>=85?'🏆':r.score>=65?'📊':'📋'}</div>
-    <div style="font-family:'Playfair Display',serif;font-size:64px;color:${color};line-height:1">${r.score}%</div>
-    <div style="margin:12px 0">${scoreBadge(r.score)}</div>
-    <p style="font-size:14px;color:var(--muted);margin:16px 0;line-height:1.6">
-      ${r.score>=85?'Tabriklaymiz! Natijalaringiz rahbarga yuborildi.':r.score>=65?"Yaxshi natija! Rahbar siz bilan bog'lanadi.":'Natijalaringiz rahbarga yuborildi.'}
-    </p>
-  </div>`;
+function renderE4(){
+  if(!S.result) return '<div style="text-align:center;padding:32px"><div style="font-size:32px">⏳</div><p style="color:var(--muted);margin-top:8px">Yuborilmoqda...</p></div>';
+  var r=S.result;
+  var c=r.finalScore>=85?'var(--success)':r.finalScore>=65?'var(--warn)':'var(--danger)';
+  var ic=r.finalScore>=85?'🏆':r.finalScore>=65?'📊':'📋';
+  return '<div style="text-align:center;padding:12px 0">'
+    +'<div style="font-size:48px;margin-bottom:10px">'+ic+'</div>'
+    +'<div style="font-family:\'Playfair Display\',serif;font-size:60px;color:'+c+';line-height:1">'+r.finalScore+'%</div>'
+    +'<div style="margin:10px 0">'+sbadge(r.finalScore)+'</div>'
+    +'<p style="font-size:13px;color:var(--muted);margin-top:14px;line-height:1.6">'
+    +(r.finalScore>=85?'Tabriklaymiz! Natijalaringiz rahbarga yuborildi.':r.finalScore>=65?"Yaxshi natija! Rahbar siz bilan bog'lanadi.":'Natijalaringiz rahbarga yuborildi.')
+    +'</p></div>';
 }
 
-// ══════ RAHBAR PANEL ══════
+// ── MANAGER APP ──
 function renderApp(){
-  return`
-  ${S.toast?`<div class="toast toast-${S.toast.type}">${S.toast.msg}</div>`:''}
-  <div class="app">
-    <div class="topbar">
-      <div class="logo"><div class="logo-dot"></div>Ottimo</div>
-      <div></div>
-      <div class="user-chip" onclick="doLogout()">
-        <div class="avatar">${(S.managerName||'R')[0].toUpperCase()}</div>
-        <span style="font-weight:600">${S.managerName}</span>
-        <span style="color:var(--muted);font-size:12px">Chiqish</span>
-      </div>
-    </div>
-    <div class="main">${renderResults()}</div>
-  </div>`;
+  var content=S.page==='home'?renderHome():renderResults();
+  return '<div style="display:flex;flex-direction:column;min-height:100vh">'
+    +'<div class="topbar">'
+    +'<div class="logo">Ottimo</div>'
+    +'<nav class="nav">'
+    +'<button class="'+(S.page==='home'?'on':'')+'" onclick="S.page=\'home\';R()">Bosh sahifa</button>'
+    +'<button class="'+(S.page==='results'?'on':'')+'" onclick="S.page=\'results\';loadExams();R()">Natijalar</button>'
+    +'</nav>'
+    +'<div class="chip" onclick="doLogout()">'
+    +'<div class="av">'+(S.mgrName[0]||'R').toUpperCase()+'</div>'
+    +'<span>'+esc(S.mgrName)+'</span>'
+    +'<span style="color:var(--muted);font-size:11px">↗</span>'
+    +'</div></div>'
+    +'<div class="main fu">'+content+'</div>'
+    +'</div>';
+}
+
+function renderHome(){
+  var passed=S.exams.filter(function(e){return e.finalScore>=85}).length;
+  var monitor=S.exams.filter(function(e){return e.finalScore>=65&&e.finalScore<85}).length;
+  var avg=S.exams.length?Math.round(S.exams.reduce(function(a,e){return a+e.finalScore},0)/S.exams.length):0;
+  var recent=S.exams.slice(0,6);
+  var rows='';
+  recent.forEach(function(ex){
+    var p=POS[ex.position];
+    rows+='<div style="display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--border)">'
+      +'<div style="display:flex;align-items:center;gap:10px">'
+      +'<div style="width:34px;height:34px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:15px">'+(p?p.i:'👤')+'</div>'
+      +'<div><div style="font-size:14px;font-weight:600">'+esc(ex.employeeName)+'</div>'
+      +'<div style="font-size:12px;color:var(--muted)">'+(p?p.l:ex.position||'')+(ex.date?' · '+ex.date:'')+'</div>'
+      +'</div></div>'
+      +'<div style="display:flex;align-items:center;gap:8px">'
+      +'<span style="font-size:17px;font-weight:700;color:'+(ex.finalScore>=85?'var(--success)':ex.finalScore>=65?'var(--warn)':'var(--danger)')+'">'+ex.finalScore+'%</span>'
+      +sbadge(ex.finalScore)
+      +'</div></div>';
+  });
+  var statCards=[
+    {l:'Jami topshirdi',v:S.exams.length,c:'var(--accent)'},
+    {l:'Qabul qilindi',v:passed,c:'var(--success)'},
+    {l:'Monitoring',v:monitor,c:'var(--warn)'},
+    {l:"O'rtacha ball",v:avg+'%',c:'#2a5fa8'},
+  ];
+  var stats='';
+  statCards.forEach(function(s){
+    stats+='<div class="csm"><div class="sv" style="color:'+s.c+'">'+s.v+'</div><div class="sl">'+s.l+'</div></div>';
+  });
+  return '<h1 style="font-family:\'Playfair Display\',serif;font-size:28px;margin-bottom:4px">Bosh sahifa</h1>'
+    +'<p style="color:var(--muted);font-size:13px;margin-bottom:24px">Ottimo HR — Sinov muddati tizimi</p>'
+    +'<div class="g4" style="margin-bottom:22px">'+stats+'</div>'
+    +'<div class="card">'
+    +'<div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px">So\'nggi imtihonlar</div>'
+    +(recent.length===0?'<p style="color:var(--muted);font-size:13px;text-align:center;padding:20px 0">Hali imtihon yo\'q</p>':rows)
+    +'</div>';
 }
 
 function renderResults(){
-  const search=S.search.toLowerCase();
-  const list=[...S.exams].filter(e=>
-    !search||(e.name||'').toLowerCase().includes(search)||(e.position||'').toLowerCase().includes(search)
-  );
-  const passed=S.exams.filter(e=>e.score>=85).length;
-  const monitor=S.exams.filter(e=>e.score>=65&&e.score<85).length;
-  const failed=S.exams.filter(e=>e.score<65).length;
-
-  return`
-  <div class="fade-up">
-    <h1 style="font-size:30px;margin-bottom:6px">Natijalar</h1>
-    <p style="color:var(--muted);font-size:14px;margin-bottom:24px">Hodimlar topshirgan imtihon natijalari</p>
-    <div class="grid-3 mb-24">
-      <div class="card-sm"><div class="stat-val" style="color:var(--success)">${passed}</div><div class="stat-label">Qabul (≥85%)</div></div>
-      <div class="card-sm"><div class="stat-val" style="color:var(--warning)">${monitor}</div><div class="stat-label">Monitoring (65–84%)</div></div>
-      <div class="card-sm"><div class="stat-val" style="color:var(--danger)">${failed}</div><div class="stat-label">Rad (&lt;65%)</div></div>
-    </div>
-    <input class="input mb-20" placeholder="Ism yoki kasb bo'yicha qidirish…"
-      value="${esc(S.search)}" oninput="S.search=this.value;render()" style="max-width:360px"/>
-    ${list.length===0
-      ?`<div class="card" style="text-align:center;padding:48px"><p style="color:var(--muted)">Hali natija yo'q</p></div>`
-      :list.map(ex=>renderExamCard(ex)).join('')}
-  </div>`;
+  var search=(S.srch||'').toLowerCase();
+  var list=S.exams.filter(function(e){
+    return !search||(e.employeeName||'').toLowerCase().includes(search)||(e.position||'').toLowerCase().includes(search);
+  });
+  var passed=S.exams.filter(function(e){return e.finalScore>=85}).length;
+  var monitor=S.exams.filter(function(e){return e.finalScore>=65&&e.finalScore<85}).length;
+  var failed=S.exams.filter(function(e){return e.finalScore<65}).length;
+  var stats='';
+  [{l:'Qabul (≥85%)',v:passed,c:'var(--success)'},{l:'Monitoring',v:monitor,c:'var(--warn)'},{l:'Rad (<65%)',v:failed,c:'var(--danger)'}].forEach(function(s){
+    stats+='<div class="csm"><div class="sv" style="color:'+s.c+'">'+s.v+'</div><div class="sl">'+s.l+'</div></div>';
+  });
+  var cards='';
+  list.forEach(function(ex){
+    cards+=renderExCard(ex);
+  });
+  return '<h1 style="font-family:\'Playfair Display\',serif;font-size:28px;margin-bottom:18px">Natijalar</h1>'
+    +'<div class="g3" style="margin-bottom:20px">'+stats+'</div>'
+    +'<input class="inp" placeholder="Qidirish…" value="'+esc(S.srch)+'" oninput="S.srch=this.value;R()" style="max-width:340px;margin-bottom:18px"/>'
+    +(list.length===0?'<div class="card" style="text-align:center;padding:40px"><p style="color:var(--muted)">Natija topilmadi</p></div>':cards);
 }
 
-function renderExamCard(ex){
-  const pos=POSITIONS[ex.position];
-  const isOpen=S.expandedId===ex.id;
-  const color=ex.finalScore>=85?'var(--success)':ex.finalScore>=65?'var(--warning)':'var(--danger)';
-
-  let qaHtml='';
-  if(isOpen && pos){
-    const ans=ex.answers||{};
-    pos.questions.forEach(function(q,i){
-      const raw=ans[q.id];
-      const idx2=(raw!==undefined&&raw!==null&&raw!=='') ? parseInt(raw) : -1;
-      const ansText=(idx2>=0 && q.options[idx2]) ? q.options[idx2] : 'Javob berilmagan';
-      qaHtml+='<div style="padding:12px 0;border-bottom:1px solid var(--border)">'
-        +'<div style="font-size:11px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">'+q.cat+'</div>'
-        +'<div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px">'+(i+1)+'. '+q.text+'</div>'
-        +'<div style="background:var(--accent-light);border-radius:8px;padding:8px 14px;font-size:13px;font-weight:700;color:var(--accent)">✓ '+ansText+'</div>'
+function renderExCard(ex){
+  var p=POS[ex.position];
+  var open=S.expandId===ex.id;
+  var c=ex.finalScore>=85?'var(--success)':ex.finalScore>=65?'var(--warn)':'var(--danger)';
+  var qa='';
+  if(open && p){
+    var ans=ex.answers||{};
+    p.q.forEach(function(q,i){
+      var raw=ans[q.id];
+      var idx=raw!==undefined&&raw!==null&&raw!==''?parseInt(raw):-1;
+      var at=idx>=0&&q.o[idx]?q.o[idx]:'Javob berilmagan';
+      qa+='<div class="qa-item">'
+        +'<div class="qa-cat">'+esc(q.c)+'</div>'
+        +'<div class="qa-q">'+(i+1)+'. '+esc(q.t)+'</div>'
+        +'<div class="qa-a">✓ '+esc(at)+'</div>'
         +'</div>';
     });
     if(ex.selfNote){
-      qaHtml+='<div style="padding:12px 0">'
-        +'<div style="font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;margin-bottom:4px">Izoh</div>'
-        +'<div style="background:var(--card);border-radius:8px;padding:8px 14px;font-size:13px">'+ex.selfNote+'</div>'
+      qa+='<div class="qa-item">'
+        +'<div class="qa-cat">Izoh</div>'
+        +'<div class="qa-a" style="background:var(--card);color:var(--text)">'+esc(ex.selfNote)+'</div>'
         +'</div>';
     }
   }
-
-  const openBtn='<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">'
-    +'<span style="font-size:13px;font-weight:700;color:var(--accent)">'+(isOpen?'▲ Yopish':'▼ Savollar va javoblarni ko\'rish')+'</span>'
-    +'<span style="font-size:12px;color:var(--muted)">'+(pos?.questions?.length||0)+' ta savol</span>'
-    +'</div>';
-
-  const qaBlock=isOpen?'<div style="padding:0 20px 16px;border-top:1px solid var(--border)">'+qaHtml+'</div>':'';
-
-  return'<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow)">'
-    +'<div style="padding:18px 20px;cursor:pointer" onclick="S.expandedId=S.expandedId===''+ex.id+''?null:''+ex.id+'';render()">'
-    +'<div class="flex-between" style="flex-wrap:wrap;gap:12px">'
-    +'<div class="flex gap-12">'
-    +'<div style="width:44px;height:44px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">'+(pos?.icon||'👤')+'</div>'
-    +'<div>'
-    +'<div style="font-size:16px;font-weight:700">'+ex.employeeName+'</div>'
-    +'<div style="font-size:13px;color:var(--muted);margin-top:2px"><span class="badge badge-gray" style="margin-right:6px">'+(pos?.label||ex.position||'—')+'</span>'+(ex.date||'')+'</div>'
-    +'<div style="font-size:12px;color:var(--muted);margin-top:4px">📞 '+(ex.phone||'—')+' · 📧 '+(ex.email||'—')+' · 📍 '+(ex.address||'—')+'</div>'
+  var head='<div class="rcard-head" onclick="EX(\''+ex.id+'\')">'
+    +'<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap">'
+    +'<div style="display:flex;align-items:center;gap:10px">'
+    +'<div style="width:42px;height:42px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">'+(p?p.i:'👤')+'</div>'
+    +'<div><div style="font-size:15px;font-weight:700">'+esc(ex.employeeName)+'</div>'
+    +'<div style="font-size:12px;color:var(--muted);margin-top:2px"><span class="badge bgray" style="margin-right:5px">'+(p?p.l:ex.position||'—')+'</span>'+(ex.date||'')+'</div>'
+    +'<div style="font-size:11px;color:var(--muted);margin-top:3px">📞 '+(ex.phone||'—')+' · 📧 '+(ex.email||'—')+'</div>'
+    +'<div style="font-size:11px;color:var(--muted)">📅 '+(ex.bdate||'—')+' · 📍 '+(ex.address||'—')+'</div>'
     +'</div></div>'
-    +'<div style="text-align:right">'
-    +'<div style="font-size:36px;font-weight:700;color:'+color+';font-family:'Playfair Display',serif;line-height:1">'+ex.finalScore+'%</div>'
-    +'<div style="margin-top:6px">'+scoreBadge(ex.finalScore)+'</div>'
-    +'<div style="font-size:12px;color:var(--muted);margin-top:4px">Ball: '+ex.empScore+'%</div>'
+    +'<div style="text-align:right;flex-shrink:0">'
+    +'<div style="font-family:\'Playfair Display\',serif;font-size:32px;font-weight:700;color:'+c+';line-height:1">'+ex.finalScore+'%</div>'
+    +'<div style="margin-top:5px">'+sbadge(ex.finalScore)+'</div>'
+    +'<div style="font-size:11px;color:var(--muted);margin-top:3px">Ball: '+ex.empScore+'%</div>'
     +'</div></div>'
-    +openBtn
-    +'</div>'
-    +qaBlock
-    +'</div>';
+    +'<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center">'
+    +'<span style="font-size:12px;font-weight:700;color:var(--accent)">'+(open?'▲ Yopish':'▼ Savollar va javoblarni ko\'rish')+'</span>'
+    +'<span style="font-size:11px;color:var(--muted)">'+(p?p.q.length:0)+' ta savol</span>'
+    +'</div></div>';
+  var body=open?'<div class="rcard-body">'+qa+'</div>':'';
+  return '<div class="rcard">'+head+body+'</div>';
 }
 
-function scoreBadge(s){
-  if(s>=85)return'<span class="badge badge-green">✓ Qabul</span>';
-  if(s>=65)return'<span class="badge badge-amber">◎ Monitoring</span>';
-  return'<span class="badge badge-red">✗ Rad</span>';
-}
-function computeScore(answers,qs){
-  let total=0,count=0;
-  qs.forEach(q=>{
-    const idx=answers[q.id];
-    if(idx!==undefined&&idx!==null){
-      total+=((q.options.length-Number(idx))/q.options.length)*100;
-      count++;
-    }
-  });
-  return count?Math.round(total/count):0;
-}
-function showToast(msg,type='success'){
-  S.toast={msg,type};render();
-  setTimeout(()=>{S.toast=null;render();},3000);
-}
+// ── ACTIONS ──
+window.ST=function(t){
+  S.tab=t;S.step=1;S.name='';S.email='';S.phone='';S.bdate='';S.address='';S.pos='';
+  S.errs={};S.ans={};S.qstep=0;S.result=null;S.mgr=false;
+  R();
+};
+window.SP=function(k){S.pos=k;S.errs.pos=null;R();};
+window.PA=function(id,val){S.ans[id]=String(val);R();};
+window.EX=function(id){S.expandId=S.expandId===id?null:id;R();};
 
-// ══════ ACTIONS ══════
-window.pickPos=(k)=>{S.regPosition=k;render();};
-window.pickAns=function(id,idx){S.examAnswers[id]=String(idx);render();};
-window.PA=window.pickAns;
-window.setTab=(t)=>{
-  Object.assign(S,{loginTab:t,regStep:1,regName:'',regEmail:'',regPhone:'',regBirth:'',regAddress:'',
-    regPosition:'',regErrors:{},examAnswers:{},examStep:0,examResult:null});
-  render();
+window.doMgr=function(){
+  var n=(document.getElementById('mn')||{}).value||'';
+  var p=(document.getElementById('mp')||{}).value||'';
+  n=n.trim();
+  if(!n){S.errs={mgr:"Ism Familiyangizni kiriting"};R();return;}
+  if(p!==MGR_PASS){S.errs={mgr:"Parol noto'g'ri"};R();return;}
+  S.mgr=true;S.mgrName=n;S.errs={};S.page='home';
+  loadExams().then(function(){R();});
 };
 
-window.doMgrLogin=()=>{
-  const name=(document.getElementById('m-name')?.value||'').trim();
-  const pass=(document.getElementById('m-pass')?.value||'');
-  if(!name){S.regErrors={mgr:'Ism Familiyangizni kiriting'};render();return;}
-  if(pass!==MANAGER_PASSWORD){S.regErrors={mgr:"Parol noto'g'ri"};render();return;}
-  S.isManager=true;S.managerName=name;S.regErrors={};
-  loadData().then(()=>render());
+window.doLogout=function(){
+  S.mgr=false;S.mgrName='';S.tab='manager';S.exams=[];R();
 };
 
-window.doLogout=()=>{
-  Object.assign(S,{isManager:false,managerName:'',regErrors:{},loginTab:'manager'});
-  render();
+window.goE2=function(){
+  var n=(document.getElementById('fn')||{}).value||'';
+  var e=(document.getElementById('fe')||{}).value||'';
+  var p=(document.getElementById('fp')||{}).value||'';
+  var b=(document.getElementById('fb')||{}).value||'';
+  var a=(document.getElementById('fa')||{}).value||'';
+  n=n.trim();e=e.trim();p=p.trim();b=b.trim();a=a.trim();
+  S.name=n;S.email=e;S.phone=p;S.bdate=b;S.address=a;
+  var errs={};
+  if(n.length<3) errs.name="Ism kamida 3 harfdan iborat bo'lsin";
+  if(!vEmail(e)) errs.email="To'g'ri email kiriting (masalan: ism@gmail.com)";
+  if(!vPhone(p)) errs.phone="To'g'ri telefon kiriting (+998901234567)";
+  if(!b) errs.bdate="Tug'ilgan sanani kiriting";
+  if(a.length<5) errs.address="Manzilni to'liq kiriting";
+  S.errs=errs;
+  if(Object.keys(errs).length>0){R();return;}
+  S.step=2;R();
 };
 
-window.goStep2=()=>{
-  const name=(document.getElementById('f-name')?.value||'').trim();
-  const email=(document.getElementById('f-email')?.value||'').trim();
-  const phone=(document.getElementById('f-phone')?.value||'').trim();
-  const birth=(document.getElementById('f-birth')?.value||'').trim();
-  const address=(document.getElementById('f-address')?.value||'').trim();
-  S.regName=name;S.regEmail=email;S.regPhone=phone;S.regBirth=birth;S.regAddress=address;
-  const err={};
-  if(name.length<3)err.name="Ism kamida 3 harfdan iborat bo'lsin";
-  if(!isValidEmail(email))err.email="To'g'ri email kiriting (masalan: ism@gmail.com)";
-  if(!isValidPhone(phone))err.phone="To'g'ri telefon kiriting (+998901234567)";
-  if(!birth)err.birth="Tug'ilgan sanani kiriting";
-  if(address.length<5)err.address="Manzilni to'liq kiriting";
-  S.regErrors=err;
-  if(Object.keys(err).length){render();return;}
-  S.regStep=2;render();
+window.goE3=function(){
+  if(!S.pos){S.errs={pos:true};R();return;}
+  S.errs={};S.step=3;S.ans={};S.qstep=0;R();
 };
 
-window.goStep3=()=>{
-  if(!S.regPosition){S.regErrors={pos:true};render();return;}
-  S.regErrors={};S.regStep=3;S.examAnswers={};S.examStep=0;render();
-};
-
-window.nextQ=()=>{
-  const qs=POSITIONS[S.regPosition].questions;
-  if(S.examStep<qs.length-1){S.examStep++;render();return;}
-  submitExam();
-};
-
-async function submitExam(){
-  const pos=POSITIONS[S.regPosition];
-  const score=computeScore(S.examAnswers,pos.questions);
-  const result={
-    name:S.regName,email:S.regEmail,phone:S.regPhone,
-    birth:S.regBirth,address:S.regAddress,
-    position:S.regPosition,
-    answers:S.examAnswers,
-    score,
+window.submitExam=async function(){
+  var qs=POS[S.pos].q;
+  var sc=score(S.ans,qs);
+  var final=sc;
+  var data={
+    employeeName:S.name,email:S.email,phone:S.phone,
+    bdate:S.bdate,address:S.address,position:S.pos,
+    answers:S.ans,empScore:sc,finalScore:final,
     date:new Date().toLocaleDateString('uz-UZ'),
     timestamp:Date.now(),
   };
   try{
-    await addDoc(collection(db,'exams'),result);
-    S.examResult=result;S.regStep=4;render();
-  }catch(err){showToast('Xatolik: '+err.message,'danger');}
-}
+    await addDoc(collection(db,'exams'),data);
+    // Telegram xabar
+    var pos=POS[S.pos];
+    var msg='<b>🆕 Yangi imtihon natijasi</b>\n\n'
+      +'<b>Ism:</b> '+S.name+'\n'
+      +'<b>Kasb:</b> '+(pos?pos.l:S.pos)+'\n'
+      +'<b>Email:</b> '+S.email+'\n'
+      +'<b>Telefon:</b> '+S.phone+'\n'
+      +'<b>Tug\'ilgan sana:</b> '+S.bdate+'\n'
+      +'<b>Manzil:</b> '+S.address+'\n'
+      +'<b>Ball:</b> '+final+'%\n'
+      +'<b>Holat:</b> '+(final>=85?'✅ Qabul':final>=65?'⚠️ Monitoring':'❌ Rad')+'\n\n'
+      +'<b>Savol va javoblar:</b>\n';
+    qs.forEach(function(q,i){
+      var idx=parseInt(S.ans[q.id]);
+      var at=(!isNaN(idx)&&q.o[idx])?q.o[idx]:'Javob berilmagan';
+      msg+=(i+1)+'. '+q.t+'\n→ '+at+'\n';
+    });
+    await sendTelegram(msg);
+    S.result=data;
+    R();
+  }catch(err){
+    toast('Xatolik: '+err.message,'d');
+    S.result=data;R();
+  }
+};
 
-async function loadData(){
+async function loadExams(){
   try{
-    const snap=await getDocs(query(collection(db,'exams'),orderBy('timestamp','desc')));
-    S.exams=snap.docs.map(d=>({id:d.id,...d.data()}));
+    var snap=await getDocs(query(collection(db,'exams'),orderBy('timestamp','desc')));
+    S.exams=snap.docs.map(function(d){return Object.assign({id:d.id},d.data());});
   }catch(e){console.warn(e);}
 }
 
-render();
+function toast(m,t){
+  S.toast={m:m,t:t||'s'};R();
+  setTimeout(function(){S.toast=null;R();},3000);
+}
+
+// ── START ──
+R();
 </script>
 </body>
 </html>
