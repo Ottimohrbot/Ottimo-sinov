@@ -230,9 +230,6 @@ function renderLogin(){
     <div class="login-left">
       <div class="login-logo">Ottimo</div>
       <p class="login-tagline">Xodimlarni sinov muddatida baholash va rivojlantirish tizimi</p>
-      <div style="margin-top:40px;display:flex;flex-direction:column;gap:14px">
-        ${Object.values(POSITIONS).map(p=>`<div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.75);font-size:14px;font-weight:500"><span style="font-size:20px">${p.icon}</span>${p.label}</div>`).join('')}
-      </div>
     </div>
     <div class="login-right">
       <div class="login-box fade-up">
@@ -307,7 +304,7 @@ function renderStep2(){
   <div class="section-label">Kasbingizni tanlang</div>
   <div class="pos-grid" style="grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px">
     ${Object.entries(POSITIONS).map(([k,v])=>`
-    <div class="pos-card${S.regPosition===k?' selected':''}" onclick="S.regPosition='${k}';render()">
+    <div class="pos-card${S.regPosition===k?' selected':''}" onclick="pickPos('${k}')">
       <div class="pos-icon">${v.icon}</div>
       <div class="pos-name">${v.label}</div>
     </div>`).join('')}
@@ -409,29 +406,29 @@ function renderExamCard(ex){
 
   let qaHtml='';
   if(isOpen && pos && ex.answers){
+    qaHtml+='<div style="margin-top:4px">';
     pos.questions.forEach((q,i)=>{
       const ansIdx=ex.answers[q.id];
-      const ansText=(ansIdx!==undefined&&ansIdx!==''&&q.options[parseInt(ansIdx)])
-        ?q.options[parseInt(ansIdx)]:'Javob berilmagan';
-      qaHtml+=`
-      <div style="padding:12px 0;border-bottom:1px solid var(--border)">
-        <div style="font-size:12px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">${q.cat}</div>
+      const ansText=(ansIdx!==undefined && ansIdx!=='' && q.options[parseInt(ansIdx)])
+        ? q.options[parseInt(ansIdx)] : '<span style="color:var(--muted)">Javob berilmagan</span>';
+      qaHtml+=`<div style="padding:12px 0;border-bottom:1px solid var(--border)">
+        <div style="font-size:11px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px">${q.cat}</div>
         <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px">${i+1}. ${q.text}</div>
-        <div style="background:var(--accent-light);border:1px solid var(--border2);border-radius:8px;padding:8px 14px;font-size:13px;font-weight:700;color:var(--accent)">
+        <div style="background:var(--accent-light);border-radius:8px;padding:8px 14px;font-size:13px;font-weight:700;color:var(--accent)">
           ✓ ${ansText}
         </div>
       </div>`;
     });
     if(ex.selfNote){
-      qaHtml+=`<div style="padding:12px 0;border-bottom:1px solid var(--border)">
-        <div style="font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;margin-bottom:4px">Qo'shimcha izoh</div>
+      qaHtml+=`<div style="padding:12px 0">
+        <div style="font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;margin-bottom:4px">Qo'shimcha izoh</div>
         <div style="background:var(--card);border-radius:8px;padding:8px 14px;font-size:13px;color:var(--text)">${ex.selfNote}</div>
       </div>`;
     }
+    qaHtml+='</div>';
   }
 
-  return`
-  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow)">
+  return`<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow)">
     <div style="padding:18px 20px;cursor:pointer" onclick="S.expandedId=S.expandedId==='${ex.id}'?null:'${ex.id}';render()">
       <div class="flex-between" style="flex-wrap:wrap;gap:12px">
         <div class="flex gap-12">
@@ -452,12 +449,12 @@ function renderExamCard(ex){
           <div style="font-size:12px;color:var(--muted);margin-top:4px">Savol-javob: ${ex.empScore}%</div>
         </div>
       </div>
-      <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
+      <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
         <span style="font-size:13px;font-weight:700;color:var(--accent)">${isOpen?'▲ Yopish':'▼ Savollar va javoblarni ko\'rish'}</span>
-        <span style="font-size:12px;color:var(--muted)">${pos?.questions.length||0} ta savol</span>
+        <span style="font-size:12px;color:var(--muted)">${pos?.questions?.length||0} ta savol</span>
       </div>
     </div>
-    ${isOpen?`<div style="padding:0 20px 20px;border-top:1px solid var(--border)">${qaHtml}</div>`:''}
+    ${isOpen?`<div style="padding:0 20px 16px;border-top:1px solid var(--border)">${qaHtml}</div>`:''}
   </div>`;
 }
 
@@ -483,6 +480,7 @@ function showToast(msg,type='success'){
 }
 
 // ══════ ACTIONS ══════
+window.pickPos=(k)=>{S.regPosition=k;render();};
 window.setTab=(t)=>{
   Object.assign(S,{loginTab:t,regStep:1,regName:'',regEmail:'',regPhone:'',regBirth:'',regAddress:'',
     regPosition:'',regErrors:{},examAnswers:{},examStep:0,examResult:null});
