@@ -334,7 +334,7 @@ function renderE2(){
     +(S.errs.pos?'<div class="errtxt" style="margin-bottom:10px">⚠ Iltimos kasbni tanlang</div>':'')
     +'<div class="pg">'+cards+'</div>'
     +'<div style="display:flex;gap:8px">'
-    +'<button class="btn btn-g" onclick="S.step=1;R()">← Orqaga</button>'
+    +'<button class="btn btn-g" onclick="BACK1()">← Orqaga</button>'
     +'<button class="btn btn-p" style="flex:1;justify-content:center" onclick="goE3()">Imtihonni boshlash →</button>'
     +'</div>';
 }
@@ -357,8 +357,8 @@ function renderE3(){
     +'<div class="qtxt">'+esc(q.t)+'</div>'
     +'<div class="choices">'+opts+'</div>'
     +'<div style="display:flex;gap:8px;margin-top:20px">'
-    +'<button class="btn btn-g"'+(qi===0?' disabled':'')+' onclick="S.qstep--;R()">← Oldingi</button>'
-    +'<button class="btn btn-p" style="flex:1;justify-content:center" onclick="S.qstep++;R()">'
+    +'<button class="btn btn-g"'+(qi===0?' disabled':'')+' onclick="PREV()">← Oldingi</button>'
+    +'<button class="btn btn-p" style="flex:1;justify-content:center" onclick="NEXT()">'
     +(qi===qs.length-1?'Yakunlash →':'Keyingi →')
     +'</button></div>';
 }
@@ -545,6 +545,22 @@ window.goE2=function(){
   S.step=2;R();
 };
 
+window.BACK1=function(){S.step=1;R();};
+window.NEXT=async function(){
+  var qs=POS[S.pos].q;
+  if(S.qstep>=qs.length-1){
+    S.step=4;
+    S.qstep=qs.length;
+    R();
+    await window.submitExam();
+  } else {
+    S.qstep++;
+    R();
+  }
+};
+window.PREV=function(){
+  if(S.qstep>0){S.qstep--;R();}
+};
 window.goE3=function(){
   if(!S.pos){S.errs={pos:true};R();return;}
   S.errs={};S.step=3;S.ans={};S.qstep=0;R();
