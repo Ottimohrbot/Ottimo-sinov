@@ -136,7 +136,7 @@ const FB={
 };
 const db=getFirestore(initializeApp(FB));
 
-const TG_TOKEN="8997939343:AAF57N8HYI6bB1q8qjuBGYBtPyLLjcX0KJM";
+const TG_TOKEN="8173395748:AAFCbwHLLTiEOu0L9mjD2_Yy-a-UZXLKghU";
 const TG_CHAT="206004279";
 const MGR_PASS="688466";
 
@@ -459,48 +459,69 @@ function renderResults(){
 function renderExCard(ex){
   var p=POS[ex.position];
   var open=S.expandId===ex.id;
-  var c=ex.finalScore>=85?'var(--success)':ex.finalScore>=65?'var(--warn)':'var(--danger)';
+  var fc=ex.finalScore>=85?'var(--success)':ex.finalScore>=65?'var(--warn)':'var(--danger)';
+
+  // Savollar va javoblar
   var qa='';
-  if(open && p){
-    var ans=ex.answers||{};
-    p.q.forEach(function(q,i){
-      var raw=ans[q.id];
-      var idx=raw!==undefined&&raw!==null&&raw!==''?parseInt(raw):-1;
-      var at=idx>=0&&q.o[idx]?q.o[idx]:'Javob berilmagan';
-      qa+='<div class="qa-item">'
-        +'<div class="qa-cat">'+esc(q.c)+'</div>'
-        +'<div class="qa-q">'+(i+1)+'. '+esc(q.t)+'</div>'
-        +'<div class="qa-a">✓ '+esc(at)+'</div>'
-        +'</div>';
-    });
-    if(ex.selfNote){
-      qa+='<div class="qa-item">'
-        +'<div class="qa-cat">Izoh</div>'
-        +'<div class="qa-a" style="background:var(--card);color:var(--text)">'+esc(ex.selfNote)+'</div>'
+  if(open && p && ex.answers){
+    for(var i=0;i<p.q.length;i++){
+      var q=p.q[i];
+      var raw=ex.answers[q.id];
+      var ansIdx=(raw!==undefined&&raw!==null&&raw!=='')?parseInt(raw):-1;
+      var ansText=(ansIdx>=0&&q.o[ansIdx])?q.o[ansIdx]:'Javob berilmagan';
+      qa+='<div style="padding:10px 0;border-bottom:1px solid var(--border)">'
+        +'<div style="font-size:10px;color:var(--accent);font-weight:700;text-transform:uppercase;margin-bottom:3px">'+esc(q.c)+'</div>'
+        +'<div style="font-size:13px;font-weight:600;margin-bottom:6px">'+(i+1)+'. '+esc(q.t)+'</div>'
+        +'<div style="background:var(--accent-light);border-radius:6px;padding:6px 10px;font-size:12px;font-weight:700;color:var(--accent)">✓ '+esc(ansText)+'</div>'
         +'</div>';
     }
   }
-  var head='<div class="rcard-head" onclick="EX(\''+ex.id+'\')">'
-    +'<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap">'
-    +'<div style="display:flex;align-items:center;gap:10px">'
-    +'<div style="width:42px;height:42px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">'+(p?p.i:'👤')+'</div>'
-    +'<div><div style="font-size:15px;font-weight:700">'+esc(ex.employeeName)+'</div>'
-    +'<div style="font-size:12px;color:var(--muted);margin-top:2px"><span class="badge bgray" style="margin-right:5px">'+(p?p.l:ex.position||'—')+'</span>'+(ex.date||'')+'</div>'
-    +'<div style="font-size:11px;color:var(--muted);margin-top:3px">📞 '+(ex.phone||'—')+' · 📧 '+(ex.email||'—')+'</div>'
-    +'<div style="font-size:11px;color:var(--muted)">📅 '+(ex.bdate||'—')+' · 📍 '+(ex.address||'—')+'</div>'
-    +'</div></div>'
-    +'<div style="text-align:right;flex-shrink:0">'
-    +'<div style="font-family:\'Playfair Display\',serif;font-size:32px;font-weight:700;color:'+c+';line-height:1">'+ex.finalScore+'%</div>'
-    +'<div style="margin-top:5px">'+sbadge(ex.finalScore)+'</div>'
-    +'<div style="font-size:11px;color:var(--muted);margin-top:3px">Ball: '+ex.empScore+'%</div>'
-    +'</div></div>'
-    +'<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center">'
-    +'<span style="font-size:12px;font-weight:700;color:var(--accent)">'+(open?'▲ Yopish':'▼ Savollar va javoblarni ko\'rish')+'</span>'
-    +'<span style="font-size:11px;color:var(--muted)">'+(p?p.q.length:0)+' ta savol</span>'
-    +'</div></div>';
-  var body=open?'<div class="rcard-body">'+qa+'</div>':'';
-  return '<div class="rcard">'+head+body+'</div>';
+
+  // Karta boshi
+  var html='<div class="rcard">';
+  
+  // Kliklanadigan sarlavha
+  html+='<div class="rcard-head" onclick="EX(''+ex.id+'')">';
+  html+='<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">';
+  
+  // Chap: ism va ma'lumotlar
+  html+='<div style="display:flex;align-items:center;gap:10px">';
+  html+='<div style="width:40px;height:40px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">'+(p?p.i:'👤')+'</div>';
+  html+='<div>';
+  html+='<div style="font-size:15px;font-weight:700">'+esc(ex.employeeName||'')+'</div>';
+  html+='<div style="font-size:12px;color:var(--muted);margin-top:2px"><span class="badge bgray" style="margin-right:5px">'+(p?p.l:ex.position||'—')+'</span>'+(ex.date||'')+'</div>';
+  html+='<div style="font-size:11px;color:var(--muted);margin-top:2px">📞 '+(ex.phone||'—')+' · 📧 '+(ex.email||'—')+'</div>';
+  html+='</div></div>';
+  
+  // O'ng: ball
+  html+='<div style="text-align:right;flex-shrink:0">';
+  html+='<div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:'+fc+';line-height:1">'+ex.finalScore+'%</div>';
+  html+='<div style="margin-top:4px">'+sbadge(ex.finalScore)+'</div>';
+  html+='</div>';
+  html+='</div>';
+  
+  // Ko'rish tugmasi
+  html+='<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">';
+  html+='<span style="font-size:12px;font-weight:700;color:var(--accent)">'+(open?'▲ Yopish':'👁 Savollar va javoblarni ko'rish')+'</span>';
+  html+='<span style="font-size:11px;color:var(--muted)">'+(p?p.q.length:0)+' ta savol</span>';
+  html+='</div>';
+  html+='</div>'; // rcard-head
+
+  // Savollar qismi
+  if(open){
+    html+='<div class="rcard-body">';
+    if(qa){
+      html+=qa;
+    } else {
+      html+='<p style="color:var(--muted);font-size:13px;text-align:center;padding:16px 0">Javoblar topilmadi</p>';
+    }
+    html+='</div>';
+  }
+  
+  html+='</div>'; // rcard
+  return html;
 }
+
 
 // ── ACTIONS ──
 window.ST=function(t){
