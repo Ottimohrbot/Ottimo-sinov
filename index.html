@@ -4,119 +4,108 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Ottimo HR</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#f8f7f4;--surface:#fff;--card:#f2f0ec;--border:#e5e1d8;
-  --accent:#2c5f2e;--accent2:#3d7a40;--accent-light:#eaf2ea;
-  --gold:#c8973a;--text:#1a1a18;--muted:#6b6860;--muted2:#a09d97;
-  --success:#2c7a4b;--warn:#b87a1a;--danger:#b83c3c;
-  --r:12px;--r2:8px;--sh:0 2px 12px rgba(0,0,0,.07);
+  --bg:#f8f7f4;--sur:#fff;--card:#f2f0ec;--bor:#e5e1d8;
+  --ac:#2c5f2e;--ac2:#3d7a40;--acl:#eaf2ea;
+  --gold:#c8973a;--tx:#1a1a18;--mu:#6b6860;--mu2:#a09d97;
+  --ok:#2c7a4b;--wa:#b87a1a;--er:#b83c3c;
+  --r:12px;--r2:8px;
 }
-body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--tx);min-height:100vh}
 /* TOPBAR */
-.topbar{background:var(--surface);border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;z-index:50;box-shadow:var(--sh)}
-.logo{font-family:'Playfair Display',serif;font-size:20px;color:var(--accent)}
-.nav button{background:none;border:none;padding:7px 14px;border-radius:var(--r2);font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer}
-.nav button.on{color:var(--accent);background:var(--accent-light)}
-.chip{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:5px 12px 5px 6px;font-size:13px;font-weight:600;cursor:pointer}
-.av{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.tb{background:var(--sur);border-bottom:1px solid var(--bor);height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;z-index:50;box-shadow:0 1px 8px rgba(0,0,0,.06)}
+.logo{font-family:'Playfair Display',serif;font-size:20px;color:var(--ac)}
+.nav button{background:none;border:none;padding:7px 14px;border-radius:var(--r2);font-family:'Nunito',sans-serif;font-size:13px;font-weight:600;color:var(--mu);cursor:pointer;transition:all .2s}
+.nav button.on{color:var(--ac);background:var(--acl)}
+.chip{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--bor);border-radius:20px;padding:5px 12px 5px 6px;font-size:13px;font-weight:600;cursor:pointer}
+.av{width:26px;height:26px;border-radius:50%;background:var(--ac);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
 /* MAIN */
 .main{max-width:960px;margin:0 auto;padding:32px 24px}
 /* CARDS */
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:24px;box-shadow:var(--sh)}
-.csm{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--sur);border:1px solid var(--bor);border-radius:var(--r);padding:24px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.csm{background:var(--sur);border:1px solid var(--bor);border-radius:var(--r);padding:16px 18px;box-shadow:0 1px 6px rgba(0,0,0,.05)}
 .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 /* BADGES */
-.badge{display:inline-flex;align-items:center;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px}
-.bg{background:#e8f5ee;color:#2c7a4b;border:1px solid #b8ddc8}
-.ba{background:#fdf3e3;color:#b87a1a;border:1px solid #f0d49a}
-.br{background:#fdf0f0;color:#b83c3c;border:1px solid #f0c4c4}
-.bb{background:#e8f0fc;color:#2a5fa8;border:1px solid #b8cef0}
-.bgold{background:#fdf3e3;color:var(--gold);border:1px solid #f0d49a}
-.bgray{background:var(--card);color:var(--muted);border:1px solid var(--border)}
+.badge{display:inline-flex;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px}
+.bok{background:#e8f5ee;color:#2c7a4b;border:1px solid #b8ddc8}
+.bwa{background:#fdf3e3;color:#b87a1a;border:1px solid #f0d49a}
+.ber{background:#fdf0f0;color:#b83c3c;border:1px solid #f0c4c4}
+.bgr{background:var(--card);color:var(--mu);border:1px solid var(--bor)}
 /* BTNS */
 .btn{display:inline-flex;align-items:center;gap:5px;border:none;border-radius:var(--r2);padding:10px 18px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;cursor:pointer;transition:all .18s}
-.btn-p{background:var(--accent);color:#fff}
-.btn-p:hover{background:var(--accent2)}
-.btn-g{background:transparent;color:var(--muted);border:1px solid var(--border)}
-.btn-g:hover{color:var(--text);background:var(--card)}
-.btn-full{width:100%;justify-content:center}
-.btn-lg{padding:13px 24px;font-size:14px}
+.bp{background:var(--ac);color:#fff}.bp:hover{background:var(--ac2)}
+.bg2{background:transparent;color:var(--mu);border:1px solid var(--bor)}.bg2:hover{background:var(--card)}
+.bfull{width:100%;justify-content:center}
+.blg{padding:13px 24px;font-size:14px}
 .btn:disabled{opacity:.4;cursor:not-allowed}
 /* INPUTS */
-.field{margin-bottom:15px}
-.field label{display:block;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
-.inp{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r2);padding:11px 13px;color:var(--text);font-size:14px;font-family:'Nunito',sans-serif;font-weight:500;outline:none;transition:border .18s}
-.inp:focus{border-color:var(--accent);background:var(--surface)}
-.inp.err{border-color:var(--danger)}
-.inp::placeholder{color:var(--muted2)}
-.hint{font-size:11px;color:var(--muted);margin-top:3px}
-.errtxt{font-size:11px;color:var(--danger);font-weight:700;margin-top:3px}
+.fl{margin-bottom:14px}
+.fl label{display:block;font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
+.inp{width:100%;background:var(--bg);border:1.5px solid var(--bor);border-radius:var(--r2);padding:11px 13px;color:var(--tx);font-size:14px;font-family:'Nunito',sans-serif;font-weight:500;outline:none;transition:border .18s}
+.inp:focus{border-color:var(--ac);background:var(--sur)}
+.inp.err{border-color:var(--er)}
+.inp::placeholder{color:var(--mu2)}
+.hint{font-size:11px;color:var(--mu);margin-top:3px}
+.etx{font-size:11px;color:var(--er);font-weight:700;margin-top:3px}
 /* LOGIN */
 .lw{min-height:100vh;display:flex}
-.ll{width:340px;background:linear-gradient(150deg,var(--accent),#1a3d1c);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 36px;color:#fff;flex-shrink:0}
-.ll-logo{font-family:'Playfair Display',serif;font-size:40px;margin-bottom:10px}
-.ll-tag{font-size:13px;color:rgba(255,255,255,.7);text-align:center;line-height:1.6}
-.lr{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:40px 24px;overflow-y:auto}
-.lbox{width:100%;max-width:400px;padding-top:16px}
-.ltabs{display:flex;gap:3px;background:var(--card);border:1px solid var(--border);border-radius:var(--r2);padding:3px;margin-bottom:20px}
-.ltab{flex:1;padding:8px;border:none;border-radius:6px;cursor:pointer;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;background:transparent;color:var(--muted)}
-.ltab.on{background:var(--surface);color:var(--accent)}
+.ll{width:320px;background:linear-gradient(150deg,var(--ac),#1a3d1c);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 32px;color:#fff;flex-shrink:0}
+.ll-lg{font-family:'Playfair Display',serif;font-size:38px;margin-bottom:10px}
+.ll-tg{font-size:13px;color:rgba(255,255,255,.7);text-align:center;line-height:1.6}
+.lr{flex:1;display:flex;align-items:center;justify-content:center;padding:32px 24px;overflow-y:auto}
+.lbox{width:100%;max-width:400px}
+.ltabs{display:flex;gap:3px;background:var(--card);border:1px solid var(--bor);border-radius:var(--r2);padding:3px;margin-bottom:20px}
+.ltab{flex:1;padding:8px;border:none;border-radius:6px;cursor:pointer;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;background:transparent;color:var(--mu);transition:all .2s}
+.ltab.on{background:var(--sur);color:var(--ac)}
 /* STEPS */
 .dots{display:flex;gap:7px;justify-content:center;margin-bottom:20px}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:all .3s}
-.dot.on{background:var(--accent);width:22px;border-radius:4px}
-.dot.dn{background:var(--accent2)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--bor);transition:all .3s}
+.dot.on{background:var(--ac);width:22px;border-radius:4px}
+.dot.dn{background:var(--ac2)}
 /* PROGRESS */
-.pbar{height:4px;background:var(--border);border-radius:10px;overflow:hidden;margin:12px 0 5px}
-.pfill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:10px;transition:width .4s}
+.pbar{height:4px;background:var(--bor);border-radius:10px;overflow:hidden;margin:12px 0 5px}
+.pfill{height:100%;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:10px;transition:width .4s}
 /* KASB */
-.pg{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:18px}
-.pc{background:var(--surface);border:2px solid var(--border);border-radius:var(--r);padding:16px 12px;cursor:pointer;text-align:center;transition:all .2s;position:relative}
-.pc:hover{border-color:var(--accent2);background:var(--accent-light)}
-.pc.sel{border-color:var(--accent);background:var(--accent-light)}
-.pc .ck{position:absolute;top:7px;right:7px;width:18px;height:18px;background:var(--accent);border-radius:50%;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;opacity:0}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:16px}
+.pc{background:var(--sur);border:2px solid var(--bor);border-radius:var(--r);padding:14px 10px;cursor:pointer;text-align:center;transition:all .2s;position:relative}
+.pc:hover{border-color:var(--ac2);background:var(--acl)}
+.pc.sel{border-color:var(--ac);background:var(--acl)}
+.pc .ck{position:absolute;top:6px;right:6px;width:18px;height:18px;background:var(--ac);border-radius:50%;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;opacity:0}
 .pc.sel .ck{opacity:1}
 /* SAVOL */
-.qcat{font-size:11px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px}
-.qtxt{font-family:'Playfair Display',serif;font-size:19px;line-height:1.45;margin-bottom:18px}
+.qcat{font-size:11px;color:var(--ac);font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
+.qtxt{font-family:'Playfair Display',serif;font-size:19px;line-height:1.45;margin-bottom:16px}
 .choices{display:flex;flex-direction:column;gap:8px}
-.ch{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r2);padding:11px 15px;cursor:pointer;font-size:14px;font-family:'Nunito',sans-serif;font-weight:600;text-align:left;width:100%;transition:all .18s;color:var(--text)}
-.ch:hover{border-color:var(--accent2);background:var(--accent-light)}
-.ch.sel{background:var(--accent-light);border-color:var(--accent);color:var(--accent)}
-/* RESULT CARD */
-.rcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);margin-bottom:10px;overflow:hidden;box-shadow:var(--sh)}
-.rcard-head{padding:16px 18px;cursor:pointer}
-.rcard-body{padding:0 18px 16px;border-top:1px solid var(--border)}
-.qa-item{padding:10px 0;border-bottom:1px solid var(--border)}
-.qa-item:last-child{border-bottom:none}
-.qa-cat{font-size:10px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px}
-.qa-q{font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px}
-.qa-a{background:var(--accent-light);border-radius:6px;padding:6px 11px;font-size:12px;font-weight:700;color:var(--accent);display:inline-block}
+.ch{background:var(--bg);border:1.5px solid var(--bor);border-radius:var(--r2);padding:11px 14px;cursor:pointer;font-size:13px;font-family:'Nunito',sans-serif;font-weight:600;text-align:left;width:100%;transition:all .18s;color:var(--tx)}
+.ch:hover{border-color:var(--ac2);background:var(--acl)}
+.ch.sel{background:var(--acl);border-color:var(--ac);color:var(--ac)}
+/* NATIJA CARD */
+.nc{background:var(--sur);border:1px solid var(--bor);border-radius:var(--r);margin-bottom:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.nc-h{padding:16px 18px;cursor:pointer;transition:background .2s}
+.nc-h:hover{background:var(--bg)}
+.nc-b{padding:4px 18px 16px;border-top:1px solid var(--bor)}
+.qa-it{padding:10px 0;border-bottom:1px solid var(--bor)}
+.qa-it:last-child{border-bottom:none}
+.qa-cat{font-size:10px;color:var(--ac);font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px}
+.qa-q{font-size:13px;font-weight:600;color:var(--tx);margin-bottom:5px}
+.qa-a{background:var(--acl);border-radius:6px;padding:5px 10px;font-size:12px;font-weight:700;color:var(--ac);display:inline-block}
 /* STAT */
-.sv{font-family:'Playfair Display',serif;font-size:38px;line-height:1;margin-bottom:3px}
-.sl{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
-/* TABLE */
-.tw{overflow-x:auto;border-radius:var(--r);border:1px solid var(--border)}
-table{width:100%;border-collapse:collapse}
-th{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;padding:11px 15px;text-align:left;border-bottom:1px solid var(--border);background:var(--card)}
-td{padding:12px 15px;border-bottom:1px solid var(--border);font-size:13px;font-weight:500}
-tr:last-child td{border-bottom:none}
-tbody tr:hover td{background:var(--bg)}
+.sv{font-family:'Playfair Display',serif;font-size:36px;line-height:1;margin-bottom:3px}
+.sl{font-size:11px;color:var(--mu);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
 /* TOAST */
-.toast{position:fixed;top:18px;right:18px;z-index:999;padding:12px 18px;border-radius:var(--r2);font-size:13px;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,.15);max-width:300px}
-.ts{background:var(--accent);color:#fff}
-.td{background:var(--danger);color:#fff}
-@keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-.fu{animation:fu .35s ease}
+.toast{position:fixed;top:16px;right:16px;z-index:999;padding:12px 18px;border-radius:var(--r2);font-size:13px;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,.15)}
+.tok{background:var(--ac);color:#fff}
+.ter{background:var(--er);color:#fff}
+@keyframes fu{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.fu{animation:fu .3s ease}
 @media(max-width:640px){
-  .ll{display:none}.lr{padding:20px 16px}
-  .g4,.g3{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}
-  .topbar{padding:0 14px}.main{padding:20px 14px}
+  .ll{display:none}.lr{padding:20px 14px}
+  .g4{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr}
+  .tb{padding:0 14px}.main{padding:20px 14px}
 }
 </style>
 </head>
@@ -124,37 +113,37 @@ tbody tr:hover td{background:var(--bg)}
 <div id="app"></div>
 <script type="module">
 import{initializeApp}from"https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import{getFirestore,collection,addDoc,getDocs,query,orderBy,serverTimestamp}from"https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import{getFirestore,collection,addDoc,getDocs,query,orderBy}from"https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-const FB={
+const db=getFirestore(initializeApp({
   apiKey:"AIzaSyBkFbcT--VfrLe2ZMjxhmRAs1V7Svzx2Bg",
   authDomain:"ottimo-hr.firebaseapp.com",
   projectId:"ottimo-hr",
   storageBucket:"ottimo-hr.firebasestorage.app",
   messagingSenderId:"130893452321",
   appId:"1:130893452321:web:d70ddfc1fffc57a1c97f60"
-};
-const db=getFirestore(initializeApp(FB));
+}));
 
 const TG_TOKEN="8173395748:AAFCbwHLLTiEOu0L9mjD2_Yy-a-UZXLKghU";
 const TG_CHAT="206004279";
 const MGR_PASS="688466";
 
-async function sendTelegram(text){
+async function tg(txt){
   try{
     await fetch("https://api.telegram.org/bot"+TG_TOKEN+"/sendMessage",{
       method:"POST",headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({chat_id:TG_CHAT,text:text,parse_mode:"HTML"})
+      body:JSON.stringify({chat_id:TG_CHAT,text:txt,parse_mode:"HTML"})
     });
-  }catch(e){console.warn("TG error:",e);}
+  }catch(e){}
 }
 
-const POS={
+// KASBLAR
+var POS={
   menejer:{l:"Menejer",i:"👔",q:[
     {id:"m1",c:"Rahbarlik",t:"Xodim ish rejasini bajarmasa birinchi nima qilasiz?",o:["Sababini aniqlab, yordam beraman","Ogohlantirib, muddatni uzaytiraman","Boshqa xodimga topshiraman","Darhol jazo chorasi ko'raman"]},
     {id:"m2",c:"Qaror",t:"Ikki muhim ish bir vaqtda tushsa qanday harakat qilasiz?",o:["Muhimligiga qarab ustuvorlik belgilayman","Ikkalasini parallel bajaraman","Jamoaga taqsimlayman","Rahbardan ko'rsatma kutaman"]},
     {id:"m3",c:"Muloqot",t:"Xodim siz bilan rozi bo'lmasa qanday muloqot qilasiz?",o:["Tinglash va birgalikda yechim topaman","O'z fikrimni to'g'ri deb davom ettiraman","Ovoz berish o'tkazaman","Rahbariyatga hisobot beraman"]},
-    {id:"m4",c:"Motivatsiya",t:"Jamoangiz ish sifati pasayib ketsa nima qilasiz?",o:["Muammoni aniqlab, qo'llab-quvvatlayman","Rag'batlantirish tizimini ko'rib chiqaman","Umumiy yig'ilish o'tkazaman","Eng yaxshi natija ko'rsatganlarga bonus beraman"]},
+    {id:"m4",c:"Motivatsiya",t:"Jamoangiz ish sifati pasayib ketsa nima qilasiz?",o:["Muammoni aniqlab, qo'llab-quvvatlayman","Rag'batlantirish tizimini ko'rib chiqaman","Umumiy yig'ilish o'tkazaman","Eng yaxshilarga bonus beraman"]},
     {id:"m5",c:"Mijoz",t:"VIP mijoz shikoyat bilan kelsa nima qilasiz?",o:["Zudlik bilan shaxsan muloqot qilaman","Mas'ul xodimni yo'naltiraman","Kechirim so'rab, yechim taklif qilaman","Standart jarayon bo'yicha hal qilaman"]},
     {id:"m6",c:"Hisobot",t:"Oylik ko'rsatkichlar past bo'lsa rahbariyatga nima deysiz?",o:["Sabablarni tahlil qilib, yechim rejasi taqdim etaman","Faqat natijani aytaman","Jamoani ayblayman","Keyingi oy yaxshilanadi deb va'da qilaman"]},
     {id:"m7",c:"Yangi xodim",t:"Yangi xodimni jamoaga qo'shishda asosiy ustuvorlik?",o:["Mentor tayinlab, moslashishiga yordam beraman","Qo'llanma va yo'riqnoma tayyorlayman","Jamoaga tanishtirib qo'yaman","Faqat ish vazifalarini tushuntiraman"]},
@@ -164,34 +153,34 @@ const POS={
   ]},
   barista:{l:"Barista",i:"☕",q:[
     {id:"b1",c:"Texnika",t:"Espresso tayyorlashda eng muhim omil nima?",o:["Tortish vaqti (25-30 sek) va hajmi (25-30ml)","Kofe turi va qovurish darajasi","Suv harorati va bosimi","Kofe maydalash darajasi"]},
-    {id:"b2",c:"Sifat",t:"Mijoz qahvasi ta'mini yoqtirmasa nima qilasiz?",o:["Uzr so'rab darhol yangi tayyorlayman","Isitish uchun mikroto'lqin taklif qilaman","Kechirim so'rayman, lekin yangi tayyorlay olmayman","Menejerni chaqiraman"]},
+    {id:"b2",c:"Sifat",t:"Mijoz qahvasi ta'mini yoqtirmasa nima qilasiz?",o:["Uzr so'rab darhol yangi tayyorlayman","Isitish uchun mikroto'lqin taklif qilaman","Kechirim so'rayman","Menejerni chaqiraman"]},
     {id:"b3",c:"Bilim",t:"Latte va cappuccino farqi nima?",o:["Latte ko'proq sut, cappuccino ko'proq ko'pik","Ikkalasi bir xil, faqat nomi farq qiladi","Cappuccino kuchliroq, latte yumshoqroq","Latte sovuq, cappuccino issiq servis qilinadi"]},
     {id:"b4",c:"Tozalik",t:"Espresso mashinasini qachon tozalash kerak?",o:["Har smena boshida, oxirida va zarur bo'lganda","Faqat ko'zga ko'rinadigan kir bo'lganda","Hafta oxirida bir marta","Texnik xizmat vaqtida"]},
-    {id:"b5",c:"Mijoz",t:"Qahvadan allergiyasi bor mijoz kelsa nima qilasiz?",o:["Ingredientlarni batafsil tushuntirib, muqobil taklif qilaman","Doktor maslahatiga yo'naltiraman","Hech narsa demayman, o'zi biladi","Faqat kutilgan mahsulotni beraman"]},
+    {id:"b5",c:"Mijoz",t:"Allergiyasi bor mijoz kelsa nima qilasiz?",o:["Ingredientlarni tushuntirib, muqobil taklif qilaman","Doktor maslahatiga yo'naltiraman","Hech narsa demayman","Faqat kutilgan mahsulotni beraman"]},
     {id:"b6",c:"Tezlik",t:"Navbat uzayib ketsa qanday ish tartibini qo'llaysiz?",o:["Parallel tayyorlash: bir vaqtda bir nechta buyurtma","Tezlik uchun sifatni biroz pasaytiraman","Yordamchi so'rayman","Har bir buyurtmani tartibda bajaraman"]},
-    {id:"b7",c:"Yangi mahsulot",t:"Menyuga yangi ichimlik qo'shilsa qanday o'rganasiz?",o:["Retseptni yod olib, o'zim sinab ko'raman","Faqat ko'rsatma bo'lganda o'rganaman","Internet va video darslardan qo'shimcha o'rganaman","Hamkasbdan so'rayman"]},
+    {id:"b7",c:"O'rganish",t:"Menyuga yangi ichimlik qo'shilsa qanday o'rganasiz?",o:["Retseptni yod olib, o'zim sinab ko'raman","Faqat ko'rsatma bo'lganda o'rganaman","Internet va video darslardan o'rganaman","Hamkasbdan so'rayman"]},
     {id:"b8",c:"Muammo",t:"Mashina ishlamay qolsa smena o'rtasida nima qilasiz?",o:["Darhol mas'ulni xabardor qilib, mijozlarni ogohlantiraman","O'zim tuzatishga harakat qilaman","Smenani to'xtataman","Muqobil usul bilan davom etaman"]},
     {id:"b9",c:"Jamoa",t:"Hamkasbingiz xato retsept ishlatayotganini ko'rsangiz?",o:["Xushmuomalalik bilan to'g'ri retseptni ko'rsataman","Menejerni xabardor qilaman","Hech narsa demay davom etaman","Mijoz shikoyat qilganidan keyin aytaman"]},
     {id:"b10",c:"Mas'uliyat",t:"Smena oxirida ish joyi tartibsiz qolsa nima qilasiz?",o:["O'zim to'liq tozalab, keyingi smenani tayyorlab ketaman","Faqat o'z ish joyimni tozalayman","Keyingi smena o'zi tartibga soladi","Tez-tez tozalab, tartibli ushlab turaman"]},
   ]},
   sotuvchi:{l:"Sotuvchi",i:"🛍️",q:[
-    {id:"s1",c:"Sotuv",t:"Mijoz mahsulot narxini qimmat desa qanday javob berasiz?",o:["Mahsulotning qiymatini va uzoq muddatli foydasini tushuntiraman","Chegirma beraman","Arzonroq variantni taklif qilaman","Narx bozor narxiga mos deb tushuntiraman"]},
+    {id:"s1",c:"Sotuv",t:"Mijoz mahsulot narxini qimmat desa qanday javob berasiz?",o:["Mahsulotning qiymatini va foydasini tushuntiraman","Chegirma beraman","Arzonroq variantni taklif qilaman","Narx bozor narxiga mos deb tushuntiraman"]},
     {id:"s2",c:"Ehtiyoj",t:"Mijozning haqiqiy ehtiyojini aniqlash uchun nima qilasiz?",o:["Ochiq savollar beraman va diqqat bilan tinglayman","Mahsulotlarimizni birin-ketin taqdim etaman","Eng mashhur mahsulotni taklif qilaman","Mijoz o'zi so'raganini beraman"]},
     {id:"s3",c:"Rad etish",t:"Mijoz 'O'ylab ko'raman' desa qanday harakat qilasiz?",o:["Asosiy savollarni aniqlab, shubhalarni bartaraf etaman","Qayta qo'ng'iroq vaqtini belgilab ruxsat so'rayman","Yangi taklif bilan chiqaman","Xayrlashib, keyingi mijozga o'taman"]},
     {id:"s4",c:"Bilim",t:"Raqobatchi mahsulotidan afzalligimizni qanday tushuntirасиз?",o:["Aniq faktlar va farqlarni ko'rsataman","Raqobatchilarni tanqid qilaman","Narq jihatiga e'tibor qarataman","Faqat o'z mahsulotimiz haqida gapiraman"]},
     {id:"s5",c:"Taqdimot",t:"Yangi mijozga mahsulot taqdimotini qanday boshlaysiz?",o:["Avval mijoz ehtiyojini aniqlayman, so'ng mahsulotni ko'rsataman","Mahsulotning barcha xususiyatlarini batafsil aytaman","Demo ko'rsataman","Muvaffaqiyatli mijozlar misolini keltiraman"]},
-    {id:"s6",c:"Munosabat",t:"Mijoz bilan uzoq muddatli munosabat qurish uchun nima qilasiz?",o:["Sotuvdan keyin ham xabardor bo'lib turaman","Har oy yangi takliflar yuboraman","Bayramlarda tabriklаyman","Faqat yangi mahsulot chiqqanda muloqot qilaman"]},
+    {id:"s6",c:"Munosabat",t:"Mijoz bilan uzoq muddatli munosabat qurish uchun nima qilasiz?",o:["Sotuvdan keyin ham xabardor bo'lib turaman","Har oy yangi takliflar yuboraman","Bayramlarda tabriklayman","Faqat yangi mahsulot chiqqanda muloqot qilaman"]},
     {id:"s7",c:"Reja",t:"Oylik reja bajarilmayotganini sezsa qanday harakat qilasiz?",o:["Sabablarni tahlil qilib, strategiyani o'zgartiraman","Rahbariyatga aytaman","Qolgan kunlarda ikki barobar harakat qilaman","Keyingi oyga umid qilaman"]},
     {id:"s8",c:"Guruh",t:"Jamoaviy sotuv loyihasida o'z vazifangiz nima?",o:["Aniq rolimni o'tab, jamoa muvaffaqiyatiga hissa qo'shaman","Eng ko'p sotuv qilishga intilamаn","Loyiha rahbarini qo'llab-quvvatlayman","Jamoadan mustaqil ishlashni afzal ko'raman"]},
     {id:"s9",c:"Shikoyat",t:"Mijoz mahsulotdan norozi bo'lib qaytib kelsa nima qilasiz?",o:["Muammoni tinglash, kechirim so'rash va yechim taklif qilish","Qaytarish yoki almashtirish tartibini tushuntiraman","Menejerga yo'naltiraman","Sababini aniqlab, imkon qadar hal qilaman"]},
     {id:"s10",c:"O'rganish",t:"Yangi mahsulot haqida qanday bilim olasiz?",o:["Barcha materiallarni o'qib, o'zim sinab ko'raman","Treninglar va prezentatsiyalarda qatnashaman","Hamkasblardan o'rganaman","Mijoz savollari orqali o'rganaman"]},
   ]},
   hr:{l:"HR",i:"🤝",q:[
-    {id:"h1",c:"Yollash",t:"Intervyu o'tkazishda qanday savollardan foydalanasiz?",o:["Vaziyatga asoslangan (STAR) savollar","Standart ish tajribasi savollari","Ko'proq shaxsiy va motivatsiya savollari","Texnik bilimni tekshiruvchi savollar"]},
-    {id:"h2",c:"Onboarding",t:"Yangi xodim birinchi haftada nimaga muhtoj?",o:["Aniq rol va vazifalar, mentor va ish muhiti bilan tanishish","Faqat hujjatlarni to'ldirish","Darhol ish boshlash","Jamoa bilan tanishish yig'ilishi"]},
+    {id:"h1",c:"Yollash",t:"Intervyu o'tkazishda qanday savollardan foydalanasiz?",o:["Vaziyatga asoslangan (STAR) savollar","Standart ish tajribasi savollari","Ko'proq motivatsiya savollari","Texnik bilimni tekshiruvchi savollar"]},
+    {id:"h2",c:"Onboarding",t:"Yangi xodim birinchi haftada nimaga muhtoj?",o:["Aniq rol, mentor va ish muhiti bilan tanishish","Faqat hujjatlarni to'ldirish","Darhol ish boshlash","Jamoa bilan tanishish yig'ilishi"]},
     {id:"h3",c:"Nizo",t:"Bo'limlar o'rtasida mojaro yuzaga kelsa HR sifatida nima qilasiz?",o:["Betaraf vositachi sifatida ikki tomonni tinglaman","Qoida va tartibga asosan qaror qilaman","Yuqori rahbariyatga topshiraman","Tomonlarni alohida yig'ib, yechim topaman"]},
     {id:"h4",c:"Bo'shatish",t:"Xodimni bo'shatish zarur bo'lganda qanday harakat qilasiz?",o:["Qonuniy tartib va insoniy munosabat bilan o'tkazaman","Faqat hujjat va rasmiy jarayon","Xodimga oldindan ogohlantirish beraman","Menejer bilan birgalikda hal qilaman"]},
-    {id:"h5",c:"Siyosat",t:"Xodim kompaniya qoidasini buzsa nima qilasiz?",o:["Qoidabuzarlik darajasiga qarab tartib bo'yicha jazo chorasi","Avval suhbat, keyin rasmiy ogohlantirish","Darhol menejerga xabar beraman","Yozma ogohlantirish yuboraman"]},
+    {id:"h5",c:"Siyosat",t:"Xodim kompaniya qoidasini buzsa nima qilasiz?",o:["Darajasiga qarab tartib bo'yicha jazo chorasi","Avval suhbat, keyin rasmiy ogohlantirish","Darhol menejerga xabar beraman","Yozma ogohlantirish yuboraman"]},
     {id:"h6",c:"Motivatsiya",t:"Xodimlar ish qoldirish ko'rsatkichi oshsa nimadan boshlayman?",o:["Exit interview va sabab tahlili","Ish sharoitini ko'rib chiqaman","Maosh va benefitlarni taqqoslayman","Xodimlar so'rovnomasini o'tkazaman"]},
     {id:"h7",c:"Rivojlanish",t:"Xodim o'sishini qo'llab-quvvatlash uchun nima qilasiz?",o:["Individual rivojlanish rejasi (IDP) tuzaman","Treninglar va kurslar tashkil etaman","Mentorlik dasturini yo'lga qo'yaman","Ichki ko'tarilish imkoniyatlarini taqdim etaman"]},
     {id:"h8",c:"Madaniyat",t:"Korporativ madaniyatni shakllantirishda HR roli nima?",o:["Qadriyatlarni tatbiq etuvchi tadbirlar","Faqat yangi xodimlarni o'rgatish","Rahbariyat ko'rsatmasini amalga oshirish","Xodimlar fikr-mulohazasini to'plash"]},
@@ -212,433 +201,396 @@ const POS={
   ]},
 };
 
-// ── HELPERS ──
-function vEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test((e||'').trim())}
-function vPhone(p){return /^\+?[0-9]{9,13}$/.test((p||'').replace(/[\s\-\(\)]/g,''))}
-function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
-function sbadge(s){
-  if(s>=85)return '<span class="badge bg">✓ Qabul</span>';
-  if(s>=65)return '<span class="badge ba">◎ Monitoring</span>';
-  return '<span class="badge br">✗ Rad</span>';
+// HELPERS
+function ve(e){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test((e||'').trim())}
+function vp(p){return /^\+?[0-9]{9,13}$/.test((p||'').replace(/[\s\-\(\)]/g,''))}
+function ex(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function sb(s){
+  if(s>=85)return '<span class="badge bok">✓ Qabul</span>';
+  if(s>=65)return '<span class="badge bwa">◎ Monitoring</span>';
+  return '<span class="badge ber">✗ Rad</span>';
 }
-function score(ans,qs){
-  let t=0,c=0;
-  qs.forEach(function(q){
-    var idx=parseInt(ans[q.id]);
-    if(!isNaN(idx)&&idx>=0){t+=((q.o.length-idx)/q.o.length)*100;c++;}
-  });
+function calcScore(ans,qs){
+  var t=0,c=0;
+  for(var i=0;i<qs.length;i++){
+    var idx=parseInt(ans[qs[i].id]);
+    if(!isNaN(idx)&&idx>=0){t+=((qs[i].o.length-idx)/qs[i].o.length)*100;c++;}
+  }
   return c?Math.round(t/c):50;
 }
 
-// ── STATE ──
+// STATE
 var S={
-  tab:'manager', // manager | employee
-  // manager
-  mgr:false, mgrName:'',
-  page:'home', // home | results
-  exams:[], expandId:null,
+  tab:'manager',
+  mgr:false,mgrName:'',
+  page:'home',
+  exams:[],
+  openId:null,
   srch:'',
-  // employee steps: 1=info, 2=kasb, 3=exam, 4=done
+  // hodim
   step:1,
-  name:'',email:'',phone:'',bdate:'',address:'',pos:'',
+  nm:'',em:'',ph:'',bd:'',ad:'',pos:'',
   errs:{},
-  ans:{}, qstep:0,
+  ans:{},qi:0,
   result:null,
-  // ui
   toast:null,
 };
 
-// ── RENDER ──
+// RENDER
 function R(){
   var h='';
-  if(S.toast) h+='<div class="toast '+(S.toast.t==='d'?'td':'ts')+'">'+S.toast.m+'</div>';
-
-  if(!S.mgr && S.tab==='manager'){
-    h+=renderLogin();
-  } else if(S.tab==='employee'){
-    h+=renderLogin();
-  } else {
-    h+=renderApp();
-  }
+  if(S.toast)h+='<div class="toast '+(S.toast.t==='e'?'ter':'tok')+'">'+S.toast.m+'</div>';
+  if(S.mgr){h+=appHTML();}
+  else{h+=loginHTML();}
   document.getElementById('app').innerHTML=h;
 }
 
-// ── LOGIN PAGE ──
-function renderLogin(){
+// LOGIN
+function loginHTML(){
   return '<div class="lw">'
-    +'<div class="ll"><div class="ll-logo">Ottimo</div><p class="ll-tag">Xodimlarni sinov muddatida baholash tizimi</p></div>'
+    +'<div class="ll"><div class="ll-lg">Ottimo</div>'
+    +'<p class="ll-tg">Xodimlarni sinov muddatida baholash tizimi</p></div>'
     +'<div class="lr"><div class="lbox fu">'
-    +'<div style="font-family:\'Playfair Display\',serif;font-size:24px;margin-bottom:4px">'+(S.tab==='manager'?'Rahbar kirish':'Sinov imtihoni')+'</div>'
-    +'<div style="font-size:13px;color:var(--muted);margin-bottom:18px">'+(S.tab==='manager'?'Boshqaruv paneliga kirish':'Ma\'lumotlarni to\'ldiring')+'</div>'
+    +'<div style="font-family:\'Playfair Display\',serif;font-size:24px;margin-bottom:4px">'
+    +(S.tab==='manager'?'Rahbar kirish':'Sinov imtihoni')+'</div>'
+    +'<div style="font-size:13px;color:var(--mu);margin-bottom:18px">'
+    +(S.tab==='manager'?'Boshqaruv paneliga kirish':'Ma\'lumotlarni to\'ldiring va imtihonni boshlang')+'</div>'
     +'<div class="ltabs">'
-    +'<button class="ltab '+(S.tab==='manager'?'on':'')+'" onclick="ST(\'manager\')">Rahbar</button>'
-    +'<button class="ltab '+(S.tab==='employee'?'on':'')+'" onclick="ST(\'employee\')">Hodim</button>'
+    +'<button class="ltab '+(S.tab==='manager'?'on':'')+'" onclick="TAB(\'manager\')">Rahbar</button>'
+    +'<button class="ltab '+(S.tab==='employee'?'on':'')+'" onclick="TAB(\'employee\')">Hodim</button>'
     +'</div>'
-    +(S.tab==='manager'?renderMgrLogin():renderEmpFlow())
+    +(S.tab==='manager'?mgrForm():empFlow())
     +'</div></div></div>';
 }
 
-function renderMgrLogin(){
-  return '<div class="field"><label>Ism Familiya</label>'
+function mgrForm(){
+  return '<div class="fl"><label>Ism Familiya</label>'
     +'<input class="inp" id="mn" type="text" placeholder="Ism Familiya"/></div>'
-    +'<div class="field"><label>Parol</label>'
+    +'<div class="fl"><label>Parol</label>'
     +'<input class="inp" id="mp" type="password" placeholder="••••••••"/></div>'
-    +(S.errs.mgr?'<div class="errtxt">⚠ '+S.errs.mgr+'</div>':'')
-    +'<button class="btn btn-p btn-full btn-lg" style="margin-top:10px" onclick="doMgr()">Kirish →</button>';
+    +(S.errs.mgr?'<div class="etx" style="margin-bottom:10px">⚠ '+S.errs.mgr+'</div>':'')
+    +'<button class="btn bp bfull blg" style="margin-top:8px" onclick="LOGIN()">Kirish →</button>';
 }
 
-// ── EMPLOYEE FLOW ──
-function renderEmpFlow(){
-  if(S.step===1) return renderE1();
-  if(S.step===2) return renderE2();
-  if(S.step===3) return renderE3();
-  if(S.step===4) return renderE4();
-  return renderE1();
+function empFlow(){
+  if(S.step===1)return step1();
+  if(S.step===2)return step2();
+  if(S.step===3)return step3();
+  if(S.step===4)return step4();
+  return step1();
 }
 
-function renderE1(){
+function step1(){
   var e=S.errs;
   return '<div class="dots"><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>'
-    +'<div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px">Shaxsiy ma\'lumotlar</div>'
-    +'<div class="field"><label>Ism va familiya *</label>'
-    +'<input class="inp'+(e.name?' err':'')+'" id="fn" type="text" placeholder="To\'liq ismingiz" value="'+esc(S.name)+'"/>'
-    +(e.name?'<div class="errtxt">⚠ '+e.name+'</div>':'')+'</div>'
-    +'<div class="field"><label>Email *</label>'
-    +'<input class="inp'+(e.email?' err':'')+'" id="fe" type="email" placeholder="email@gmail.com" value="'+esc(S.email)+'"/>'
-    +(e.email?'<div class="errtxt">⚠ '+e.email+'</div>':'<div class="hint">To\'g\'ri format: ism@gmail.com</div>')+'</div>'
-    +'<div class="field"><label>Telefon *</label>'
-    +'<input class="inp'+(e.phone?' err':'')+'" id="fp" type="tel" placeholder="+998901234567" value="'+esc(S.phone)+'"/>'
-    +(e.phone?'<div class="errtxt">⚠ '+e.phone+'</div>':'<div class="hint">Masalan: +998901234567</div>')+'</div>'
-    +'<div class="field"><label>Tug\'ilgan sana *</label>'
-    +'<input class="inp'+(e.bdate?' err':'')+'" id="fb" type="date" value="'+esc(S.bdate)+'"/>'
-    +(e.bdate?'<div class="errtxt">⚠ '+e.bdate+'</div>':'')+'</div>'
-    +'<div class="field"><label>Manzil *</label>'
-    +'<input class="inp'+(e.address?' err':'')+'" id="fa" type="text" placeholder="Toshkent, Chilonzor tumani" value="'+esc(S.address)+'"/>'
-    +(e.address?'<div class="errtxt">⚠ '+e.address+'</div>':'')+'</div>'
-    +'<button class="btn btn-p btn-full btn-lg" style="margin-top:8px" onclick="goE2()">Davom etish →</button>';
+    +'<div style="font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px">Shaxsiy ma\'lumotlar</div>'
+    +'<div class="fl"><label>Ism va familiya *</label>'
+    +'<input class="inp'+(e.nm?' err':'')+'" id="f1" type="text" placeholder="To\'liq ismingiz" value="'+ex(S.nm)+'"/>'
+    +(e.nm?'<div class="etx">⚠ '+e.nm+'</div>':'')+'</div>'
+    +'<div class="fl"><label>Email *</label>'
+    +'<input class="inp'+(e.em?' err':'')+'" id="f2" type="email" placeholder="email@gmail.com" value="'+ex(S.em)+'"/>'
+    +(e.em?'<div class="etx">⚠ '+e.em+'</div>':'<div class="hint">To\'g\'ri format: ism@gmail.com</div>')+'</div>'
+    +'<div class="fl"><label>Telefon *</label>'
+    +'<input class="inp'+(e.ph?' err':'')+'" id="f3" type="tel" placeholder="+998901234567" value="'+ex(S.ph)+'"/>'
+    +(e.ph?'<div class="etx">⚠ '+e.ph+'</div>':'<div class="hint">Masalan: +998901234567</div>')+'</div>'
+    +'<div class="fl"><label>Tug\'ilgan sana *</label>'
+    +'<input class="inp'+(e.bd?' err':'')+'" id="f4" type="date" value="'+ex(S.bd)+'"/>'
+    +(e.bd?'<div class="etx">⚠ '+e.bd+'</div>':'')+'</div>'
+    +'<div class="fl"><label>Manzil *</label>'
+    +'<input class="inp'+(e.ad?' err':'')+'" id="f5" type="text" placeholder="Toshkent, Chilonzor" value="'+ex(S.ad)+'"/>'
+    +(e.ad?'<div class="etx">⚠ '+e.ad+'</div>':'')+'</div>'
+    +'<button class="btn bp bfull blg" style="margin-top:8px" onclick="NEXT1()">Davom etish →</button>';
 }
 
-function renderE2(){
-  var keys=Object.keys(POS);
+function step2(){
   var cards='';
-  keys.forEach(function(k){
+  Object.keys(POS).forEach(function(k){
     var p=POS[k];
-    cards+='<div class="pc'+(S.pos===k?' sel':'')+'" onclick="SP(\''+k+'\')">'
+    cards+='<div class="pc'+(S.pos===k?' sel':'')+'" onclick="SEL(\''+k+'\')">'
       +'<div class="ck">✓</div>'
-      +'<div style="font-size:26px;margin-bottom:7px">'+p.i+'</div>'
+      +'<div style="font-size:26px;margin-bottom:6px">'+p.i+'</div>'
       +'<div style="font-size:13px;font-weight:700">'+p.l+'</div>'
       +'</div>';
   });
   return '<div class="dots"><div class="dot dn"></div><div class="dot on"></div><div class="dot"></div></div>'
-    +'<div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px">Kasbingizni tanlang</div>'
-    +(S.errs.pos?'<div class="errtxt" style="margin-bottom:10px">⚠ Iltimos kasbni tanlang</div>':'')
+    +'<div style="font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px">Kasbingizni tanlang</div>'
+    +(S.errs.pos?'<div class="etx" style="margin-bottom:10px">⚠ Iltimos kasbni tanlang</div>':'')
     +'<div class="pg">'+cards+'</div>'
     +'<div style="display:flex;gap:8px">'
-    +'<button class="btn btn-g" onclick="BACK1()">← Orqaga</button>'
-    +'<button class="btn btn-p" style="flex:1;justify-content:center" onclick="goE3()">Imtihonni boshlash →</button>'
+    +'<button class="btn bg2" onclick="S.step=1;R()">← Orqaga</button>'
+    +'<button class="btn bp" style="flex:1;justify-content:center" onclick="NEXT2()">Imtihonni boshlash →</button>'
     +'</div>';
 }
 
-function renderE3(){
+function step3(){
   var qs=POS[S.pos].q;
-  var qi=S.qstep;
-  if(qi>=qs.length){S.step=4;submitExam();return '';}
-  var q=qs[qi];
-  var pct=Math.round((qi/qs.length)*100);
+  var q=qs[S.qi];
+  if(!q){SUBMIT();return '<div style="text-align:center;padding:32px"><div style="font-size:28px">⏳</div><p style="color:var(--mu);margin-top:8px">Yuborilmoqda...</p></div>';}
+  var pct=Math.round((S.qi/qs.length)*100);
   var opts='';
-  q.o.forEach(function(o,i){
-    var isSel=S.ans[q.id]===String(i);
-    opts+='<button class="ch'+(isSel?' sel':'')+'" onclick="PA(\''+q.id+'\',\''+i+'\')">'+esc(o)+'</button>';
-  });
+  for(var i=0;i<q.o.length;i++){
+    var sel=S.ans[q.id]===String(i);
+    opts+='<button class="ch'+(sel?' sel':'')+'" onclick="ANS(\''+q.id+'\',\''+i+'\')">'+ex(q.o[i])+'</button>';
+  }
   return '<div class="dots"><div class="dot dn"></div><div class="dot dn"></div><div class="dot on"></div></div>'
     +'<div class="pbar"><div class="pfill" style="width:'+pct+'%"></div></div>'
-    +'<div style="font-size:11px;color:var(--muted);font-weight:600;margin-bottom:16px">Savol '+(qi+1)+' / '+qs.length+'</div>'
-    +'<div class="qcat">'+q.c+'</div>'
-    +'<div class="qtxt">'+esc(q.t)+'</div>'
+    +'<div style="font-size:11px;color:var(--mu);font-weight:600;margin-bottom:14px">Savol '+(S.qi+1)+' / '+qs.length+'</div>'
+    +'<div class="qcat">'+ex(q.c)+'</div>'
+    +'<div class="qtxt">'+ex(q.t)+'</div>'
     +'<div class="choices">'+opts+'</div>'
-    +'<div style="display:flex;gap:8px;margin-top:20px">'
-    +'<button class="btn btn-g"'+(qi===0?' disabled':'')+' onclick="PREV()">← Oldingi</button>'
-    +'<button class="btn btn-p" style="flex:1;justify-content:center" onclick="NEXT()">'
-    +(qi===qs.length-1?'Yakunlash →':'Keyingi →')
-    +'</button></div>';
+    +'<div style="display:flex;gap:8px;margin-top:18px">'
+    +'<button class="btn bg2"'+(S.qi===0?' disabled':'')+' onclick="PREV()">← Oldingi</button>'
+    +'<button class="btn bp" style="flex:1;justify-content:center" onclick="NEXQ()">'
+    +(S.qi===qs.length-1?'Yakunlash →':'Keyingi →')+'</button>'
+    +'</div>';
 }
 
-function renderE4(){
-  if(!S.result) return '<div style="text-align:center;padding:32px"><div style="font-size:32px">⏳</div><p style="color:var(--muted);margin-top:8px">Yuborilmoqda...</p></div>';
+function step4(){
+  if(!S.result)return '<div style="text-align:center;padding:32px"><div style="font-size:28px">⏳</div></div>';
   var r=S.result;
-  var c=r.finalScore>=85?'var(--success)':r.finalScore>=65?'var(--warn)':'var(--danger)';
-  var ic=r.finalScore>=85?'🏆':r.finalScore>=65?'📊':'📋';
+  var c=r.sc>=85?'var(--ok)':r.sc>=65?'var(--wa)':'var(--er)';
+  var ic=r.sc>=85?'🏆':r.sc>=65?'📊':'📋';
   return '<div style="text-align:center;padding:12px 0">'
     +'<div style="font-size:48px;margin-bottom:10px">'+ic+'</div>'
-    +'<div style="font-family:\'Playfair Display\',serif;font-size:60px;color:'+c+';line-height:1">'+r.finalScore+'%</div>'
-    +'<div style="margin:10px 0">'+sbadge(r.finalScore)+'</div>'
-    +'<p style="font-size:13px;color:var(--muted);margin-top:14px;line-height:1.6">'
-    +(r.finalScore>=85?'Tabriklaymiz! Natijalaringiz rahbarga yuborildi.':r.finalScore>=65?"Yaxshi natija! Rahbar siz bilan bog'lanadi.":'Natijalaringiz rahbarga yuborildi.')
-    +'</p></div>';
+    +'<div style="font-family:\'Playfair Display\',serif;font-size:60px;color:'+c+';line-height:1">'+r.sc+'%</div>'
+    +'<div style="margin:10px 0">'+sb(r.sc)+'</div>'
+    +'<p style="font-size:13px;color:var(--mu);margin-top:14px;line-height:1.6">'
+    +(r.sc>=85?'Tabriklaymiz! Natijalaringiz rahbarga yuborildi.'
+      :r.sc>=65?"Yaxshi natija! Rahbar siz bilan bog'lanadi."
+      :'Natijalaringiz rahbarga yuborildi. Rahbar siz bilan bog\'lanadi.')+'</p>'
+    +'<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;text-align:left">'
+    +'<div class="csm"><div style="font-size:11px;color:var(--mu);font-weight:700;margin-bottom:3px">BALL</div>'
+    +'<div style="font-size:28px;font-weight:700;color:'+c+'">'+r.sc+'%</div></div>'
+    +'<div class="csm"><div style="font-size:11px;color:var(--mu);font-weight:700;margin-bottom:3px">HOLAT</div>'
+    +'<div style="margin-top:4px">'+sb(r.sc)+'</div></div>'
+    +'</div></div>';
 }
 
-// ── MANAGER APP ──
-function renderApp(){
-  var content=S.page==='home'?renderHome():renderResults();
+// APP (RAHBAR)
+function appHTML(){
+  var content=S.page==='results'?resultsHTML():homeHTML();
   return '<div style="display:flex;flex-direction:column;min-height:100vh">'
-    +'<div class="topbar">'
-    +'<div class="logo">Ottimo</div>'
+    +'<div class="tb">'
+    +'<div class="logo">Ottimo HR</div>'
     +'<nav class="nav">'
-    +'<button class="'+(S.page==='home'?'on':'')+'" onclick="S.page=\'home\';R()">Bosh sahifa</button>'
-    +'<button class="'+(S.page==='results'?'on':'')+'" onclick="S.page=\'results\';loadExams();R()">Natijalar</button>'
+    +'<button class="'+(S.page==='home'?'on':'')+'" onclick="PAGE(\'home\')">Bosh sahifa</button>'
+    +'<button class="'+(S.page==='results'?'on':'')+'" onclick="PAGE(\'results\')">Natijalar</button>'
     +'</nav>'
-    +'<div class="chip" onclick="doLogout()">'
+    +'<div class="chip" onclick="LOGOUT()">'
     +'<div class="av">'+(S.mgrName[0]||'R').toUpperCase()+'</div>'
-    +'<span>'+esc(S.mgrName)+'</span>'
-    +'<span style="color:var(--muted);font-size:11px">↗</span>'
+    +'<span>'+ex(S.mgrName)+'</span>'
+    +'<span style="font-size:11px;color:var(--mu)">↗ Chiqish</span>'
     +'</div></div>'
-    +'<div class="main fu">'+content+'</div>'
-    +'</div>';
+    +'<div class="main fu">'+content+'</div></div>';
 }
 
-function renderHome(){
-  var passed=S.exams.filter(function(e){return e.finalScore>=85}).length;
-  var monitor=S.exams.filter(function(e){return e.finalScore>=65&&e.finalScore<85}).length;
-  var avg=S.exams.length?Math.round(S.exams.reduce(function(a,e){return a+e.finalScore},0)/S.exams.length):0;
-  var recent=S.exams.slice(0,6);
+function homeHTML(){
+  var passed=S.exams.filter(function(e){return e.sc>=85}).length;
+  var mon=S.exams.filter(function(e){return e.sc>=65&&e.sc<85}).length;
+  var avg=S.exams.length?Math.round(S.exams.reduce(function(a,e){return a+e.sc},0)/S.exams.length):0;
   var rows='';
-  recent.forEach(function(ex){
-    var p=POS[ex.position];
-    rows+='<div style="display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--border)">'
+  var recent=S.exams.slice(0,6);
+  for(var i=0;i<recent.length;i++){
+    var e=recent[i];
+    var p=POS[e.position];
+    var c=e.sc>=85?'var(--ok)':e.sc>=65?'var(--wa)':'var(--er)';
+    rows+='<div style="display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--bor)">'
       +'<div style="display:flex;align-items:center;gap:10px">'
-      +'<div style="width:34px;height:34px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:15px">'+(p?p.i:'👤')+'</div>'
-      +'<div><div style="font-size:14px;font-weight:600">'+esc(ex.employeeName)+'</div>'
-      +'<div style="font-size:12px;color:var(--muted)">'+(p?p.l:ex.position||'')+(ex.date?' · '+ex.date:'')+'</div>'
-      +'</div></div>'
+      +'<div style="width:34px;height:34px;border-radius:50%;background:var(--acl);display:flex;align-items:center;justify-content:center;font-size:15px">'+(p?p.i:'👤')+'</div>'
+      +'<div><div style="font-size:14px;font-weight:600">'+ex(e.nm||'')+'</div>'
+      +'<div style="font-size:12px;color:var(--mu)">'+(p?p.l:e.position||'')+(e.date?' · '+e.date:'')+'</div></div></div>'
       +'<div style="display:flex;align-items:center;gap:8px">'
-      +'<span style="font-size:17px;font-weight:700;color:'+(ex.finalScore>=85?'var(--success)':ex.finalScore>=65?'var(--warn)':'var(--danger)')+'">'+ex.finalScore+'%</span>'
-      +sbadge(ex.finalScore)
-      +'</div></div>';
-  });
-  var statCards=[
-    {l:'Jami topshirdi',v:S.exams.length,c:'var(--accent)'},
-    {l:'Qabul qilindi',v:passed,c:'var(--success)'},
-    {l:'Monitoring',v:monitor,c:'var(--warn)'},
-    {l:"O'rtacha ball",v:avg+'%',c:'#2a5fa8'},
-  ];
-  var stats='';
-  statCards.forEach(function(s){
-    stats+='<div class="csm"><div class="sv" style="color:'+s.c+'">'+s.v+'</div><div class="sl">'+s.l+'</div></div>';
-  });
+      +'<span style="font-size:17px;font-weight:700;color:'+c+'">'+e.sc+'%</span>'
+      +sb(e.sc)+'</div></div>';
+  }
   return '<h1 style="font-family:\'Playfair Display\',serif;font-size:28px;margin-bottom:4px">Bosh sahifa</h1>'
-    +'<p style="color:var(--muted);font-size:13px;margin-bottom:24px">Ottimo HR — Sinov muddati tizimi</p>'
-    +'<div class="g4" style="margin-bottom:22px">'+stats+'</div>'
+    +'<p style="color:var(--mu);font-size:13px;margin-bottom:22px">Ottimo HR — Sinov muddati tizimi</p>'
+    +'<div class="g4" style="margin-bottom:20px">'
+    +'<div class="csm"><div class="sv" style="color:var(--ac)">'+S.exams.length+'</div><div class="sl">Jami topshirdi</div></div>'
+    +'<div class="csm"><div class="sv" style="color:var(--ok)">'+passed+'</div><div class="sl">Qabul qilindi</div></div>'
+    +'<div class="csm"><div class="sv" style="color:var(--wa)">'+mon+'</div><div class="sl">Monitoring</div></div>'
+    +'<div class="csm"><div class="sv" style="color:#2a5fa8">'+avg+'%</div><div class="sl">O\'rtacha ball</div></div>'
+    +'</div>'
     +'<div class="card">'
-    +'<div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px">So\'nggi imtihonlar</div>'
-    +(recent.length===0?'<p style="color:var(--muted);font-size:13px;text-align:center;padding:20px 0">Hali imtihon yo\'q</p>':rows)
+    +'<div style="font-size:11px;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px">So\'nggi imtihonlar</div>'
+    +(recent.length?rows:'<p style="color:var(--mu);font-size:13px;text-align:center;padding:20px 0">Hali imtihon yo\'q</p>')
     +'</div>';
 }
 
-function renderResults(){
-  var search=(S.srch||'').toLowerCase();
+function resultsHTML(){
+  var srch=(S.srch||'').toLowerCase();
   var list=S.exams.filter(function(e){
-    return !search||(e.employeeName||'').toLowerCase().includes(search)||(e.position||'').toLowerCase().includes(search);
+    return !srch||(e.nm||'').toLowerCase().includes(srch)||(e.position||'').toLowerCase().includes(srch);
   });
-  var passed=S.exams.filter(function(e){return e.finalScore>=85}).length;
-  var monitor=S.exams.filter(function(e){return e.finalScore>=65&&e.finalScore<85}).length;
-  var failed=S.exams.filter(function(e){return e.finalScore<65}).length;
-  var stats='';
-  [{l:'Qabul (≥85%)',v:passed,c:'var(--success)'},{l:'Monitoring',v:monitor,c:'var(--warn)'},{l:'Rad (<65%)',v:failed,c:'var(--danger)'}].forEach(function(s){
-    stats+='<div class="csm"><div class="sv" style="color:'+s.c+'">'+s.v+'</div><div class="sl">'+s.l+'</div></div>';
-  });
+  var passed=S.exams.filter(function(e){return e.sc>=85}).length;
+  var mon=S.exams.filter(function(e){return e.sc>=65&&e.sc<85}).length;
+  var fail=S.exams.filter(function(e){return e.sc<65}).length;
   var cards='';
-  list.forEach(function(ex){
-    cards+=renderExCard(ex);
-  });
+  for(var i=0;i<list.length;i++){cards+=examCard(list[i]);}
   return '<h1 style="font-family:\'Playfair Display\',serif;font-size:28px;margin-bottom:18px">Natijalar</h1>'
-    +'<div class="g3" style="margin-bottom:20px">'+stats+'</div>'
-    +'<input class="inp" placeholder="Qidirish…" value="'+esc(S.srch)+'" oninput="S.srch=this.value;R()" style="max-width:340px;margin-bottom:18px"/>'
-    +(list.length===0?'<div class="card" style="text-align:center;padding:40px"><p style="color:var(--muted)">Natija topilmadi</p></div>':cards);
+    +'<div class="g3" style="margin-bottom:18px">'
+    +'<div class="csm"><div class="sv" style="color:var(--ok)">'+passed+'</div><div class="sl">Qabul (≥85%)</div></div>'
+    +'<div class="csm"><div class="sv" style="color:var(--wa)">'+mon+'</div><div class="sl">Monitoring</div></div>'
+    +'<div class="csm"><div class="sv" style="color:var(--er)">'+fail+'</div><div class="sl">Rad (&lt;65%)</div></div>'
+    +'</div>'
+    +'<input class="inp" placeholder="Qidirish…" value="'+ex(S.srch)+'" oninput="S.srch=this.value;R()" style="max-width:320px;margin-bottom:16px"/>'
+    +(list.length?cards:'<div class="card" style="text-align:center;padding:40px"><p style="color:var(--mu)">Natija topilmadi</p></div>');
 }
 
-function renderExCard(ex){
-  var p=POS[ex.position];
-  var open=S.expandId===ex.id;
-  var fc=ex.finalScore>=85?'var(--success)':ex.finalScore>=65?'var(--warn)':'var(--danger)';
+function examCard(e){
+  var p=POS[e.position];
+  var open=S.openId===e.id;
+  var c=e.sc>=85?'var(--ok)':e.sc>=65?'var(--wa)':'var(--er)';
 
-  // Savollar va javoblar
+  // SAVOLLAR VA JAVOBLAR
   var qa='';
-  if(open && p && ex.answers){
-    for(var i=0;i<p.q.length;i++){
-      var q=p.q[i];
-      var raw=ex.answers[q.id];
-      var ansIdx=(raw!==undefined&&raw!==null&&raw!=='')?parseInt(raw):-1;
-      var ansText=(ansIdx>=0&&q.o[ansIdx])?q.o[ansIdx]:'Javob berilmagan';
-      qa+='<div style="padding:10px 0;border-bottom:1px solid var(--border)">'
-        +'<div style="font-size:10px;color:var(--accent);font-weight:700;text-transform:uppercase;margin-bottom:3px">'+esc(q.c)+'</div>'
-        +'<div style="font-size:13px;font-weight:600;margin-bottom:6px">'+(i+1)+'. '+esc(q.t)+'</div>'
-        +'<div style="background:var(--accent-light);border-radius:6px;padding:6px 10px;font-size:12px;font-weight:700;color:var(--accent)">✓ '+esc(ansText)+'</div>'
+  if(open){
+    var ans=e.answers||{};
+    var qs=p?p.q:[];
+    for(var i=0;i<qs.length;i++){
+      var q=qs[i];
+      var raw=ans[q.id];
+      var idx=(raw!==undefined&&raw!==null&&raw!=='')?parseInt(raw):-1;
+      var at=(idx>=0&&idx<q.o.length)?q.o[idx]:'Javob berilmagan';
+      qa+='<div class="qa-it">'
+        +'<div class="qa-cat">'+ex(q.c)+'</div>'
+        +'<div class="qa-q">'+(i+1)+'. '+ex(q.t)+'</div>'
+        +'<div class="qa-a">✓ '+ex(at)+'</div>'
         +'</div>';
     }
+    if(!qa)qa='<p style="color:var(--mu);font-size:13px;text-align:center;padding:14px 0">Javoblar topilmadi</p>';
   }
 
-  // Karta boshi
-  var html='<div class="rcard">';
-  
-  // Kliklanadigan sarlavha
-  html+='<div class="rcard-head" onclick="EX(''+ex.id+'')">';
-  html+='<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">';
-  
-  // Chap: ism va ma'lumotlar
-  html+='<div style="display:flex;align-items:center;gap:10px">';
-  html+='<div style="width:40px;height:40px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">'+(p?p.i:'👤')+'</div>';
-  html+='<div>';
-  html+='<div style="font-size:15px;font-weight:700">'+esc(ex.employeeName||'')+'</div>';
-  html+='<div style="font-size:12px;color:var(--muted);margin-top:2px"><span class="badge bgray" style="margin-right:5px">'+(p?p.l:ex.position||'—')+'</span>'+(ex.date||'')+'</div>';
-  html+='<div style="font-size:11px;color:var(--muted);margin-top:2px">📞 '+(ex.phone||'—')+' · 📧 '+(ex.email||'—')+'</div>';
-  html+='</div></div>';
-  
-  // O'ng: ball
-  html+='<div style="text-align:right;flex-shrink:0">';
-  html+='<div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:'+fc+';line-height:1">'+ex.finalScore+'%</div>';
-  html+='<div style="margin-top:4px">'+sbadge(ex.finalScore)+'</div>';
-  html+='</div>';
-  html+='</div>';
-  
-  // Ko'rish tugmasi
-  html+='<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">';
-  html+='<span style="font-size:12px;font-weight:700;color:var(--accent)">'+(open?'▲ Yopish':'👁 Savollar va javoblarni ko'rish')+'</span>';
-  html+='<span style="font-size:11px;color:var(--muted)">'+(p?p.q.length:0)+' ta savol</span>';
-  html+='</div>';
-  html+='</div>'; // rcard-head
-
-  // Savollar qismi
-  if(open){
-    html+='<div class="rcard-body">';
-    if(qa){
-      html+=qa;
-    } else {
-      html+='<p style="color:var(--muted);font-size:13px;text-align:center;padding:16px 0">Javoblar topilmadi</p>';
-    }
-    html+='</div>';
-  }
-  
-  html+='</div>'; // rcard
-  return html;
+  return '<div class="nc">'
+    // SARLAVHA — kliklanadigan
+    +'<div class="nc-h" onclick="OPEN(\''+e.id+'\')">'
+    +'<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">'
+    // Chap
+    +'<div style="display:flex;align-items:center;gap:10px">'
+    +'<div style="width:40px;height:40px;border-radius:50%;background:var(--acl);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">'+(p?p.i:'👤')+'</div>'
+    +'<div>'
+    +'<div style="font-size:15px;font-weight:700">'+ex(e.nm||'')+'</div>'
+    +'<div style="font-size:12px;color:var(--mu);margin-top:2px">'
+    +'<span class="badge bgr" style="margin-right:5px">'+(p?p.l:e.position||'—')+'</span>'+(e.date||'')+'</div>'
+    +'<div style="font-size:11px;color:var(--mu);margin-top:2px">📞 '+(e.ph||'—')+' · 📧 '+(e.em||'—')+'</div>'
+    +'<div style="font-size:11px;color:var(--mu)">📅 '+(e.bd||'—')+' · 📍 '+(e.ad||'—')+'</div>'
+    +'</div></div>'
+    // O'ng: ball
+    +'<div style="text-align:right;flex-shrink:0">'
+    +'<div style="font-family:\'Playfair Display\',serif;font-size:32px;font-weight:700;color:'+c+';line-height:1">'+e.sc+'%</div>'
+    +'<div style="margin-top:4px">'+sb(e.sc)+'</div>'
+    +'</div></div>'
+    // Toggle
+    +'<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--bor);display:flex;align-items:center;justify-content:space-between">'
+    +'<span style="font-size:12px;font-weight:700;color:var(--ac)">'+(open?'▲ Yopish':'👁 Savollar va javoblarni ko\'rish')+'</span>'
+    +'<span style="font-size:11px;color:var(--mu)">'+(p?p.q.length:0)+' ta savol</span>'
+    +'</div></div>'
+    // SAVOLLAR QISMI
+    +(open?'<div class="nc-b">'+qa+'</div>':'')
+    +'</div>';
 }
 
+// GLOBAL FUNKSIYALAR
+window.TAB=function(t){S.tab=t;S.step=1;S.nm='';S.em='';S.ph='';S.bd='';S.ad='';S.pos='';S.errs={};S.ans={};S.qi=0;S.result=null;R();};
+window.SEL=function(k){S.pos=k;S.errs.pos=null;R();};
+window.ANS=function(id,v){S.ans[id]=v;R();};
+window.OPEN=function(id){S.openId=S.openId===id?null:id;R();};
+window.PAGE=function(p){S.page=p;if(p==='results')loadEx().then(R);else R();};
 
-// ── ACTIONS ──
-window.ST=function(t){
-  S.tab=t;S.step=1;S.name='';S.email='';S.phone='';S.bdate='';S.address='';S.pos='';
-  S.errs={};S.ans={};S.qstep=0;S.result=null;S.mgr=false;
-  R();
-};
-window.SP=function(k){S.pos=k;S.errs.pos=null;R();};
-window.PA=function(id,val){S.ans[id]=String(val);R();};
-window.EX=function(id){S.expandId=S.expandId===id?null:id;R();};
-
-window.doMgr=function(){
+window.LOGIN=function(){
   var n=(document.getElementById('mn')||{}).value||'';
   var p=(document.getElementById('mp')||{}).value||'';
   n=n.trim();
-  if(!n){S.errs={mgr:"Ism Familiyangizni kiriting"};R();return;}
+  if(!n){S.errs={mgr:'Ism Familiyangizni kiriting'};R();return;}
   if(p!==MGR_PASS){S.errs={mgr:"Parol noto'g'ri"};R();return;}
   S.mgr=true;S.mgrName=n;S.errs={};S.page='home';
-  loadExams().then(function(){R();});
+  loadEx().then(R);
 };
 
-window.doLogout=function(){
-  S.mgr=false;S.mgrName='';S.tab='manager';S.exams=[];R();
-};
+window.LOGOUT=function(){S.mgr=false;S.mgrName='';S.tab='manager';S.exams=[];R();};
 
-window.goE2=function(){
-  var n=(document.getElementById('fn')||{}).value||'';
-  var e=(document.getElementById('fe')||{}).value||'';
-  var p=(document.getElementById('fp')||{}).value||'';
-  var b=(document.getElementById('fb')||{}).value||'';
-  var a=(document.getElementById('fa')||{}).value||'';
-  n=n.trim();e=e.trim();p=p.trim();b=b.trim();a=a.trim();
-  S.name=n;S.email=e;S.phone=p;S.bdate=b;S.address=a;
-  var errs={};
-  if(n.length<3) errs.name="Ism kamida 3 harfdan iborat bo'lsin";
-  if(!vEmail(e)) errs.email="To'g'ri email kiriting (masalan: ism@gmail.com)";
-  if(!vPhone(p)) errs.phone="To'g'ri telefon kiriting (+998901234567)";
-  if(!b) errs.bdate="Tug'ilgan sanani kiriting";
-  if(a.length<5) errs.address="Manzilni to'liq kiriting";
-  S.errs=errs;
-  if(Object.keys(errs).length>0){R();return;}
+window.NEXT1=function(){
+  var nm=(document.getElementById('f1')||{}).value||'';
+  var em=(document.getElementById('f2')||{}).value||'';
+  var ph=(document.getElementById('f3')||{}).value||'';
+  var bd=(document.getElementById('f4')||{}).value||'';
+  var ad=(document.getElementById('f5')||{}).value||'';
+  nm=nm.trim();em=em.trim();ph=ph.trim();bd=bd.trim();ad=ad.trim();
+  S.nm=nm;S.em=em;S.ph=ph;S.bd=bd;S.ad=ad;
+  var er={};
+  if(nm.length<3)er.nm="Ism kamida 3 harfdan iborat bo'lsin";
+  if(!ve(em))er.em="To'g'ri email kiriting (masalan: ism@gmail.com)";
+  if(!vp(ph))er.ph="To'g'ri telefon kiriting (+998901234567)";
+  if(!bd)er.bd="Tug'ilgan sanani kiriting";
+  if(ad.length<4)er.ad="Manzilni kiriting";
+  S.errs=er;
+  if(Object.keys(er).length>0){R();return;}
   S.step=2;R();
 };
 
-window.BACK1=function(){S.step=1;R();};
-window.NEXT=async function(){
-  var qs=POS[S.pos].q;
-  if(S.qstep>=qs.length-1){
-    S.step=4;
-    S.qstep=qs.length;
-    R();
-    await window.submitExam();
-  } else {
-    S.qstep++;
-    R();
-  }
-};
-window.PREV=function(){
-  if(S.qstep>0){S.qstep--;R();}
-};
-window.goE3=function(){
+window.NEXT2=function(){
   if(!S.pos){S.errs={pos:true};R();return;}
-  S.errs={};S.step=3;S.ans={};S.qstep=0;R();
+  S.errs={};S.step=3;S.ans={};S.qi=0;R();
 };
 
-window.submitExam=async function(){
+window.PREV=function(){if(S.qi>0){S.qi--;R();}};
+
+window.NEXQ=function(){
   var qs=POS[S.pos].q;
-  var sc=score(S.ans,qs);
-  var final=sc;
+  if(S.qi>=qs.length-1){
+    S.step=4;R();
+    SUBMIT();
+  } else {
+    S.qi++;R();
+  }
+};
+
+window.SUBMIT=async function(){
+  var qs=POS[S.pos].q;
+  var sc=calcScore(S.ans,qs);
   var data={
-    employeeName:S.name,email:S.email,phone:S.phone,
-    bdate:S.bdate,address:S.address,position:S.pos,
-    answers:S.ans,empScore:sc,finalScore:final,
+    nm:S.nm,em:S.em,ph:S.ph,bd:S.bd,ad:S.ad,
+    position:S.pos,answers:S.ans,sc:sc,
     date:new Date().toLocaleDateString('uz-UZ'),
-    timestamp:Date.now(),
+    ts:Date.now(),
   };
   try{
     await addDoc(collection(db,'exams'),data);
-    // Telegram xabar
+    // TELEGRAM XABAR
     var pos=POS[S.pos];
     var msg='<b>🆕 Yangi imtihon natijasi</b>\n\n'
-      +'<b>Ism:</b> '+S.name+'\n'
-      +'<b>Kasb:</b> '+(pos?pos.l:S.pos)+'\n'
-      +'<b>Email:</b> '+S.email+'\n'
-      +'<b>Telefon:</b> '+S.phone+'\n'
-      +'<b>Tug\'ilgan sana:</b> '+S.bdate+'\n'
-      +'<b>Manzil:</b> '+S.address+'\n'
-      +'<b>Ball:</b> '+final+'%\n'
-      +'<b>Holat:</b> '+(final>=85?'✅ Qabul':final>=65?'⚠️ Monitoring':'❌ Rad')+'\n\n'
-      +'<b>Savol va javoblar:</b>\n';
-    qs.forEach(function(q,i){
+      +'👤 <b>Ism:</b> '+S.nm+'\n'
+      +'💼 <b>Kasb:</b> '+(pos?pos.l:S.pos)+'\n'
+      +'📧 <b>Email:</b> '+S.em+'\n'
+      +'📞 <b>Telefon:</b> '+S.ph+'\n'
+      +'📅 <b>Tug\'ilgan sana:</b> '+S.bd+'\n'
+      +'📍 <b>Manzil:</b> '+S.ad+'\n'
+      +'📊 <b>Ball:</b> '+sc+'%\n'
+      +'✅ <b>Holat:</b> '+(sc>=85?'Qabul':sc>=65?'Monitoring':'Rad')+'\n\n'
+      +'<b>📋 Savol va javoblar:</b>\n';
+    for(var i=0;i<qs.length;i++){
+      var q=qs[i];
       var idx=parseInt(S.ans[q.id]);
-      var at=(!isNaN(idx)&&q.o[idx])?q.o[idx]:'Javob berilmagan';
-      msg+=(i+1)+'. '+q.t+'\n→ '+at+'\n';
-    });
-    await sendTelegram(msg);
-    S.result=data;
-    R();
-  }catch(err){
-    toast('Xatolik: '+err.message,'d');
+      var at=(!isNaN(idx)&&idx>=0&&q.o[idx])?q.o[idx]:'Javob berilmagan';
+      msg+=(i+1)+'. '+q.t+'\n<i>→ '+at+'</i>\n\n';
+    }
+    await tg(msg);
     S.result=data;R();
+  }catch(err){
+    S.result={sc:sc};R();
+    console.error(err);
   }
 };
 
-async function loadExams(){
+async function loadEx(){
   try{
-    var snap=await getDocs(query(collection(db,'exams'),orderBy('timestamp','desc')));
-    S.exams=snap.docs.map(function(d){return Object.assign({id:d.id},d.data());});
+    var snap=await getDocs(query(collection(db,'exams'),orderBy('ts','desc')));
+    S.exams=snap.docs.map(function(d){var x=d.data();x.id=d.id;return x;});
   }catch(e){console.warn(e);}
 }
 
-function toast(m,t){
-  S.toast={m:m,t:t||'s'};R();
-  setTimeout(function(){S.toast=null;R();},3000);
-}
+function showToast(m,t){S.toast={m:m,t:t||'ok'};R();setTimeout(function(){S.toast=null;R();},3000);}
 
-// ── START ──
 R();
 </script>
 </body>
